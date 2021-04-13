@@ -295,9 +295,16 @@ void SerializeTAContext(void **data, unsigned int *total_size)
 	const u32 taSize = ta_ctx->tad.thd_data - ta_ctx->tad.thd_root;
 	LIBRETRO_S(taSize);
 	LIBRETRO_SA(ta_ctx->tad.thd_root, taSize);
+
+   LIBRETRO_S(ta_ctx->tad.render_pass_count);
+	for (u32 i = 0; i < ta_ctx->tad.render_pass_count; i++)
+	{
+		u32 offset = (u32)(ta_ctx->tad.render_passes[i] - ta_ctx->tad.thd_root);
+		LIBRETRO_S(offset);
+	}
 }
 
-void UnserializeTAContext(void **data, unsigned int *total_size)
+void UnserializeTAContext(void **data, unsigned int *total_size, serialize_version_enum version)
 {
 	u32 address;
 	LIBRETRO_US(address);
@@ -308,4 +315,18 @@ void UnserializeTAContext(void **data, unsigned int *total_size)
 	LIBRETRO_US(size);
 	LIBRETRO_USA(ta_ctx->tad.thd_root, size);
 	ta_ctx->tad.thd_data = ta_ctx->tad.thd_root + size;
+   if (version >= V12)
+	{
+		LIBRETRO_US(ta_ctx->tad.render_pass_count);
+		for (u32 i = 0; i < ta_ctx->tad.render_pass_count; i++)
+		{
+			u32 offset;
+			LIBRETRO_US(offset);
+			ta_ctx->tad.render_passes[i] = ta_ctx->tad.thd_root + offset;
+		}
+	}
+	else
+	{
+		ta_ctx->tad.render_pass_count = 0;
+	}
 }

@@ -908,4 +908,6 @@ enum serialize_version_enum {
 	V9,
 	V10,
 	V11,
+   V12,
+   VCUR_LIBRETRO = V12,
 };

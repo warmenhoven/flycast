@@ -80,6 +80,7 @@ cResetEvent re;
 extern cResetEvent frame_finished;
 static bool swap_pending;
 static bool do_swap;
+u32 fb_w_cur = 1;
 
 int max_idx,max_mvo,max_op,max_pt,max_tr,max_vtx,max_modt, ovrn;
 bool pend_rend = false;

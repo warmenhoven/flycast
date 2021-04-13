@@ -133,6 +133,7 @@ extern int modem_sched;
 
 //./core/hw/pvr/Renderer_if.o
 extern bool pend_rend;
+extern u32 fb_w_cur;
 
 //./core/hw/pvr/pvr_mem.o
 extern u32 YUV_tempdata[512/4];//512 bytes
@@ -314,7 +315,7 @@ bool dc_serialize(void **data, unsigned int *total_size)
 {
 	int i = 0;
 	int j = 0;
-	serialize_version_enum version = V11;
+	serialize_version_enum version = V12;
 
 	*total_size = 0 ;
 
@@ -419,6 +420,7 @@ bool dc_serialize(void **data, unsigned int *total_size)
 
 	LIBRETRO_S(in_vblank);
 	LIBRETRO_S(clc_pvr_scanline);
+   LIBRETRO_S(fb_w_cur);
 
 	LIBRETRO_S(ta_fsm[2048]);
 	LIBRETRO_S(ta_fsm_cl);
@@ -766,6 +768,7 @@ bool dc_unserialize(void **data, unsigned int *total_size, size_t actual_data_si
 
 	LIBRETRO_US(in_vblank);
 	LIBRETRO_US(clc_pvr_scanline);
+   fb_w_cur = 1;
 	if (version < V9)
 	{
 		LIBRETRO_US(i); 			// pvr_numscanlines
@@ -786,6 +789,10 @@ bool dc_unserialize(void **data, unsigned int *total_size, size_t actual_data_si
 		LIBRETRO_SKIP(4 * 256); // ta_type_lut
 		LIBRETRO_SKIP(2048); // ta_fsm
 	}
+   if (version >= V12)
+		LIBRETRO_US(fb_w_cur);
+	else
+		fb_w_cur = 1;
 	LIBRETRO_US(ta_fsm[2048]);
 	LIBRETRO_US(ta_fsm_cl);
 
@@ -814,7 +821,7 @@ bool dc_unserialize(void **data, unsigned int *total_size, size_t actual_data_si
 	KillTex = true;
 	pal_needs_update = true;
 	if (version >= V10)
-		UnserializeTAContext(data, total_size);
+		UnserializeTAContext(data, total_size, VCUR_LIBRETRO);
 
 	LIBRETRO_USA(vram.data, vram.size);
 

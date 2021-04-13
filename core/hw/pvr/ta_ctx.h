@@ -275,4 +275,4 @@ void VDecEnd();
 //must be moved to proper header
 void FillBGP(TA_context* ctx);
 void SerializeTAContext(void **data, unsigned int *total_size);
-void UnserializeTAContext(void **data, unsigned int *total_size);
+void UnserializeTAContext(void **data, unsigned int *total_size, serialize_version_enum version);
