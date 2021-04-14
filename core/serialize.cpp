@@ -941,7 +941,7 @@ bool dc_unserialize(void **data, unsigned int *total_size, size_t actual_data_si
 	}
 
    if (version >= V13)
-		LIBRETRO_S(settings.network.EmulateBBA);
+		LIBRETRO_US(settings.network.EmulateBBA);
 	else
 		settings.network.EmulateBBA = false;
 
