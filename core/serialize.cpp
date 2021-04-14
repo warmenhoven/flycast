@@ -25,9 +25,10 @@
 #include "rend/gles/gles.h"
 #include "hw/sh4/dyna/blockmanager.h"
 #include "hw/sh4/dyna/ngen.h"
-#include "hw/naomi/naomi_cart.h"
 #include "hw/naomi/naomi.h"
+#include "hw/naomi/naomi_cart.h"
 #include "hw/sh4/sh4_cache.h"
+#include "hw/bba/bba.h"
 
 #define LIBRETRO_SKIP(size) do { if (*data) *(u8**)data += (size); *total_size += (size); } while (false)
 
@@ -125,7 +126,7 @@ extern maple_device* MapleDevices[4][6];
 extern int maple_sched;
 extern bool maple_ddt_pending_reset;
 
-#ifdef HAVE_MODEM
+#ifdef ENABLE_MODEM
 //./core/hw/modem/modem.cpp
 extern int modem_sched;
 #endif
@@ -315,7 +316,7 @@ bool dc_serialize(void **data, unsigned int *total_size)
 {
 	int i = 0;
 	int j = 0;
-	serialize_version_enum version = V12;
+	serialize_version_enum version = VCUR_LIBRETRO;
 
 	*total_size = 0 ;
 
@@ -512,10 +513,18 @@ bool dc_serialize(void **data, unsigned int *total_size)
 	LIBRETRO_S(sch_list[vblank_schid].start) ;
 	LIBRETRO_S(sch_list[vblank_schid].end) ;
 
-#ifdef HAVE_MODEM
-   LIBRETRO_S(sch_list[modem_sched].tag) ;
-   LIBRETRO_S(sch_list[modem_sched].start) ;
-   LIBRETRO_S(sch_list[modem_sched].end) ;
+   LIBRETRO_S(settings.network.EmulateBBA);
+#ifdef ENABLE_MODEM
+   if (settings.network.EmulateBBA)
+   {
+      bba_Serialize(data, total_size);
+   }
+   else
+   {
+      LIBRETRO_S(sch_list[modem_sched].tag) ;
+      LIBRETRO_S(sch_list[modem_sched].start) ;
+      LIBRETRO_S(sch_list[modem_sched].end) ;
+   }
 #else
    LIBRETRO_S(i);
    LIBRETRO_S(i);
@@ -586,6 +595,7 @@ bool dc_serialize(void **data, unsigned int *total_size)
 	if (CurrentCartridge != NULL)
 	   CurrentCartridge->Serialize(data, total_size);
 	gd_hle_state.Serialize(data, total_size);
+   settings.network.EmulateBBA = false;
 
 	return true ;
 }
@@ -930,12 +940,24 @@ bool dc_unserialize(void **data, unsigned int *total_size, size_t actual_data_si
 		LIBRETRO_US(dummy_int); // sch_list[time_sync].end
 	}
 
+   if (version >= V13)
+		LIBRETRO_S(settings.network.EmulateBBA);
+	else
+		settings.network.EmulateBBA = false;
+
 	if ( version >= V2 )
 	{
-#ifdef HAVE_MODEM
-		LIBRETRO_US(sch_list[modem_sched].tag) ;
-		LIBRETRO_US(sch_list[modem_sched].start) ;
-		LIBRETRO_US(sch_list[modem_sched].end) ;
+#ifdef ENABLE_MODEM
+      if (settings.network.EmulateBBA)
+      {
+         bba_Unserialize(data, total_size);
+      }
+      else
+      {
+         LIBRETRO_US(sch_list[modem_sched].tag) ;
+         LIBRETRO_US(sch_list[modem_sched].start) ;
+         LIBRETRO_US(sch_list[modem_sched].end) ;
+      }
 #else
 		LIBRETRO_US(dummy_int);
 		LIBRETRO_US(dummy_int);

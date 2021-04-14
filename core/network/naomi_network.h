@@ -20,6 +20,7 @@
 #include <mutex>
 #include <vector>
 #include "net_platform.h"
+#include "miniupnp.h"
 
 class NaomiNetwork
 {
@@ -67,6 +68,7 @@ private:
 	u16 packet_number = 0;
 	std::atomic<bool> network_stopping{ false };
 	std::mutex mutex;
+   MiniUPnP miniupnp;
 
 	static const uint16_t SERVER_PORT = 37391;
 };

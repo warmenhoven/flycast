@@ -558,4 +558,5 @@ void LoadSettings(void)
 	settings.network.ActAsServer = false;
 	settings.network.dns = "46.101.91.123";		// Dreamcast Live DNS
 	settings.network.server = "";
+	settings.network.EmulateBBA = false;
 }

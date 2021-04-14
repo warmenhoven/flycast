@@ -343,3 +343,13 @@ int msgboxf(const char* text,unsigned int type,...);
 #define MBX_RV_IGNORE            5
 #define MBX_RV_YES               6
 #define MBX_RV_NO                7
+
+static inline std::string trim_trailing_ws(const std::string& str,
+                 const std::string& whitespace = " ")
+{
+    const auto strEnd = str.find_last_not_of(whitespace);
+	if (strEnd == std::string::npos)
+		return "";
+
+    return str.substr(0, strEnd + 1);
+}

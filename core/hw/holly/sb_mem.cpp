@@ -12,6 +12,7 @@
 
 #include "hw/flashrom/flashrom.h"
 #include "reios/reios.h"
+#include "hw/bba/bba.h"
 
 /*
 	Dreamcast 'area 0' emulation
@@ -412,8 +413,11 @@ T DYNACALL ReadMem_area0(u32 addr)
 	else if ((base ==0x0060) /*&& (addr>= 0x00600000)*/ && (addr<= 0x006007FF)) //	:MODEM
 	{
 		if (settings.System == DC_PLATFORM_DREAMCAST)
-#ifdef HAVE_MODEM
-			return (T)ModemReadMem_A0_006(addr, sz);
+#ifdef ENABLE_MODEM
+         if (!settings.network.EmulateBBA)
+            return (T)ModemReadMem_A0_006(addr, sz);
+         else
+            return (T)0;
 #else
 			return (T)0;
 #endif
@@ -447,10 +451,14 @@ T DYNACALL ReadMem_area0(u32 addr)
 		if (settings.System == DC_PLATFORM_NAOMI)
 			return (T)libExtDevice_ReadMem_A0_010(addr, sz);
 		else
-		{
-			INFO_LOG(MEMORY, "Read from BBA not implemented, addr=%x", addr);
-			return 0;
-		}
+#if defined(ENABLE_MODEM)
+         if (settings.network.EmulateBBA)
+            return (T)bba_ReadMem(addr, sz);
+         else
+            return (T)0;
+#else
+      return (T)0;
+#endif
 	}
 	return 0;
 }
@@ -504,14 +512,12 @@ void  DYNACALL WriteMem_area0(u32 addr,T data)
 	//map 0x0060 to 0x0060
 	else if ((base ==0x0060) /*&& (addr>= 0x00600000)*/ && (addr<= 0x006007FF)) // MODEM
 	{
-#ifdef HAVE_MODEM
-		if (settings.System == DC_PLATFORM_DREAMCAST)
-			ModemWriteMem_A0_006(addr, data, sz);
-		else
-#else
 		if (settings.System != DC_PLATFORM_DREAMCAST)
+         libExtDevice_WriteMem_A0_006(addr,data,sz);
+#ifdef ENABLE_MODEM
+      else if (!settings.network.EmulateBBA)
+			ModemWriteMem_A0_006(addr, data, sz);
 #endif
-			libExtDevice_WriteMem_A0_006(addr,data,sz);
 	}
 	//map 0x0060 to 0x006F
 	else if ((base >=0x0060) && (base <=0x006F) && (addr>= 0x00600800) && (addr<= 0x006FFFFF)) // G2 (Reserved)
@@ -538,8 +544,10 @@ void  DYNACALL WriteMem_area0(u32 addr,T data)
 	{
 		if (settings.System == DC_PLATFORM_NAOMI)
 			libExtDevice_WriteMem_A0_010(addr, data, sz);
-		else
-			INFO_LOG(COMMON, "Write to BBA not implemented, addr=%x, data=%x, size=%d", addr, data, sz);
+#if defined(ENABLE_MODEM)
+      else if (settings.network.EmulateBBA)
+         bba_WriteMem(addr, data, sz);
+#endif
 	}
    else
       EMUERROR4("Write to area0_32 not implemented [Unassigned], addr=%x,data=%x,size=%d",addr,data,sz);

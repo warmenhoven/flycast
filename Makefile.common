@@ -229,9 +229,13 @@ PICOTCP_INCFLAGS = \
 					-I$(DEPS_DIR)/picotcp/include \
 					-I$(DEPS_DIR)/picotcp/modules
 
+PICOTCP_CFLAGS = -DPICO_SUPPORT_UDP -DPICO_SUPPORT_DHCPD
+
 PICOTCP_SOURCES_C = \
 					$(DEPS_DIR)/picotcp/modules/pico_arp.c \
 					$(DEPS_DIR)/picotcp/modules/pico_dev_ppp.c \
+					$(DEPS_DIR)/picotcp/modules/pico_dhcp_common.c \
+					$(DEPS_DIR)/picotcp/modules/pico_dhcp_server.c \
 					$(DEPS_DIR)/picotcp/modules/pico_dns_client.c \
 					$(DEPS_DIR)/picotcp/modules/pico_dns_common.c \
 					$(DEPS_DIR)/picotcp/modules/pico_ethernet.c \
@@ -278,6 +282,7 @@ ifeq ($(SYSTEM_PICOTCP), 1)
 	LIBS += $(shell pkg-config --libs picotcp)
 else
 	INCFLAGS += $(PICOTCP_INCFLAGS)
+	CFLAGS    += $(PICOTCP_CFLAGS)
 	SOURCES_C += $(PICOTCP_SOURCES_C)
 endif
 
@@ -292,12 +297,32 @@ ifeq ($(NO_REND), 1)
 	SOURCES_CXX += $(CORE_DIR)/core/rend/norend/norend.cpp
 endif
 
-ifeq ($(HAVE_MODEM), 1)
+ifeq ($(ENABLE_MODEM), 1)
+	INCFLAGS    += -I$(CORE_DIR)/core/deps/miniupnpc
 	SOURCES_CXX += $(CORE_DIR)/core/hw/modem/dns.cpp \
-					$(CORE_DIR)/core/hw/modem/modem.cpp \
-					$(CORE_DIR)/core/hw/modem/picoppp.cpp
+						$(CORE_DIR)/core/hw/modem/modem.cpp \
+						$(CORE_DIR)/core/hw/bba/bba.cpp \
+						$(CORE_DIR)/core/hw/bba/rtl8139c.cpp \
+						$(CORE_DIR)/core/network/picoppp.cpp \
+						$(CORE_DIR)/core/network/miniupnp.cpp
 
-	CORE_DEFINES += -DHAVE_MODEM
+	SOURCES_C += \
+					 $(CORE_DIR)/core/deps/miniupnpc/addr_is_reserved.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/igd_desc_parse.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/upnpreplyparse.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/upnpcommands.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/upnperrors.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/connecthostport.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/portlistingparse.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/receivedata.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/upnpdev.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/minissdpc.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/miniwget.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/miniupnpc.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/minixml.c \
+					 $(CORE_DIR)/core/deps/miniupnpc/minisoap.c
+
+	CORE_DEFINES += -DENABLE_MODEM -DMINIUPNP_STATICLIB
 endif
 
 ifeq ($(HAVE_GL), 1)

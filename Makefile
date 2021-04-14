@@ -21,7 +21,7 @@ HAVE_OPENMP   := 1
 HAVE_CHD      := 1
 HAVE_CLANG    ?= 0
 HAVE_CDROM    := 0
-HAVE_MODEM    := 1
+ENABLE_MODEM  := 1
 
 TARGET_NAME   := flycast
 
@@ -425,7 +425,7 @@ else ifeq ($(platform), libnx)
    WITH_DYNAREC=arm64
    HAVE_GENERIC_JIT = 0
    STATIC_LINKING = 1
-   HAVE_MODEM = 1
+   ENABLE_MODEM = 1
    HAVE_LTCG = 0
    NO_NVMEM = 1
    # stubs
@@ -826,7 +826,7 @@ else
 	TARGET := $(TARGET_NAME)_libretro.$(EXT)
 	LDFLAGS += -shared -static-libgcc -static-libstdc++ -Wl,--version-script=link.T -lwinmm -lgdi32
 	GL_LIB := -lopengl32
-	LIBS := -lws2_32
+	LIBS := -lws2_32 -liphlpapi
 	PLATFORM_EXT := win32
 	SINGLE_PREC_FLAGS=1
 	CC ?= gcc
@@ -1020,7 +1020,7 @@ else
 	CXXFLAGS += -DTARGET_NO_OPENMP
 endif
 ifeq ($(platform), win)
-	LDFLAGS_END += -Wl,-Bstatic -lgomp -lwsock32 -lws2_32
+	LDFLAGS_END += -Wl,-Bstatic -lgomp -lwsock32 -lws2_32 -liphlpapi
 endif
 	NEED_CXX11=1
 	NEED_PTHREAD=1

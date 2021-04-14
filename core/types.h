@@ -426,12 +426,12 @@ void os_DebugBreak(void);
 #endif
 
 #ifndef NO_VERIFY
-#define verify(x) if((x)==false){ msgboxf("Verify Failed  : " #x "\n in %s -> %s : %d \n",MBX_ICONERROR,(__FUNCTION__),(__FILE__),__LINE__); dbgbreak;}
+#define verify(x) if((x)==false){ dbgbreak;}
 #else
-#define verify(x) if((x)==false){ msgboxf("Verify Failed  : " #x "\n in %s -> %s : %d \n",MBX_ICONERROR,(__FUNCTION__),(__FILE__),__LINE__); }
+#define verify(x) if((x)==false){ }
 #endif
 
-#define die(reason) { msgboxf("Fatal error : %s\n in %s -> %s : %d \n",MBX_ICONERROR,(reason),(__FUNCTION__),(__FILE__),__LINE__); dbgbreak;}
+#define die(reason) { dbgbreak;}
 
 
 //will be removed sometime soon
@@ -655,6 +655,7 @@ struct settings_t
 		bool ActAsServer;
 		std::string dns;
 		std::string server;
+      bool EmulateBBA;
 	} network;
 };
 
@@ -909,5 +910,6 @@ enum serialize_version_enum {
 	V10,
 	V11,
    V12,
-   VCUR_LIBRETRO = V12,
+   V13,
+   VCUR_LIBRETRO = V13,
 };
