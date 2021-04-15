@@ -425,7 +425,7 @@ else ifeq ($(platform), libnx)
    WITH_DYNAREC=arm64
    HAVE_GENERIC_JIT = 0
    STATIC_LINKING = 1
-   ENABLE_MODEM = 1
+   ENABLE_MODEM = 0
    HAVE_LTCG = 0
    NO_NVMEM = 1
    # stubs
