@@ -27,6 +27,10 @@
 #define _POSIX_SOURCE
 #endif
 
+#ifdef __LIBRETRO__
+#include <retro_timers.h>
+#endif
+
 extern "C" {
 #include <pico_stack.h>
 #include <pico_dev_ppp.h>
@@ -266,7 +270,11 @@ static int modem_write(pico_device *dev, const void *data, int len)
 			in_buffer_lock.unlock();
 			if (!pico_thread_running)
 				return 0;
+#ifdef __LIBRETRO__
+         retro_sleep(5);
+#else
 			usleep(5000);
+#endif
 			in_buffer_lock.lock();
 		}
 		in_buffer.push(*p++);
@@ -995,7 +1003,11 @@ static void *pico_thread_func(void *)
     	read_native_sockets();
     	pico_stack_tick();
     	check_dns_entries();
+#ifdef __LIBRETRO__
+      retro_sleep(5);
+#else
     	usleep(5000);
+#endif
     }
 
     for (auto it = tcp_listening_sockets.begin(); it != tcp_listening_sockets.end(); it++)
