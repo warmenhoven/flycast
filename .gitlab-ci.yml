@@ -104,7 +104,7 @@ android-x86_64:
     
 ################################### CONSOLES #################################
 # Nintendo Switch
-libretro-build-libnx-aarch64:
-  extends:
-    - .libretro-libnx-static-retroarch-master
-    - .core-defs
+#libretro-build-libnx-aarch64:
+#  extends:
+#    - .libretro-libnx-static-retroarch-master
+#    - .core-defs
