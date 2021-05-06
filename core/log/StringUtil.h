@@ -11,7 +11,7 @@ constexpr u32 CODEPAGE_WINDOWS_1252 = 1252;
 #include <locale.h>
 #endif
 
-#ifdef HAVE_LIBNX
+#if defined(HAVE_LIBNX) || defined(__HAIKU__)
 int vasprintf(char **s, const char *fmt, va_list ap)
 {
     va_list ap2;
