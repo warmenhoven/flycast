@@ -31,6 +31,7 @@
 #include <fcntl.h>
 #include <cerrno>
 #include <sys/select.h>
+#include <sys/ioctl.h>
 #else
 #include <ws2tcpip.h>
 #endif
@@ -108,3 +109,16 @@ static inline const char *inet_ntop(int af, const void* src, char* dst, int cnt)
     	return dst;
 }
 #endif
+
+static inline int available_bytes(sock_t fd)
+{
+	u32 count;
+#ifdef _WIN32
+	if (ioctlsocket(fd, FIONREAD, &count))
+#else
+	if (ioctl(fd, FIONREAD, &count))
+#endif
+		return 1;
+	else
+		return count;
+}

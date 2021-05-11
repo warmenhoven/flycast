@@ -808,6 +808,9 @@ void NaomiCartridge::WriteMem(u32 address, u32 data, u32 size)
 		#endif
 		return;
 
+	case NAOMI_STATUS_LEDS_addr & 255:
+		return;
+
 		//This should be valid
 	case NAOMI_BOARDID_READ_addr&255:
 		DEBUG_LOG(NAOMI, "naomi WriteMem: %X <= %X, %d", address, data, size);

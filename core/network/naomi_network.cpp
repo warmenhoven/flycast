@@ -578,8 +578,8 @@ bool NaomiNetwork::receive(u8 *data, u32 size)
 
 void NaomiNetwork::send(u8 *data, u32 size)
 {
-	if (!got_token)
-		return;
+//	if (!got_token)
+//		return;
 
 	sock_t sockfd;
 	if (isMaster())
@@ -721,4 +721,17 @@ bool NaomiNetworkSupported()
 			return true;
 
 	return false;
+}
+
+bool NaomiNetwork::canReceive()
+{
+	sock_t sockfd = INVALID_SOCKET;
+	if (isMaster())
+		sockfd = slaves.empty() ? INVALID_SOCKET : slaves.back().socket;
+	else
+		sockfd = client_sock;
+	if (!VALID(sockfd))
+		return false;
+
+	return available_bytes(sockfd) > 0;
 }

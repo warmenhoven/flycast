@@ -55,32 +55,66 @@ void NaomiM3Comm::connectNetwork()
 	}
 }
 
-void NaomiM3Comm::receiveNetwork()
+static FILE *f;
+
+bool NaomiM3Comm::receiveNetwork()
 {
-	const u32 slot_size = swap16(*(u16*)&m68k_ram[0x204]);
-	const u32 packet_size = slot_size * slot_count;
+	using the_clock = std::chrono::high_resolution_clock;
+	the_clock::time_point token_time = the_clock::now();
 
-	std::unique_ptr<u8[]> buf(new u8[packet_size]);
-
-	if (naomiNetwork.receive(buf.get(), packet_size))
+//	if (dataWritten)
 	{
-		packet_number += slot_count - 1;
-		*(u16*)&comm_ram[6] = swap16(packet_number);
-		std::unique_lock<std::mutex> lock(mem_mutex);
-		memcpy(&comm_ram[0x100 + slot_size], buf.get(), packet_size);
+		const u32 slot_size = swap16(*(u16*)&m68k_ram[0x204]);
+		const u32 packet_size = slot_size * slot_count;
+
+		std::unique_ptr<u8[]> buf(new u8[packet_size]);
+
+		do {
+			if (naomiNetwork.receive(buf.get(), packet_size))
+			{
+				if (naomiNetwork.canReceive())
+				{
+					WARN_LOG(NETWORK, "[%d] Can still receive after receive", slot_id);
+					//naomiNetwork.receive(buf.get(), packet_size);
+				}
+				packet_number += slot_count - 1;
+				*(u16*)&comm_ram[6] = swap16(packet_number);
+				std::unique_lock<std::mutex> lock(mem_mutex);
+				memcpy(&comm_ram[0x100 + slot_size], buf.get(), packet_size);
+	//			if (f == nullptr && slot_id == 0)
+	//				f = fopen("commdump.bin", "wb");
+				if (f != nullptr)
+					fwrite(buf.get(), 1, packet_size, f);
+				return true;
+			}
+		} while (dataWrittenOnce && the_clock::now() - token_time < std::chrono::microseconds(50000));
 	}
+	ERROR_LOG(NETWORK, "[%d] Failed to receive", slot_id);
+	return false;
 }
 
-void NaomiM3Comm::sendNetwork()
+bool NaomiM3Comm::sendNetwork()
 {
-	if (naomiNetwork.hasToken())
+	if (/* naomiNetwork.hasToken() && */ dataWritten)
 	{
 		const u32 packet_size = swap16(*(u16*)&m68k_ram[0x204]) * slot_count;
 		std::unique_lock<std::mutex> lock(mem_mutex);
 		naomiNetwork.send(&comm_ram[0x100], packet_size);
 		packet_number++;
 		*(u16*)&comm_ram[6] = swap16(packet_number);
+		dataWritten = false;
+		if (!dataWrittenOnce)
+		{
+			dataWrittenOnce = true;
+			// wrungp(4p) doesn't like this
+			// gundmx neither?
+			//std::unique_ptr<u8[]> buf(new u8[packet_size]);
+			//while (naomiNetwork.canReceive())
+			//	naomiNetwork.receive(buf.get(), packet_size);
+		}
+		return true;
 	}
+	return false;
 }
 
 u32 NaomiM3Comm::ReadMem(u32 address, u32 size)
@@ -128,6 +162,9 @@ void NaomiM3Comm::connectedState(bool success)
 	if (!success)
 		return;
 
+	// TODO ? game writes to m68k_ram[0x200]: master(0), slave(1), satellite(ffff)
+	// 208-20A: game id (42435630 for gundam)
+	// 20C-20E: ? (00010000 -> 1? for gundam) game version?
 	memset(&comm_ram[0xf000], 0, 16);
 	comm_ram[0xf000] = 1;
 	comm_ram[0xf001] = 1;
@@ -139,20 +176,20 @@ void NaomiM3Comm::connectedState(bool success)
 	memset(&comm_ram[0], 0, 32);
 	// 80000
 	comm_ram[0] = 0;
-	comm_ram[1] = slot_id == 0 ? 0 : 1;
+	comm_ram[1] = slot_id == 0 ? 0 : 1;	// TODO Satellites >= 0x8000/0x0080 ?
 	// 80002
-	comm_ram[2] = 0x01;
-	comm_ram[3] = 0x01;
+	comm_ram[2] = slot_count - 1;	// slave machines total
+	comm_ram[3] = slot_count - 1; 	// slave machines playable (total - satellites)
 	// 80004
 	if (slot_id == 0)
 	{
-		comm_ram[4] = 0;
-		comm_ram[5] = 0;
+		comm_ram[4] = 0; // machine index total
+		comm_ram[5] = 0; // machine index playable
 	}
 	else
 	{
-		comm_ram[4] = 1;
-		comm_ram[5] = 1;
+		comm_ram[4] = slot_id;
+		comm_ram[5] = slot_id;
 	}
 	// 80006: packet number
 	comm_ram[6] = 0;
@@ -161,17 +198,18 @@ void NaomiM3Comm::connectedState(bool success)
 	comm_ram[8] = slot_id == 0 ? 0x78 : 0x73;
 	comm_ram[9] = slot_id == 0 ? 0x30 : 0xa2;
 	// 8000A
-	*(u16 *)(comm_ram + 10) = 0x100 + slot_size;		// offset of recvd data
+	*(u16 *)(comm_ram + 10) = swap16(0x100 + slot_size);		// offset of recvd data
 	// 8000C
-	*(u16 *)(comm_ram + 12) = slot_size * slot_count;	// recvd data size
+	*(u16 *)(comm_ram + 12) = swap16(slot_size * slot_count);	// recvd data size
 	// 8000E
-	*(u16 *)(comm_ram + 14) = 0x100;					// offset of sent data
+	*(u16 *)(comm_ram + 14) = swap16(0x100);					// offset of sent data
 	// 80010
-	*(u16 *)(comm_ram + 16) = 0x80 + slot_size * slot_count;	// sent data size
+	*(u16 *)(comm_ram + 16) = swap16(0x80 + slot_size * slot_count);	// sent data size
 														// FIXME wrungp uses 100, others 80
 
 	comm_status0 = 0xff01;	// But 1 at connect time before f000 is read
-	comm_status1 = (slot_count << 8) | slot_id;
+	comm_status1 = (slot_count << 8) | slot_id;	// confirmed slot_count and not slot_count-1 (spawn)
+	// slot_id would be >= 0x8000 ?
 }
 
 void NaomiM3Comm::WriteMem(u32 address, u32 data, u32 size)
@@ -235,17 +273,33 @@ bool NaomiM3Comm::DmaStart(u32 addr, u32 data)
 	if (comm_ctrl & 0x4000)
 		return false;
 
-	DEBUG_LOG(NAOMI, "NaomiM3Comm: DMA addr %08X <-> %04x len %d %s", SB_GDSTAR, comm_offset, SB_GDLEN, SB_GDDIR == 0 ? "OUT" : "IN");
-	std::unique_lock<std::mutex> lock(mem_mutex);
+	DEBUG_LOG(NAOMI, "NaomiM3Comm[%d]: DMA addr %08X <-> %04x len %d %s", slot_id, SB_GDSTAR,
+			comm_offset, SB_GDLEN, SB_GDDIR == 0 ? "OUT" : "IN");
+//	std::unique_lock<std::mutex> lock(mem_mutex);
 	if (SB_GDDIR == 0)
 	{
 		// Network write
 		for (u32 i = 0; i < SB_GDLEN; i++)
 			comm_ram[comm_offset++] = ReadMem8_nommu(SB_GDSTAR + i);
+		dataWritten = true;
+		dataReceived = false;
+		//if (!receiveFailed || !dataWrittenOnce) // otrigger likes this(?) but not gundmx
+			sendNetwork();
 	}
 	else
 	{
 		// Network read
+		// ffs dataReceived test not working for gundmx, need GDLEN != 32 instead
+		// transition from status0/1 checking to online:
+		// nodes don't send but do double reads, some time out (0, 2) then send
+		if ((SB_GDLEN != 32) != (!dataReceived))
+			ERROR_LOG(NETWORK, "[%d] GDLEN %d dataReceived %d", slot_id, SB_GDLEN, dataReceived);
+		if (SB_GDLEN != 32 /* && !dataReceived */)
+		{
+			receiveFailed = !receiveNetwork();
+			dataReceived = true;
+		}
+		/*
 		if (SB_GDLEN == 32 && (comm_ctrl & 1) == 0)
 		{
 			char buf[32 * 5 + 1];
@@ -259,6 +313,9 @@ bool NaomiM3Comm::DmaStart(u32 addr, u32 data)
 		}
 		for (u32 i = 0; i < SB_GDLEN; i++)
 			WriteMem8_nommu(SB_GDSTAR + i, comm_ram[comm_offset++]);
+		*/
+		WriteMemBlock_nommu_ptr(SB_GDSTAR, (u32 *)&comm_ram[comm_offset], SB_GDLEN);
+		comm_offset += SB_GDLEN;
 	}
 	return true;
 }
@@ -276,11 +333,16 @@ void NaomiM3Comm::startThread()
 		while (!network_stopping)
 		{
 			naomiNetwork.pipeSlaves();
-			receiveNetwork();
-
+			std::this_thread::sleep_for(std::chrono::milliseconds(1));
+//			if (sendNetwork())
+//			{
+//				while (!receiveNetwork() && !network_stopping)
+//					;
+//			}
+/*
 			if (slot_id == 0 && naomiNetwork.hasToken())
 			{
-				const auto target_duration = std::chrono::milliseconds(10);
+				const auto target_duration = std::chrono::milliseconds(1);
 				auto duration = the_clock::now() - token_time;
 				if (duration < target_duration)
 				{
@@ -289,9 +351,8 @@ void NaomiM3Comm::startThread()
 				}
 				token_time = the_clock::now();
 			}
-
-			sendNetwork();
-
+*/
+			//sendNetwork();
 		}
 		DEBUG_LOG(NAOMI, "Network thread exiting");
 	}));

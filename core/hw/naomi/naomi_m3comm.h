@@ -37,8 +37,8 @@ public:
 private:
 	void initNetwork();
 	void connectNetwork();
-	void receiveNetwork();
-	void sendNetwork();
+	bool receiveNetwork();
+	bool sendNetwork();
 	void connectedState(bool success);
 	void startThread();
 
@@ -55,4 +55,8 @@ private:
 	std::atomic<bool> network_stopping{ false };
 	std::unique_ptr<std::thread> thread;
 	std::mutex mem_mutex;
+	bool dataWritten = false;
+	bool dataReceived = false;
+	bool dataWrittenOnce = false;
+	bool receiveFailed = false;
 };

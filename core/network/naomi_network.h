@@ -44,6 +44,7 @@ public:
 	bool syncNetwork();
 	void pipeSlaves();
 	bool receive(u8 *data, u32 size);
+	bool canReceive();
 	void send(u8 *data, u32 size);
 	void shutdown();	// thread-safe
 	void terminate();	// thread-safe
