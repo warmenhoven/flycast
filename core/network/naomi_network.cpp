@@ -63,8 +63,10 @@ bool NaomiNetwork::init()
 #endif
 	if (settings.network.ActAsServer)
    {
-      miniupnp.Init();
+#ifdef ENABLE_MODEM
+        miniupnp.Init();
 		miniupnp.AddPortMapping(SERVER_PORT, true);
+#endif // ENABLE_MODEM
 		return createBeaconSocket() && createServerSocket();
    }
 	else
@@ -482,8 +484,10 @@ void NaomiNetwork::shutdown()
 void NaomiNetwork::terminate()
 {
 	shutdown();
+#ifdef ENABLE_MODEM
    if (settings.network.ActAsServer)
 		miniupnp.Term();
+#endif // ENABLE_MODEM
 	if (beacon_sock != INVALID_SOCKET)
 	{
 		closesocket(beacon_sock);
