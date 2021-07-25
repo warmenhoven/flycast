@@ -110,11 +110,16 @@ jobs:
       - name: Dump symbols
         shell: msys2 {0}
         run: |
-          dump_syms build/artifact/flycast.exe > flycast.exe.sym 2>/dev/null
+          dump_syms build/artifact/flycast.exe > flycast.exe.sym
+          echo "symbols dumped"
           BUILD_ID=`head -1 flycast.exe.sym | awk '{ print $4 }'`
+          echo "Build id $BUILD_ID"
           mkdir -p symbols/flycast.exe/$BUILD_ID
+          echo "mkdir symbols/flycast.exe/$BUILD_ID"
           mv flycast.exe.sym symbols/flycast.exe/$BUILD_ID
+          echo "mv flycast.exe.sym symbols/flycast.exe/$BUILD_ID"
           strip build/artifact/flycast.exe
+          echo "build/artifact/flycast.exe stripped"
         if: matrix.config.name == 'x86_64-w64-mingw32'
 
       - uses: actions/upload-artifact@v2
