@@ -19,25 +19,25 @@
 include:
   ################################## DESKTOPS ################################
   # Windows 64-bit
-  - project: 'libretro-infrastructure/ci-templates'
-    file: '/windows-x64-mingw.yml'
+  #- project: 'libretro-infrastructure/ci-templates'
+  #  file: '/windows-x64-mingw.yml'
 
   # Windows 32-bit
-  - project: 'libretro-infrastructure/ci-templates'
-    file: '/windows-i686-mingw.yml'
+  #- project: 'libretro-infrastructure/ci-templates'
+  #  file: '/windows-i686-mingw.yml'
 
   # Linux 64-bit
-  - project: 'libretro-infrastructure/ci-templates'
-    file: '/linux-x64.yml'
+  #- project: 'libretro-infrastructure/ci-templates'
+  #  file: '/linux-x64.yml'
 
   # MacOS 64-bit
-  - project: 'libretro-infrastructure/ci-templates'
-    file: '/osx-x64.yml'
+  #- project: 'libretro-infrastructure/ci-templates'
+  #  file: '/osx-x64.yml'
 
   ################################## CELLULAR ################################
   # Android
-  - project: 'libretro-infrastructure/ci-templates'
-    file: '/android-jni.yml'
+  #- project: 'libretro-infrastructure/ci-templates'
+  #  file: '/android-jni.yml'
     
   ################################## CONSOLES ################################  
   # Nintendo Switch
@@ -56,51 +56,51 @@ stages:
 #
 ################################### DESKTOPS #################################
 # Windows 64-bit
-libretro-build-windows-x64:
-  extends:
-    - .libretro-windows-x64-mingw-make-default
-    - .core-defs-oit
-  variables:
-    platform: win
+#libretro-build-windows-x64:
+#  extends:
+#    - .libretro-windows-x64-mingw-make-default
+#    - .core-defs-oit
+#  variables:
+#    platform: win
     
 # Windows 32-bit
-libretro-build-windows-i686:
-  extends:
-    - .libretro-windows-i686-mingw-make-default
-    - .core-defs-oit
-  variables:
-    platform: win
+#libretro-build-windows-i686:
+#  extends:
+#    - .libretro-windows-i686-mingw-make-default
+#    - .core-defs-oit
+#  variables:
+#    platform: win
     
 # Linux 64-bit
-libretro-build-linux-x64:
-  extends:
-    - .libretro-linux-x64-make-default
-    - .core-defs-oit
+#libretro-build-linux-x64:
+#  extends:
+#    - .libretro-linux-x64-make-default
+#    - .core-defs-oit
 
 # MacOS 64-bit
-libretro-build-osx-x64:
-  extends:
-    - .libretro-osx-x64-make-default
-    - .core-defs
+#libretro-build-osx-x64:
+#  extends:
+#    - .libretro-osx-x64-make-default
+#    - .core-defs
 
 ################################### CELLULAR #################################
 # Android ARMv7a
-android-armeabi-v7a:
-  extends:
-    - .libretro-android-jni-armeabi-v7a
-    - .core-defs
+#android-armeabi-v7a:
+#  extends:
+#    - .libretro-android-jni-armeabi-v7a
+#    - .core-defs
     
 # Android ARMv8a
-android-arm64-v8a:
-  extends:
-    - .libretro-android-jni-arm64-v8a
-    - .core-defs
+#android-arm64-v8a:
+#  extends:
+#    - .libretro-android-jni-arm64-v8a
+#    - .core-defs
 
 # Android 64-bit x86
-android-x86_64:
-  extends:
-    - .libretro-android-jni-x86_64
-    - .core-defs
+#android-x86_64:
+#  extends:
+#    - .libretro-android-jni-x86_64
+#    - .core-defs
     
 ################################### CONSOLES #################################
 # Nintendo Switch
