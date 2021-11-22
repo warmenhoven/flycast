@@ -174,13 +174,16 @@ else ifneq (,$(findstring rpi,$(platform)))
 	
 	ifneq (,$(findstring rpi4,$(platform)))
 		FORCE_GLES = 1
+		# The Pi4 has mature Vulkan support when using up-to-date MESA.
+		HAVE_VULKAN = 1
 		ifneq (,$(findstring rpi4_64,$(platform)))
 			# 64-bit userspace
 			ARM_FLOAT_ABI_HARD = 0
 			CPUFLAGS += -DTARGET_LINUX_ARMv8 -frename-registers
 			CFLAGS += -march=armv8-a+crc -mcpu=cortex-a72 -mtune=cortex-a72 $(CPUFLAGS)
 			CXXFLAGS += -march=armv8-a+crc -mcpu=cortex-a72 -mtune=cortex-a72 $(CPUFLAGS)
-			ASFLAGS += $(CFLAGS) -c -frename-registers -fno-strict-aliasing -ffast-math -ftree-vectorize
+			# Look at GNU assembler man pages for actual aarch64 parameters, don't make them up.
+			ASFLAGS += -march=armv8-a+crc -mcpu=cortex-a72 -c
 			WITH_DYNAREC=arm64
 		else
 			# rpi4 flags are taken from rockpro64
