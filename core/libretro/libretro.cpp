@@ -283,9 +283,11 @@ static void input_set_deadzone_trigger( int percent )
 
 void retro_set_environment(retro_environment_t cb)
 {
+	static bool categoriesSupported;
+   
    environ_cb = cb;
 
-   libretro_set_core_options(environ_cb);
+   libretro_set_core_options(environ_cb, &categoriesSupported);
 
    static const struct retro_controller_description ports_default[] =
    {
