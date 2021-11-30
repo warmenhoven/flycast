@@ -82,7 +82,7 @@ struct retro_core_option_v2_category option_cats_tr[] = {
 struct retro_core_option_v2_definition option_defs_tr[] = {
 #if ((FEAT_SHREC == DYNAREC_JIT && HOST_CPU == CPU_X86) || (HOST_CPU == CPU_ARM) || (HOST_CPU == CPU_ARM64) || (HOST_CPU == CPU_X64)) && defined(TARGET_NO_JIT)
    {
-      "reicast_cpu_mode",
+      CORE_OPTION_NAME "_cpu_mode",
       "CPU Modu (Yeniden Başlatma Gerektirir)",
       NULL,
       "",
@@ -101,7 +101,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
    },
 #endif
    {
-      "reicast_boot_to_bios",
+      CORE_OPTION_NAME "_boot_to_bios",
       "BIOS'a önyükleme (Yeniden Başlatma Gerektirir)",
       NULL,
       "Doğrudan Dreamcast BIOS menüsüne önyükleme yapın.",
@@ -113,7 +113,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_system",
+      CORE_OPTION_NAME "_system",
       "Sistem Tipi (Yeniden Başlatma Gerektirir)",
       NULL,
       "",
@@ -129,7 +129,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_hle_bios",
+      CORE_OPTION_NAME "_hle_bios",
       "HLE BIOS",
       NULL,
       "Üst düzey öykünmüş BIOS(HLE) kullanımını zorla.",
@@ -142,7 +142,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
    },
 #ifdef HAVE_OIT
    {
-      "reicast_oit_abuffer_size",
+      CORE_OPTION_NAME "_oit_abuffer_size",
       "Birikim Piksel Arabellek Boyutu (Yeniden Başlatma Gerektirir)",
       NULL,
       "",
@@ -155,7 +155,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
    },
 #endif
    {
-      "reicast_internal_resolution",
+      CORE_OPTION_NAME "_internal_resolution",
       "Dahili Çözünürlük (Yeniden Başlat Gerektirir)",
       NULL,
       "Render çözünürlüğünü değiştirin. Yeniden başlatma gerektirir.",
@@ -167,7 +167,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_screen_rotation",
+      CORE_OPTION_NAME "_screen_rotation",
       "Ekran Yönü",
       NULL,
       "",
@@ -181,7 +181,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_alpha_sorting",
+      CORE_OPTION_NAME "_alpha_sorting",
       "Alfa Sıralama",
       NULL,
       "",
@@ -198,7 +198,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_gdrom_fast_loading",
+      CORE_OPTION_NAME "_gdrom_fast_loading",
       "GDROM Hızlı Yükleme (kusurlu)",
       NULL,
       "GD-ROM yüklemesini hızlandırır.",
@@ -210,7 +210,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_mipmapping",
+      CORE_OPTION_NAME "_mipmapping",
       "Mipmapping",
       NULL,
       "",
@@ -222,7 +222,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_volume_modifier_enable",
+      CORE_OPTION_NAME "_volume_modifier_enable",
       "Hacim Değiştirici",
       NULL,
       "Nesne gölgeleri çizmek için genellikle oyunlar tarafından kullanılan bir Dreamcast GPU özelliği. Bu normalde etkinleştirilmelidir - performansın etkisi ihmal edilebilir düzeyde genellikle minimum düzeydedir.",
@@ -234,7 +234,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_widescreen_hack",
+      CORE_OPTION_NAME "_widescreen_hack",
       "Geniş ekran kesmesi (Yeniden Başlatma Gerektirir)",
       NULL,
       "",
@@ -246,7 +246,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_cable_type",
+      CORE_OPTION_NAME "_cable_type",
       "Kablo Tipi",
       NULL,
       "",
@@ -261,7 +261,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_broadcast",
+      CORE_OPTION_NAME "_broadcast",
       "Yayın",
       NULL,
       "",
@@ -278,7 +278,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_framerate",
+      CORE_OPTION_NAME "_framerate",
       "Kare Hızı",
       NULL,
       "Emülatörün ön uçla nasıl etkileşimde bulunduğunu etkiler. 'Tam Hız' - emülatör, bir kare oluşturulduğunda, kontrolü RetroArch'a geri döndürür. 'Normal' - emülatör, V-blank kesmesi her üretildiğinde kontrolü RetroArch'a döndürür. Çoğu durumda 'Tam Hız' kullanılmalıdır. 'Normal' bazı sistemlerde kare ilerleme hızını iyileştirebilir, ancak ekran statik olduğunda (örneğin, yükleme/duraklatma ekranları) yanıt vermeyen girişe neden olabilir.",
@@ -292,7 +292,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_region",
+      CORE_OPTION_NAME "_region",
       "Bölge",
       NULL,
       "",
@@ -308,7 +308,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_language",
+      CORE_OPTION_NAME "_language",
       "Dil",
       NULL,
       "",
@@ -327,7 +327,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_div_matching",
+      CORE_OPTION_NAME "_div_matching",
       "DIV Eşleştirme (performans, daha az doğru)",
       NULL,
       "",
@@ -342,7 +342,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_force_wince",
+      CORE_OPTION_NAME "_force_wince",
       "Force Windows CE Mode",
       NULL,
       "Enable full MMU emulation and other settings for Windows CE games",
@@ -356,7 +356,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_analog_stick_deadzone",
+      CORE_OPTION_NAME "_analog_stick_deadzone",
       "Analog Çubuğu Ölü Bölge",
       NULL,
       "",
@@ -368,7 +368,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_trigger_deadzone",
+      CORE_OPTION_NAME "_trigger_deadzone",
       "Tetik Ölü Bölge",
       NULL,
       "",
@@ -380,7 +380,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_digital_triggers",
+      CORE_OPTION_NAME "_digital_triggers",
       "Dijital Tetikleyiciler",
       NULL,
       "",
@@ -392,7 +392,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_enable_dsp",
+      CORE_OPTION_NAME "_enable_dsp",
       "DSP'yi Etkinleştir",
       NULL,
       "Dreamcast'in ses DSP'sinin (dijital sinyal işlemcisi) öykünmesini etkinleştirin. Üretilen sesin doğruluğunu arttırır, ancak performans gereksinimlerini artırır.",
@@ -405,7 +405,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
    },
 #ifdef HAVE_TEXUPSCALE
    {
-      "reicast_texupscale",
+      CORE_OPTION_NAME "_texupscale",
       "Doku Büyütme (xBRZ)",
       NULL,
       "",
@@ -421,7 +421,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_texupscale_max_filtered_texture_size",
+      CORE_OPTION_NAME "_texupscale_max_filtered_texture_size",
       "Doku Yükseltme Maks. Filtre boyutu",
       NULL,
       "",
@@ -434,7 +434,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
    },
 #endif
    {
-      "reicast_enable_rttb",
+      CORE_OPTION_NAME "_enable_rttb",
       "RTT'yi etkinleştirme (Dokuya Render'i) ara belleği",
       NULL,
       "",
@@ -446,7 +446,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_render_to_texture_upscaling",
+      CORE_OPTION_NAME "_render_to_texture_upscaling",
       "Doku Yükseltme İşlemine Render",
       NULL,
       "",
@@ -459,7 +459,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
    },
 #if !defined(TARGET_NO_THREADS)
    {
-      "reicast_threaded_rendering",
+      CORE_OPTION_NAME "_threaded_rendering",
       "İşlem Parçacığı Renderlama (Yeniden Başlatma Gerektirir)",
       NULL,
       "",
@@ -471,7 +471,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_synchronous_rendering",
+      CORE_OPTION_NAME "_synchronous_rendering",
       "Senkronize İşleme",
       NULL,
       "",
@@ -484,7 +484,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
    },
 #endif
    {
-      "reicast_frame_skipping",
+      CORE_OPTION_NAME "_frame_skipping",
       "Kare Atlama",
       NULL,
       "",
@@ -496,7 +496,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_enable_purupuru",
+      CORE_OPTION_NAME "_enable_purupuru",
       "Purupuru Paketi / Titreşim Paketi",
       NULL,
       "Denetleyici geri bildirimini etkinleştirir.",
@@ -508,7 +508,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_allow_service_buttons",
+      CORE_OPTION_NAME "_allow_service_buttons",
       "Allow NAOMI Service Buttons",
       NULL,
       "Kabin ayarlarına girmek için NAOMI'nin SERVİS düğmesini etkinleştirir.",
@@ -520,7 +520,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_enable_naomi_15khz_dipswitch",
+      CORE_OPTION_NAME "_enable_naomi_15khz_dipswitch",
       "NAOMI 15KHz Dipswitch'i etkinleştir",
       NULL,
       "Bu, 240p, 480i'de gösterimi zorlayabilir veya oyuna bağlı olarak hiçbir etkisi olmayabilir.",
@@ -532,7 +532,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_custom_textures",
+      CORE_OPTION_NAME "_custom_textures",
       "Özel Dokular Yükle",
       NULL,
       "",
@@ -544,7 +544,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_dump_textures",
+      CORE_OPTION_NAME "_dump_textures",
       "Dokuları Göm",
       NULL,
       "",
@@ -556,7 +556,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_per_content_vmus",
+      CORE_OPTION_NAME "_per_content_vmus",
       "Oyun Başına VMU'lar",
       NULL,
       "Devre dışı bırakıldığında, tüm oyunlar RetroArch'ın sistem dizininde bulunan 4 VMU kaydetme dosyasını (A1, B1, C1, D1) paylaşır. 'VMU A1' ayarı, RetroArch'ın başlattığı her oyun için kaydetme dizininde benzersiz bir VMU 'A1' dosyası oluşturur. 'Tüm VMU'lar' ayarı, başlatılan her oyun için 4 benzersiz VMU dosyası (A1, B1, C1, D1) oluşturur.",
@@ -571,7 +571,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu1_screen_display",
+      CORE_OPTION_NAME "_vmu1_screen_display",
       "VMU Screen 1 Görsel",
       NULL,
       "",
@@ -583,7 +583,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu1_screen_position",
+      CORE_OPTION_NAME "_vmu1_screen_position",
       "VMU Screen 1 Pozisyon",
       NULL,
       "",
@@ -599,7 +599,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu1_screen_size_mult",
+      CORE_OPTION_NAME "_vmu1_screen_size_mult",
       "VMU Screen 1 Boyut",
       NULL,
       "",
@@ -611,7 +611,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu1_pixel_on_color",
+      CORE_OPTION_NAME "_vmu1_pixel_on_color",
       "VMU Screen 1 Piksel Varken Renk",
       NULL,
       "",
@@ -652,7 +652,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu1_pixel_off_color",
+      CORE_OPTION_NAME "_vmu1_pixel_off_color",
       "VMU Screen 1 Piksel Yokken Renk",
       NULL,
       "",
@@ -693,7 +693,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu1_screen_opacity",
+      CORE_OPTION_NAME "_vmu1_screen_opacity",
       "VMU Screen 1 Opaklık",
       NULL,
       "",
@@ -705,7 +705,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu2_screen_display",
+      CORE_OPTION_NAME "_vmu2_screen_display",
       "VMU Screen 2 Görsel",
       NULL,
       "",
@@ -717,7 +717,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu2_screen_position",
+      CORE_OPTION_NAME "_vmu2_screen_position",
       "VMU Screen 2 Pozisyon",
       NULL,
       "",
@@ -733,7 +733,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu2_screen_size_mult",
+      CORE_OPTION_NAME "_vmu2_screen_size_mult",
       "VMU Screen 2 Boyut",
       NULL,
       "",
@@ -745,7 +745,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu2_pixel_on_color",
+      CORE_OPTION_NAME "_vmu2_pixel_on_color",
       "VMU Screen 2 Piksel Varken Renk",
       NULL,
       "",
@@ -786,7 +786,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu2_pixel_off_color",
+      CORE_OPTION_NAME "_vmu2_pixel_off_color",
       "VMU Screen 2 Piksel Yokken Renk",
       NULL,
       "",
@@ -827,7 +827,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu2_screen_opacity",
+      CORE_OPTION_NAME "_vmu2_screen_opacity",
       "VMU Screen 2 Opaklık",
       NULL,
       "",
@@ -839,7 +839,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu3_screen_display",
+      CORE_OPTION_NAME "_vmu3_screen_display",
       "VMU Screen 3 Görsel",
       NULL,
       "",
@@ -851,7 +851,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu3_screen_position",
+      CORE_OPTION_NAME "_vmu3_screen_position",
       "VMU Screen 3 Pozisyon",
       NULL,
       "",
@@ -867,7 +867,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu3_screen_size_mult",
+      CORE_OPTION_NAME "_vmu3_screen_size_mult",
       "VMU Screen 3 Boyut",
       NULL,
       "",
@@ -879,7 +879,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu3_pixel_on_color",
+      CORE_OPTION_NAME "_vmu3_pixel_on_color",
       "VMU Screen 3 Piksel Varken Renk",
       NULL,
       "",
@@ -920,7 +920,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu3_pixel_off_color",
+      CORE_OPTION_NAME "_vmu3_pixel_off_color",
       "VMU Screen 3 Piksel Yokken Renk",
       NULL,
       "",
@@ -961,7 +961,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu3_screen_opacity",
+      CORE_OPTION_NAME "_vmu3_screen_opacity",
       "VMU Screen 3 Opaklık",
       NULL,
       "",
@@ -973,7 +973,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu4_screen_display",
+      CORE_OPTION_NAME "_vmu4_screen_display",
       "VMU Screen 4 Görsel",
       NULL,
       "",
@@ -985,7 +985,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu4_screen_position",
+      CORE_OPTION_NAME "_vmu4_screen_position",
       "VMU Screen 4 Pozisyon",
       NULL,
       "",
@@ -1001,7 +1001,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu4_screen_size_mult",
+      CORE_OPTION_NAME "_vmu4_screen_size_mult",
       "VMU Screen 4 Boyut",
       NULL,
       "",
@@ -1013,7 +1013,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu4_pixel_on_color",
+      CORE_OPTION_NAME "_vmu4_pixel_on_color",
       "VMU Screen 4 Piksel Varken Renk",
       NULL,
       "",
@@ -1054,7 +1054,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu4_pixel_off_color",
+      CORE_OPTION_NAME "_vmu4_pixel_off_color",
       "VMU Screen 4 Piksel Yokken Renk",
       NULL,
       "",
@@ -1095,7 +1095,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_vmu4_screen_opacity",
+      CORE_OPTION_NAME "_vmu4_screen_opacity",
       "VMU Screen 4 Opaklık",
       NULL,
       "",
@@ -1107,7 +1107,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_lightgun1_crosshair",
+      CORE_OPTION_NAME "_lightgun1_crosshair",
       "Gun Crosshair 1 Görsel",
       NULL,
       "",
@@ -1124,7 +1124,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_lightgun2_crosshair",
+      CORE_OPTION_NAME "_lightgun2_crosshair",
       "Gun Crosshair 2 Görsel",
       NULL,
       "",
@@ -1141,7 +1141,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_lightgun3_crosshair",
+      CORE_OPTION_NAME "_lightgun3_crosshair",
       "Gun Crosshair 3 Görsel",
       NULL,
       "",
@@ -1158,7 +1158,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
    },
    {
-      "reicast_lightgun4_crosshair",
+      CORE_OPTION_NAME "_lightgun4_crosshair",
       "Gun Crosshair 4 Görsel",
       NULL,
       "",

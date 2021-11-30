@@ -59,7 +59,7 @@ struct retro_core_option_v2_category option_cats_us[] = {
    {
       "input",
       "Input",
-      "Configure controller & lightgun settings."
+      "Configure controller & light gun settings."
    },
    {
       "vmu",
@@ -77,7 +77,7 @@ struct retro_core_option_v2_category option_cats_us[] = {
 struct retro_core_option_v2_definition option_defs_us[] = {
 #if ((FEAT_SHREC == DYNAREC_JIT && HOST_CPU == CPU_X86) || (HOST_CPU == CPU_ARM) || (HOST_CPU == CPU_ARM64) || (HOST_CPU == CPU_X64)) && defined(TARGET_NO_JIT)
    {
-      "reicast_cpu_mode",
+      CORE_OPTION_NAME "_cpu_mode",
       "CPU Mode (Restart Required)",
       NULL,
       "",
@@ -100,7 +100,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
    },
 #endif
    {
-      "reicast_boot_to_bios",
+      CORE_OPTION_NAME "_boot_to_bios",
       "Boot to BIOS (Restart Required)",
       NULL,
       "Boot directly into the Dreamcast BIOS menu.",
@@ -114,7 +114,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_system",
+      CORE_OPTION_NAME "_system",
       "System Type (Restart Required)",
       NULL,
       "",
@@ -130,7 +130,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "auto",
    },
    {
-      "reicast_hle_bios",
+      CORE_OPTION_NAME "_hle_bios",
       "HLE BIOS",
       NULL,
       "Force use of high-level emulation BIOS.",
@@ -145,7 +145,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
    },
 #if defined(HAVE_OIT) || defined(HAVE_VULKAN)
    {
-      "reicast_oit_abuffer_size",
+      CORE_OPTION_NAME "_oit_abuffer_size",
       "Accumulation Pixel Buffer Size (Restart Required)",
       NULL,
       "",
@@ -162,7 +162,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
    },
 #endif
    {
-      "reicast_internal_resolution",
+      CORE_OPTION_NAME "_internal_resolution",
       "Internal Resolution (Restart Required)",
       NULL,
       "Modify rendering resolution.",
@@ -205,7 +205,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
 #endif
    },
    {
-      "reicast_screen_rotation",
+      CORE_OPTION_NAME "_screen_rotation",
       "Screen Orientation",
       NULL,
       "",
@@ -219,7 +219,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "horizontal",
    },
    {
-      "reicast_alpha_sorting",
+      CORE_OPTION_NAME "_alpha_sorting",
       "Alpha Sorting",
       NULL,
       "",
@@ -240,7 +240,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
 #endif
    },
    {
-      "reicast_gdrom_fast_loading",
+      CORE_OPTION_NAME "_gdrom_fast_loading",
       "GD-ROM Fast Loading (inaccurate)",
       NULL,
       "Speeds up GD-ROM loading.",
@@ -258,7 +258,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
 #endif
    },
    {
-      "reicast_mipmapping",
+      CORE_OPTION_NAME "_mipmapping",
       "Mipmapping",
       NULL,
       "",
@@ -272,7 +272,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "enabled",
    },
    {
-      "reicast_fog",
+      CORE_OPTION_NAME "_fog",
       "Fog Effects",
       NULL,
       "",
@@ -286,7 +286,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "enabled",
    },
    {
-      "reicast_volume_modifier_enable",
+      CORE_OPTION_NAME "_volume_modifier_enable",
       "Volume Modifier",
       NULL,
       "A Dreamcast GPU feature that is typically used by games to draw object shadows. This should normally be enabled - the performance impact is usually minimal to negligible.",
@@ -300,7 +300,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "enabled",
    },
    {
-      "reicast_widescreen_hack",
+      CORE_OPTION_NAME "_widescreen_hack",
       "Widescreen Hack (Restart Required)",
       NULL,
       "",
@@ -314,7 +314,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_widescreen_cheats",
+      CORE_OPTION_NAME "_widescreen_cheats",
       "Widescreen Cheats (Restart Required)",
       NULL,
       "Activates cheats that allow certain games to display in widescreen format.",
@@ -328,7 +328,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_cable_type",
+      CORE_OPTION_NAME "_cable_type",
       "Cable Type",
       NULL,
       "",
@@ -347,7 +347,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
 #endif
    },
    {
-      "reicast_broadcast",
+      CORE_OPTION_NAME "_broadcast",
       "Broadcast",
       NULL,
       "",
@@ -364,10 +364,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "Default",
    },
    {
-      "reicast_framerate",
+      CORE_OPTION_NAME "_framerate",
       "Framerate",
       NULL,
-      "Affects how emulator interacts with frontend. 'Full Speed' - emulator returns control to RetroArch each time a frame has been rendered. 'Normal' - emulator returns control to RetroArch each time a V-blank interrupt is generated. 'Full Speed' should be used in most cases. 'Normal' may improve frame pacing on some systems, but can cause unresponsive input when screen is static (e.g. loading/pause screens). Note: This setting only applies when 'Threaded Rendering' is disabled.",
+      "Affects how emulator interacts with frontend. 'Full Speed' - emulator returns control to RetroArch each time a frame has been rendered. 'Normal' - emulator returns control to RetroArch each time a V-blank interrupt is generated. 'Full Speed' should be used in most cases. 'Normal' may improve frame pacing on some systems, but can cause unresponsive input when the screen is static (e.g. loading/pause screens). Note: This setting only applies when 'Threaded Rendering' is disabled.",
       NULL,
       "video",
       {
@@ -378,7 +378,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "fullspeed",
    },
    {
-      "reicast_region",
+      CORE_OPTION_NAME "_region",
       "Region",
       NULL,
       "",
@@ -394,7 +394,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "Default",
    },
    {
-      "reicast_language",
+      CORE_OPTION_NAME "_language",
       "Language",
       NULL,
       "",
@@ -413,7 +413,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "Default",
    },
    {
-      "reicast_div_matching",
+      CORE_OPTION_NAME "_div_matching",
       "DIV Matching",
       NULL,
       "Optimize integer division",
@@ -427,7 +427,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "auto",
    },
    {
-      "reicast_force_wince",
+      CORE_OPTION_NAME "_force_wince",
       "Force Windows CE Mode",
       NULL,
       "Enable full MMU emulation and other settings for Windows CE games",
@@ -441,7 +441,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_analog_stick_deadzone",
+      CORE_OPTION_NAME "_analog_stick_deadzone",
       "Analog Stick Deadzone",
       NULL,
       "",
@@ -460,7 +460,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "15%",
    },
    {
-      "reicast_trigger_deadzone",
+      CORE_OPTION_NAME "_trigger_deadzone",
       "Trigger Deadzone",
       NULL,
       "",
@@ -479,7 +479,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "0%",
    },
    {
-      "reicast_digital_triggers",
+      CORE_OPTION_NAME "_digital_triggers",
       "Digital Triggers",
       NULL,
       "",
@@ -493,7 +493,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_enable_dsp",
+      CORE_OPTION_NAME "_enable_dsp",
       "Enable DSP",
       NULL,
       "Enable emulation of the Dreamcast's audio DSP (digital signal processor). Improves the accuracy of generated sound, but increases performance requirements.",
@@ -511,7 +511,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
 #endif
    },
    {
-      "reicast_anisotropic_filtering",
+      CORE_OPTION_NAME "_anisotropic_filtering",
       "Anisotropic Filtering",
       NULL,
       "Enhance the quality of textures on surfaces that are at oblique viewing angles with respect to the camera.",
@@ -528,7 +528,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "4",
    },
    {
-      "reicast_pvr2_filtering",
+      CORE_OPTION_NAME "_pvr2_filtering",
       "PowerVR2 Post-processing Filter",
       NULL,
       "Post-process the rendered image to simulate effects specific to the PowerVR2 GPU and analog video signals.",
@@ -543,10 +543,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
    },
 #ifdef HAVE_TEXUPSCALE
    {
-      "reicast_texupscale",
+      CORE_OPTION_NAME "_texupscale",
       "Texture Upscaling (xBRZ)",
       NULL,
-      "Enhance hand-drawn 2D pixel art graphics. Should only be used with 2D pixelized games.",
+      "Enhance hand-drawn 2D pixel art graphics. Should only be used with 2D pixelated games.",
       NULL,
       "video",
       {
@@ -559,7 +559,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_texupscale_max_filtered_texture_size",
+      CORE_OPTION_NAME "_texupscale_max_filtered_texture_size",
       "Texture Upscaling Max. Filtered Size",
       NULL,
       "",
@@ -575,7 +575,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
    },
 #endif
    {
-      "reicast_enable_rttb",
+      CORE_OPTION_NAME "_enable_rttb",
       "Enable RTT (Render To Texture) Buffer",
       NULL,
       "",
@@ -589,7 +589,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_render_to_texture_upscaling",
+      CORE_OPTION_NAME "_render_to_texture_upscaling",
       "Render To Texture Upscaling",
       NULL,
       "",
@@ -607,7 +607,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
    },
 #if !defined(TARGET_NO_THREADS)
    {
-      "reicast_threaded_rendering",
+      CORE_OPTION_NAME "_threaded_rendering",
       "Threaded Rendering (Restart Required)",
       NULL,
       "Runs the GPU and CPU on different threads. Highly recommended.",
@@ -621,7 +621,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "enabled",
    },
    {
-      "reicast_synchronous_rendering",
+      CORE_OPTION_NAME "_synchronous_rendering",
       "Synchronous Rendering",
       NULL,
       "Waits for the GPU to finish rendering the previous frame instead of dropping the current one. Note: This setting only applies when 'Threaded Rendering' is enabled.",
@@ -639,7 +639,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
 #endif
    },
    {
-      "reicast_delay_frame_swapping",
+      CORE_OPTION_NAME "_delay_frame_swapping",
       "Delay Frame Swapping",
       NULL,
       "Useful to avoid flashing screens or glitchy videos. Not recommended on slow platforms. Note: This setting only applies when 'Threaded Rendering' is enabled.",
@@ -654,7 +654,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
    },
 #endif
    {
-      "reicast_frame_skipping",
+      CORE_OPTION_NAME "_frame_skipping",
       "Frame Skipping",
       NULL,
       "Sets the number of frames to skip between each displayed frame.",
@@ -673,7 +673,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_enable_purupuru",
+      CORE_OPTION_NAME "_enable_purupuru",
       "Purupuru Pack/Vibration Pack",
       NULL,
       "Enables controller force feedback.",
@@ -687,25 +687,11 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "enabled",
    },
    {
-      "reicast_allow_service_buttons",
+      CORE_OPTION_NAME "_allow_service_buttons",
       "Allow NAOMI Service Buttons",
       NULL,
       "Enables SERVICE button for NAOMI, to enter cabinet settings.",
       NULL,
-      "input",
-      {
-         { "disabled", NULL },
-         { "enabled",  NULL },
-         { NULL, NULL },
-      },
-      "disabled",
-   },
-   {
-      "reicast_enable_naomi_15khz_dipswitch",
-      "Enable NAOMI 15KHz Dipswitch",
-      NULL,
-      "This can force display in 240p, 480i or no effect at all depending on the game.",
-      NULL,
       NULL,
       {
          { "disabled", NULL },
@@ -715,7 +701,21 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_custom_textures",
+      CORE_OPTION_NAME "_enable_naomi_15khz_dipswitch",
+      "Enable NAOMI 15KHz DIP switch",
+      NULL,
+      "This can force display in 240p, 480i or have no effect at all depending on the game.",
+      NULL,
+      NULL,
+      {
+         { "disabled", NULL },
+         { "enabled",  NULL },
+         { NULL, NULL },
+      },
+      "disabled",
+   },
+   {
+      CORE_OPTION_NAME "_custom_textures",
       "Load Custom Textures",
       NULL,
       "",
@@ -729,7 +729,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_dump_textures",
+      CORE_OPTION_NAME "_dump_textures",
       "Dump Textures",
       NULL,
       "",
@@ -743,7 +743,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_per_content_vmus",
+      CORE_OPTION_NAME "_per_content_vmus",
       "Per-Game VMUs",
       NULL,
       "When disabled, all games share 4 VMU save files (A1, B1, C1, D1) located in RetroArch's system directory. The 'VMU A1' setting creates a unique VMU 'A1' file in RetroArch's save directory for each game that is launched. The 'All VMUs' setting creates 4 unique VMU files (A1, B1, C1, D1) for each game that is launched.",
@@ -758,12 +758,12 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {//TODO address this
-      "reicast_show_vmu_screen_settings",
+      CORE_OPTION_NAME "_show_vmu_screen_settings",
       "Show VMU Display Settings",
       NULL,
       "Enable configuration of emulated VMU LCD screen visibility, size, position and color. NOTE: Quick Menu must be toggled for this setting to take effect.",
       NULL,
-      NULL,
+      "vmu",
       {
          { "enabled",  NULL },
          { "disabled", NULL },
@@ -772,7 +772,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled"
    },
    {
-      "reicast_vmu1_screen_display",
+      CORE_OPTION_NAME "_vmu1_screen_display",
       "VMU Screen 1 Display",
       NULL,
       "",
@@ -786,7 +786,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_vmu1_screen_position",
+      CORE_OPTION_NAME "_vmu1_screen_position",
       "VMU Screen 1 Position",
       NULL,
       "",
@@ -802,7 +802,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "Upper Left",
    },
    {
-      "reicast_vmu1_screen_size_mult",
+      CORE_OPTION_NAME "_vmu1_screen_size_mult",
       "VMU Screen 1 Size",
       NULL,
       "",
@@ -819,7 +819,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "1x",
    },
    {
-      "reicast_vmu1_pixel_on_color",
+      CORE_OPTION_NAME "_vmu1_pixel_on_color",
       "VMU Screen 1 Pixel On Color",
       NULL,
       "",
@@ -859,7 +859,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "DEFAULT_ON 00",
    },
    {
-      "reicast_vmu1_pixel_off_color",
+      CORE_OPTION_NAME "_vmu1_pixel_off_color",
       "VMU Screen 1 Pixel Off Color",
       NULL,
       "",
@@ -899,7 +899,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "DEFAULT_OFF 01",
    },
    {
-      "reicast_vmu1_screen_opacity",
+      CORE_OPTION_NAME "_vmu1_screen_opacity",
       "VMU Screen 1 Opacity",
       NULL,
       "",
@@ -921,7 +921,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "100%",
    },
    {
-      "reicast_vmu2_screen_display",
+      CORE_OPTION_NAME "_vmu2_screen_display",
       "VMU Screen 2 Display",
       NULL,
       "",
@@ -935,7 +935,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_vmu2_screen_position",
+      CORE_OPTION_NAME "_vmu2_screen_position",
       "VMU Screen 2 Position",
       NULL,
       "",
@@ -951,7 +951,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "Upper Left",
    },
    {
-      "reicast_vmu2_screen_size_mult",
+      CORE_OPTION_NAME "_vmu2_screen_size_mult",
       "VMU Screen 2 Size",
       NULL,
       "",
@@ -968,7 +968,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "1x",
    },
    {
-      "reicast_vmu2_pixel_on_color",
+      CORE_OPTION_NAME "_vmu2_pixel_on_color",
       "VMU Screen 2 Pixel On Color",
       NULL,
       "",
@@ -1008,7 +1008,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "DEFAULT_ON 00",
    },
    {
-      "reicast_vmu2_pixel_off_color",
+      CORE_OPTION_NAME "_vmu2_pixel_off_color",
       "VMU Screen 2 Pixel Off Color",
       NULL,
       "",
@@ -1048,7 +1048,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "DEFAULT_OFF 01",
    },
    {
-      "reicast_vmu2_screen_opacity",
+      CORE_OPTION_NAME "_vmu2_screen_opacity",
       "VMU Screen 2 Opacity",
       NULL,
       "",
@@ -1070,7 +1070,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "100%",
    },
    {
-      "reicast_vmu3_screen_display",
+      CORE_OPTION_NAME "_vmu3_screen_display",
       "VMU Screen 3 Display",
       NULL,
       "",
@@ -1084,7 +1084,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_vmu3_screen_position",
+      CORE_OPTION_NAME "_vmu3_screen_position",
       "VMU Screen 3 Position",
       NULL,
       "",
@@ -1100,7 +1100,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "Upper Left",
    },
    {
-      "reicast_vmu3_screen_size_mult",
+      CORE_OPTION_NAME "_vmu3_screen_size_mult",
       "VMU Screen 3 Size",
       NULL,
       "",
@@ -1117,7 +1117,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "1x",
    },
    {
-      "reicast_vmu3_pixel_on_color",
+      CORE_OPTION_NAME "_vmu3_pixel_on_color",
       "VMU Screen 3 Pixel On Color",
       NULL,
       "",
@@ -1157,7 +1157,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "DEFAULT_ON 00",
    },
    {
-      "reicast_vmu3_pixel_off_color",
+      CORE_OPTION_NAME "_vmu3_pixel_off_color",
       "VMU Screen 3 Pixel Off Color",
       NULL,
       "",
@@ -1197,7 +1197,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "DEFAULT_OFF 01",
    },
    {
-      "reicast_vmu3_screen_opacity",
+      CORE_OPTION_NAME "_vmu3_screen_opacity",
       "VMU Screen 3 Opacity",
       NULL,
       "",
@@ -1219,7 +1219,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "100%",
    },
    {
-      "reicast_vmu4_screen_display",
+      CORE_OPTION_NAME "_vmu4_screen_display",
       "VMU Screen 4 Display",
       NULL,
       "",
@@ -1233,7 +1233,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_vmu4_screen_position",
+      CORE_OPTION_NAME "_vmu4_screen_position",
       "VMU Screen 4 Position",
       NULL,
       "",
@@ -1249,7 +1249,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "Upper Left",
    },
    {
-      "reicast_vmu4_screen_size_mult",
+      CORE_OPTION_NAME "_vmu4_screen_size_mult",
       "VMU Screen 4 Size",
       NULL,
       "",
@@ -1266,7 +1266,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "1x",
    },
    {
-      "reicast_vmu4_pixel_on_color",
+      CORE_OPTION_NAME "_vmu4_pixel_on_color",
       "VMU Screen 4 Pixel On Color",
       NULL,
       "",
@@ -1306,7 +1306,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "DEFAULT_ON 00",
    },
    {
-      "reicast_vmu4_pixel_off_color",
+      CORE_OPTION_NAME "_vmu4_pixel_off_color",
       "VMU Screen 4 Pixel Off Color",
       NULL,
       "",
@@ -1346,7 +1346,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "DEFAULT_OFF 01",
    },
    {
-      "reicast_vmu4_screen_opacity",
+      CORE_OPTION_NAME "_vmu4_screen_opacity",
       "VMU Screen 4 Opacity",
       NULL,
       "",
@@ -1367,13 +1367,13 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       },
       "100%",
    },
-   {// TODO adress this
-      "reicast_show_lightgun_settings",
+   {// TODO address this
+      CORE_OPTION_NAME "_show_lightgun_settings",
       "Show Light Gun Settings",
       NULL,
       "Enable configuration of light gun crosshair display options. NOTE: Quick Menu must be toggled for this setting to take effect.",
       NULL,
-      NULL,
+      "input",
       {
          { "enabled",  NULL },
          { "disabled", NULL },
@@ -1382,7 +1382,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled"
    },
    {
-      "reicast_lightgun1_crosshair",
+      CORE_OPTION_NAME "_lightgun1_crosshair",
       "Gun Crosshair 1 Display",
       NULL,
       "",
@@ -1399,7 +1399,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_lightgun2_crosshair",
+      CORE_OPTION_NAME "_lightgun2_crosshair",
       "Gun Crosshair 2 Display",
       NULL,
       "",
@@ -1416,7 +1416,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_lightgun3_crosshair",
+      CORE_OPTION_NAME "_lightgun3_crosshair",
       "Gun Crosshair 3 Display",
       NULL,
       "",
@@ -1433,7 +1433,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
    },
    {
-      "reicast_lightgun4_crosshair",
+      CORE_OPTION_NAME "_lightgun4_crosshair",
       "Gun Crosshair 4 Display",
       NULL,
       "",
@@ -1466,28 +1466,51 @@ struct retro_core_options_v2 options_us = {
 #ifndef HAVE_NO_LANGEXTRA
 struct retro_core_options_v2 *options_intl[RETRO_LANGUAGE_LAST] = {
    &options_us, /* RETRO_LANGUAGE_ENGLISH */
+   NULL,/*
    &options_ja,      /* RETRO_LANGUAGE_JAPANESE */
+   NULL,/*
    &options_fr,      /* RETRO_LANGUAGE_FRENCH */
+   NULL,/*
    &options_es,      /* RETRO_LANGUAGE_SPANISH */
+   NULL,/*
    &options_de,      /* RETRO_LANGUAGE_GERMAN */
+   NULL,/*
    &options_it,      /* RETRO_LANGUAGE_ITALIAN */
+   NULL,/*
    &options_nl,      /* RETRO_LANGUAGE_DUTCH */
+   NULL,/*
    &options_pt_br,   /* RETRO_LANGUAGE_PORTUGUESE_BRAZIL */
+   NULL,/*
    &options_pt_pt,   /* RETRO_LANGUAGE_PORTUGUESE_PORTUGAL */
+   NULL,/*
    &options_ru,      /* RETRO_LANGUAGE_RUSSIAN */
+   NULL,/*
    &options_ko,      /* RETRO_LANGUAGE_KOREAN */
+   NULL,/*
    &options_cht,     /* RETRO_LANGUAGE_CHINESE_TRADITIONAL */
+   NULL,/*
    &options_chs,     /* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */
+   NULL,/*
    &options_eo,      /* RETRO_LANGUAGE_ESPERANTO */
+   NULL,/*
    &options_pl,      /* RETRO_LANGUAGE_POLISH */
+   NULL,/*
    &options_vn,      /* RETRO_LANGUAGE_VIETNAMESE */
+   NULL,/*
    &options_ar,      /* RETRO_LANGUAGE_ARABIC */
+   NULL,/*
    &options_el,      /* RETRO_LANGUAGE_GREEK */
+   NULL,/*
    &options_tr,      /* RETRO_LANGUAGE_TURKISH */
+   NULL,/*
    &options_sv,      /* RETRO_LANGUAGE_SLOVAK */
+   NULL,/*
    &options_fa,      /* RETRO_LANGUAGE_PERSIAN */
+   NULL,/*
    &options_he,      /* RETRO_LANGUAGE_HEBREW */
+   NULL,/*
    &options_ast,     /* RETRO_LANGUAGE_ASTURIAN */
+   NULL,/*
    &options_fi,      /* RETRO_LANGUAGE_FINNISH */
 };
 #endif
