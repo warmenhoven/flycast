@@ -5,7 +5,7 @@ name: Crowdin Translation Integration
 on:
   schedule:
   # please choose a random time to avoid all repos synching at the same time
-    - cron: '35 19 * * *'  # 11:35 AM, UTC
+    - cron: '35 11 * * 5'  # Fridays at 11:35 AM, UTC
 
 jobs:
   create_intl_file:

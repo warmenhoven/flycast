@@ -63,12 +63,12 @@ struct retro_core_option_v2_category option_cats_us[] = {
    },
    {
       "vmu",
-      "VMU",
-      "Configure settings related to the Visual Memory Units."
+      "Visual Memory",
+      "Configure settings related to the Visual Memory Units/Systems (VMU)."
    },
    {
       "hacks",
-      "Emulation hacks",
+      "Emulation Hacks",
       "Configure different emulation hacks."
    },
    { NULL, NULL, NULL },
@@ -76,7 +76,7 @@ struct retro_core_option_v2_category option_cats_us[] = {
 
 struct retro_core_option_v2_definition option_defs_us[] = {
 #if ((FEAT_SHREC == DYNAREC_JIT && HOST_CPU == CPU_X86) || (HOST_CPU == CPU_ARM) || (HOST_CPU == CPU_ARM64) || (HOST_CPU == CPU_X64)) && defined(TARGET_NO_JIT)
-   {
+   {/* TODO: needs explanation */
       CORE_OPTION_NAME "_cpu_mode",
       "CPU Mode (Restart Required)",
       NULL,
@@ -148,7 +148,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       CORE_OPTION_NAME "_oit_abuffer_size",
       "Accumulation Pixel Buffer Size (Restart Required)",
       NULL,
-      "",
+      "Higher values might be required for higher resolutions to output correctly.",
       NULL,
       "video",
       {
@@ -218,7 +218,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       },
       "horizontal",
    },
-   {
+   {/* TODO: needs explanation */
       CORE_OPTION_NAME "_alpha_sorting",
       "Alpha Sorting",
       NULL,
@@ -257,7 +257,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "disabled",
 #endif
    },
-   {
+   {/* TODO: needs explanation */
       CORE_OPTION_NAME "_mipmapping",
       "Mipmapping",
       NULL,
@@ -331,7 +331,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       CORE_OPTION_NAME "_cable_type",
       "Cable Type",
       NULL,
-      "",
+      "The output signal type. VGA is recommended, but some games might not be compatible with it.",
       NULL,
       "video",
       {
@@ -348,7 +348,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
    },
    {
       CORE_OPTION_NAME "_broadcast",
-      "Broadcast",
+      "Broadcast Standard",
       NULL,
       "",
       NULL,
@@ -430,7 +430,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       CORE_OPTION_NAME "_force_wince",
       "Force Windows CE Mode",
       NULL,
-      "Enable full MMU emulation and other settings for Windows CE games",
+      "Enable full MMU (Memory Management Unit) emulation and other settings for Windows CE games.",
       NULL,
       NULL,
       {
@@ -558,7 +558,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       },
       "disabled",
    },
-   {
+   {/* TODO: needs clarification */
       CORE_OPTION_NAME "_texupscale_max_filtered_texture_size",
       "Texture Upscaling Max. Filtered Size",
       NULL,
@@ -574,7 +574,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "256",
    },
 #endif
-   {
+   {/* TODO: needs explanation */
       CORE_OPTION_NAME "_enable_rttb",
       "Enable RTT (Render To Texture) Buffer",
       NULL,
@@ -714,7 +714,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       },
       "disabled",
    },
-   {
+   {/* TODO: needs explanation */
       CORE_OPTION_NAME "_custom_textures",
       "Load Custom Textures",
       NULL,
@@ -728,7 +728,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       },
       "disabled",
    },
-   {
+   {/* TODO: probably needs explanation */
       CORE_OPTION_NAME "_dump_textures",
       "Dump Textures",
       NULL,
@@ -744,8 +744,8 @@ struct retro_core_option_v2_definition option_defs_us[] = {
    },
    {
       CORE_OPTION_NAME "_per_content_vmus",
+      "Per-Game Visual Memory Units/Systems (VMU)",
       "Per-Game VMUs",
-      NULL,
       "When disabled, all games share 4 VMU save files (A1, B1, C1, D1) located in RetroArch's system directory. The 'VMU A1' setting creates a unique VMU 'A1' file in RetroArch's save directory for each game that is launched. The 'All VMUs' setting creates 4 unique VMU files (A1, B1, C1, D1) for each game that is launched.",
       NULL,
       "vmu",
@@ -757,10 +757,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       },
       "disabled",
    },
-   {//TODO address this
+   {
       CORE_OPTION_NAME "_show_vmu_screen_settings",
+      "Show Visual Memory Unit/System (VMU) Display Settings",
       "Show VMU Display Settings",
-      NULL,
       "Enable configuration of emulated VMU LCD screen visibility, size, position and color. NOTE: Quick Menu must be toggled for this setting to take effect.",
       NULL,
       "vmu",
@@ -1367,7 +1367,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       },
       "100%",
    },
-   {// TODO address this
+   {
       CORE_OPTION_NAME "_show_lightgun_settings",
       "Show Light Gun Settings",
       NULL,
@@ -1466,51 +1466,28 @@ struct retro_core_options_v2 options_us = {
 #ifndef HAVE_NO_LANGEXTRA
 struct retro_core_options_v2 *options_intl[RETRO_LANGUAGE_LAST] = {
    &options_us, /* RETRO_LANGUAGE_ENGLISH */
-   NULL,/*
    &options_ja,      /* RETRO_LANGUAGE_JAPANESE */
-   NULL,/*
    &options_fr,      /* RETRO_LANGUAGE_FRENCH */
-   NULL,/*
    &options_es,      /* RETRO_LANGUAGE_SPANISH */
-   NULL,/*
    &options_de,      /* RETRO_LANGUAGE_GERMAN */
-   NULL,/*
    &options_it,      /* RETRO_LANGUAGE_ITALIAN */
-   NULL,/*
    &options_nl,      /* RETRO_LANGUAGE_DUTCH */
-   NULL,/*
    &options_pt_br,   /* RETRO_LANGUAGE_PORTUGUESE_BRAZIL */
-   NULL,/*
    &options_pt_pt,   /* RETRO_LANGUAGE_PORTUGUESE_PORTUGAL */
-   NULL,/*
    &options_ru,      /* RETRO_LANGUAGE_RUSSIAN */
-   NULL,/*
    &options_ko,      /* RETRO_LANGUAGE_KOREAN */
-   NULL,/*
    &options_cht,     /* RETRO_LANGUAGE_CHINESE_TRADITIONAL */
-   NULL,/*
    &options_chs,     /* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */
-   NULL,/*
    &options_eo,      /* RETRO_LANGUAGE_ESPERANTO */
-   NULL,/*
    &options_pl,      /* RETRO_LANGUAGE_POLISH */
-   NULL,/*
    &options_vn,      /* RETRO_LANGUAGE_VIETNAMESE */
-   NULL,/*
    &options_ar,      /* RETRO_LANGUAGE_ARABIC */
-   NULL,/*
    &options_el,      /* RETRO_LANGUAGE_GREEK */
-   NULL,/*
    &options_tr,      /* RETRO_LANGUAGE_TURKISH */
-   NULL,/*
    &options_sv,      /* RETRO_LANGUAGE_SLOVAK */
-   NULL,/*
    &options_fa,      /* RETRO_LANGUAGE_PERSIAN */
-   NULL,/*
    &options_he,      /* RETRO_LANGUAGE_HEBREW */
-   NULL,/*
    &options_ast,     /* RETRO_LANGUAGE_ASTURIAN */
-   NULL,/*
    &options_fi,      /* RETRO_LANGUAGE_FINNISH */
 };
 #endif
