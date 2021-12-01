@@ -9,13 +9,12 @@
 
 #include <libretro.h>
 
-#include "libretro_core_option_defines.h"
-
 /*
  ********************************
- * VERSION: 1.3
+ * VERSION: 2.0
  ********************************
  *
+ * - 2.0: Add support for core options v2 interface
  * - 1.3: Move translations to libretro_core_options_intl.h
  *        - libretro_core_options_intl.h includes BOM and utf-8
  *          fix for MSVC 2010-2013
@@ -75,122 +74,20 @@ extern "C" {
 
 /* RETRO_LANGUAGE_TURKISH */
 
-#define COLORS_STRING_TR \
-      { "BLACK 02",          "Siyah" }, \
-      { "BLUE 03",           "Mavi" }, \
-      { "LIGHT_BLUE 04",     "Açık Mavi" }, \
-      { "GREEN 05",          "Yeşil" }, \
-      { "CYAN 06",           "Camgöbeği" }, \
-      { "CYAN_BLUE 07",      "Camgöbeği Mavi" }, \
-      { "LIGHT_GREEN 08",    "Açık Yeşil" }, \
-      { "CYAN_GREEN 09",     "Camgöbeği Yeşil" }, \
-      { "LIGHT_CYAN 10",     "Açık Camgöbeği" }, \
-      { "RED 11",            "Kırmızı" }, \
-      { "PURPLE 12",         "Mor" }, \
-      { "LIGHT_PURPLE 13",   "Açık Mor" }, \
-      { "YELLOW 14",         "Sarı" }, \
-      { "GRAY 15",           "Gri" }, \
-      { "LIGHT_PURPLE_2 16", "Açık Mor (2)" }, \
-      { "LIGHT_GREEN_2 17",  "Açık Yeşil (2)" }, \
-      { "LIGHT_GREEN_3 18",  "Açık Yeşil (3)" }, \
-      { "LIGHT_CYAN_2 19",   "Açık Cyan (2)" }, \
-      { "LIGHT_RED_2 20",    "Açık Kırmızı (2)" }, \
-      { "MAGENTA 21",        "Eflatun" }, \
-      { "LIGHT_PURPLE_2 22", "Açık Mor (2)" }, \
-      { "LIGHT_ORANGE 23",   "Açık Turuncu" }, \
-      { "ORANGE 24",         "Turuncu" }, \
-      { "LIGHT_PURPLE_3 25", "Açık Mor (3)" }, \
-      { "LIGHT_YELLOW 26",   "Açık Sarı" }, \
-      { "LIGHT_YELLOW_2 27", "Açık Sarı (2)" }, \
-      { "WHITE 28",          "Beyaz" }, \
-      { NULL, NULL },
 
-#define VMU_SCREEN_PARAMS_TR(num) \
-{ \
-   CORE_OPTION_NAME "_vmu" #num "_screen_display", \
-   "VMU Screen " #num " Görsel", \
-   "", \
-   { \
-      { NULL, NULL }, \
-   }, \
-   NULL, \
-}, \
-{ \
-   CORE_OPTION_NAME "_vmu" #num "_screen_position", \
-   "VMU Screen " #num " Pozisyon", \
-   "", \
-   { \
-      { "Upper Left",  "Sol Üst" }, \
-      { "Upper Right", "Sağ Üst" }, \
-      { "Lower Left",  "Sol Alt" }, \
-      { "Lower Right", "Sağ Alt" }, \
-      { NULL, NULL }, \
-   }, \
-   NULL, \
-}, \
-{ \
-   CORE_OPTION_NAME "_vmu" #num "_screen_size_mult", \
-   "VMU Screen " #num " Boyut", \
-   "", \
-   { \
-      { NULL, NULL }, \
-   }, \
-   NULL, \
-}, \
-{ \
-   CORE_OPTION_NAME "_vmu" #num "_pixel_on_color", \
-   "VMU Screen " #num " Piksel Varken Renk", \
-   "", \
-   { \
-      { "DEFAULT_ON 00",  "Varsayılan AÇIK" }, \
-      { "DEFAULT_OFF 01", "Varsayılan KAPALI" }, \
-      COLORS_STRING_TR \
-   }, \
-   NULL, \
-}, \
-{ \
-   CORE_OPTION_NAME "_vmu" #num "_pixel_off_color", \
-   "VMU Screen " #num " Piksel Yokken Renk", \
-   "", \
-   { \
-      { "DEFAULT_OFF 01", "Varsayılan KAPALI" }, \
-      { "DEFAULT_ON 00",  "Varsayılan AÇIK" }, \
-      COLORS_STRING_TR \
-   }, \
-   NULL, \
-}, \
-{ \
-   CORE_OPTION_NAME "_vmu" #num "_screen_opacity", \
-   "VMU Screen " #num " Opaklık", \
-   "", \
-   { \
-      { NULL,   NULL }, \
-   }, \
-   NULL, \
-},
+struct retro_core_option_v2_category option_cats_tr[] = {
+   { NULL, NULL, NULL },
+};
 
-#define LIGHTGUN_PARAMS_TR(num) \
-{ \
-   CORE_OPTION_NAME "_lightgun" #num "_crosshair", \
-   "Gun Crosshair " #num " Görsel", \
-   "", \
-   { \
-      { "disabled", NULL }, \
-      { "White",    NULL }, \
-      { "Red",      NULL }, \
-      { "Green",    NULL }, \
-      { "Blue",     NULL }, \
-      { NULL,       NULL }, \
-   }, \
-   NULL, \
-},
-
-struct retro_core_option_definition option_defs_tr[] = {
+struct retro_core_option_v2_definition option_defs_tr[] = {
 #if ((FEAT_SHREC == DYNAREC_JIT && HOST_CPU == CPU_X86) || (HOST_CPU == CPU_ARM) || (HOST_CPU == CPU_ARM64) || (HOST_CPU == CPU_X64)) && defined(TARGET_NO_JIT)
    {
       CORE_OPTION_NAME "_cpu_mode",
       "CPU Modu (Yeniden Başlatma Gerektirir)",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
 #if (FEAT_SHREC == DYNAREC_JIT && HOST_CPU == CPU_X86) || (HOST_CPU == CPU_ARM) || (HOST_CPU == CPU_ARM64) || (HOST_CPU == CPU_X64)
          { "dynamic_recompiler", "Dinamik Yeniden Derleyici" },
@@ -206,7 +103,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_boot_to_bios",
       "BIOS'a önyükleme (Yeniden Başlatma Gerektirir)",
+      NULL,
       "Doğrudan Dreamcast BIOS menüsüne önyükleme yapın.",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -215,7 +115,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_system",
       "Sistem Tipi (Yeniden Başlatma Gerektirir)",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { "auto",       "Otomatik" },
          { "dreamcast",  "Dreamcast" },
@@ -228,7 +131,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_hle_bios",
       "HLE BIOS",
+      NULL,
       "Üst düzey öykünmüş BIOS(HLE) kullanımını zorla.",
+      NULL,
+      NULL,
       {
          { NULL, NULL},
       },
@@ -238,7 +144,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_oit_abuffer_size",
       "Birikim Piksel Arabellek Boyutu (Yeniden Başlatma Gerektirir)",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -248,7 +157,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_internal_resolution",
       "Dahili Çözünürlük (Yeniden Başlat Gerektirir)",
+      NULL,
       "Render çözünürlüğünü değiştirin. Yeniden başlatma gerektirir.",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -257,7 +169,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_screen_rotation",
       "Ekran Yönü",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { "horizontal", "Yatay" },
          { "vertical",   "Dikey" },
@@ -268,7 +183,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_alpha_sorting",
       "Alfa Sıralama",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { "per-strip (fast, least accurate)", "Şerit Başına (hızlı, en az doğru)" },
          { "per-triangle (normal)",            "Üçgen Başına (normal)" },
@@ -282,7 +200,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_gdrom_fast_loading",
       "GDROM Hızlı Yükleme (kusurlu)",
+      NULL,
       "GD-ROM yüklemesini hızlandırır.",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -291,7 +212,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_mipmapping",
       "Mipmapping",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -300,7 +224,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_volume_modifier_enable",
       "Hacim Değiştirici",
+      NULL,
       "Nesne gölgeleri çizmek için genellikle oyunlar tarafından kullanılan bir Dreamcast GPU özelliği. Bu normalde etkinleştirilmelidir - performansın etkisi ihmal edilebilir düzeyde genellikle minimum düzeydedir.",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -309,7 +236,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_widescreen_hack",
       "Geniş ekran kesmesi (Yeniden Başlatma Gerektirir)",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -318,7 +248,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_cable_type",
       "Kablo Tipi",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { "TV (RGB)",       NULL },
          { "TV (Composite)", NULL },
@@ -330,7 +263,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_broadcast",
       "Yayın",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { "Default", "Varsayılan" },
          { "PAL_M",   "PAL-M (Brazil)" },
@@ -344,7 +280,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_framerate",
       "Kare Hızı",
+      NULL,
       "Emülatörün ön uçla nasıl etkileşimde bulunduğunu etkiler. 'Tam Hız' - emülatör, bir kare oluşturulduğunda, kontrolü RetroArch'a geri döndürür. 'Normal' - emülatör, V-blank kesmesi her üretildiğinde kontrolü RetroArch'a döndürür. Çoğu durumda 'Tam Hız' kullanılmalıdır. 'Normal' bazı sistemlerde kare ilerleme hızını iyileştirebilir, ancak ekran statik olduğunda (örneğin, yükleme/duraklatma ekranları) yanıt vermeyen girişe neden olabilir.",
+      NULL,
+      NULL,
       {
          { "fullspeed", "Tam Hız" },
          { "normal",    "Normal" },
@@ -355,7 +294,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_region",
       "Bölge",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { "Default", "Varsayılan" },
          { "Japan",   NULL },
@@ -368,7 +310,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_language",
       "Dil",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { "Default",  "Varsayılan" },
          { "Japanese", NULL },
@@ -384,7 +329,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_div_matching",
       "DIV Eşleştirme (performans, daha az doğru)",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { "disabled", NULL },
          { "enabled",  NULL },
@@ -396,7 +344,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_force_wince",
       "Force Windows CE Mode",
+      NULL,
       "Enable full MMU emulation and other settings for Windows CE games",
+      NULL,
+      NULL,
       {
          { "disabled", NULL },
          { "enabled",  NULL },
@@ -407,7 +358,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_analog_stick_deadzone",
       "Analog Çubuğu Ölü Bölge",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -416,7 +370,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_trigger_deadzone",
       "Tetik Ölü Bölge",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -425,7 +382,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_digital_triggers",
       "Dijital Tetikleyiciler",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -434,7 +394,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_enable_dsp",
       "DSP'yi Etkinleştir",
+      NULL,
       "Dreamcast'in ses DSP'sinin (dijital sinyal işlemcisi) öykünmesini etkinleştirin. Üretilen sesin doğruluğunu arttırır, ancak performans gereksinimlerini artırır.",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -444,7 +407,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_texupscale",
       "Doku Büyütme (xBRZ)",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { "off", "Devre Dışı" },
          { "2x",  NULL },
@@ -457,7 +423,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_texupscale_max_filtered_texture_size",
       "Doku Yükseltme Maks. Filtre boyutu",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -467,7 +436,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_enable_rttb",
       "RTT'yi etkinleştirme (Dokuya Render'i) ara belleği",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -476,7 +448,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_render_to_texture_upscaling",
       "Doku Yükseltme İşlemine Render",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -486,7 +461,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_threaded_rendering",
       "İşlem Parçacığı Renderlama (Yeniden Başlatma Gerektirir)",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -495,7 +473,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_synchronous_rendering",
       "Senkronize İşleme",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -505,7 +486,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_frame_skipping",
       "Kare Atlama",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -514,7 +498,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_enable_purupuru",
       "Purupuru Paketi / Titreşim Paketi",
+      NULL,
       "Denetleyici geri bildirimini etkinleştirir.",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -523,7 +510,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_allow_service_buttons",
       "Allow NAOMI Service Buttons",
+      NULL,
       "Kabin ayarlarına girmek için NAOMI'nin SERVİS düğmesini etkinleştirir.",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -532,7 +522,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_enable_naomi_15khz_dipswitch",
       "NAOMI 15KHz Dipswitch'i etkinleştir",
+      NULL,
       "Bu, 240p, 480i'de gösterimi zorlayabilir veya oyuna bağlı olarak hiçbir etkisi olmayabilir.",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -541,7 +534,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_custom_textures",
       "Özel Dokular Yükle",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -550,7 +546,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_dump_textures",
       "Dokuları Göm",
+      NULL,
       "",
+      NULL,
+      NULL,
       {
          { NULL, NULL },
       },
@@ -559,7 +558,10 @@ struct retro_core_option_definition option_defs_tr[] = {
    {
       CORE_OPTION_NAME "_per_content_vmus",
       "Oyun Başına VMU'lar",
+      NULL,
       "Devre dışı bırakıldığında, tüm oyunlar RetroArch'ın sistem dizininde bulunan 4 VMU kaydetme dosyasını (A1, B1, C1, D1) paylaşır. 'VMU A1' ayarı, RetroArch'ın başlattığı her oyun için kaydetme dizininde benzersiz bir VMU 'A1' dosyası oluşturur. 'Tüm VMU'lar' ayarı, başlatılan her oyun için 4 benzersiz VMU dosyası (A1, B1, C1, D1) oluşturur.",
+      NULL,
+      NULL,
       {
          { "disabled", "Devre Dışı" },
          { "VMU A1",   NULL },
@@ -568,15 +570,616 @@ struct retro_core_option_definition option_defs_tr[] = {
       },
       NULL,
    },
-   VMU_SCREEN_PARAMS_TR(1)
-   VMU_SCREEN_PARAMS_TR(2)
-   VMU_SCREEN_PARAMS_TR(3)
-   VMU_SCREEN_PARAMS_TR(4)
-   LIGHTGUN_PARAMS_TR(1)
-   LIGHTGUN_PARAMS_TR(2)
-   LIGHTGUN_PARAMS_TR(3)
-   LIGHTGUN_PARAMS_TR(4)
-   { NULL, NULL, NULL, {{0}}, NULL },
+   {
+      CORE_OPTION_NAME "_vmu1_screen_display",
+      "VMU Screen 1 Görsel",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu1_screen_position",
+      "VMU Screen 1 Pozisyon",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "Upper Left",  "Sol Üst" },
+         { "Upper Right", "Sağ Üst" },
+         { "Lower Left",  "Sol Alt" },
+         { "Lower Right", "Sağ Alt" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu1_screen_size_mult",
+      "VMU Screen 1 Boyut",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu1_pixel_on_color",
+      "VMU Screen 1 Piksel Varken Renk",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "DEFAULT_OFF 01", "Varsayılan KAPALI" },
+         { "DEFAULT_ON 00",  "Varsayılan AÇIK" },
+         { "BLACK 02",          "Siyah" },
+         { "BLUE 03",           "Mavi" },
+         { "LIGHT_BLUE 04",     "Açık Mavi" },
+         { "GREEN 05",          "Yeşil" },
+         { "CYAN 06",           "Camgöbeği" },
+         { "CYAN_BLUE 07",      "Camgöbeği Mavi" },
+         { "LIGHT_GREEN 08",    "Açık Yeşil" },
+         { "CYAN_GREEN 09",     "Camgöbeği Yeşil" },
+         { "LIGHT_CYAN 10",     "Açık Camgöbeği" },
+         { "RED 11",            "Kırmızı" },
+         { "PURPLE 12",         "Mor" },
+         { "LIGHT_PURPLE 13",   "Açık Mor" },
+         { "YELLOW 14",         "Sarı" },
+         { "GRAY 15",           "Gri" },
+         { "LIGHT_PURPLE_2 16", "Açık Mor (2)" },
+         { "LIGHT_GREEN_2 17",  "Açık Yeşil (2)" },
+         { "LIGHT_GREEN_3 18",  "Açık Yeşil (3)" },
+         { "LIGHT_CYAN_2 19",   "Açık Cyan (2)" },
+         { "LIGHT_RED_2 20",    "Açık Kırmızı (2)" },
+         { "MAGENTA 21",        "Eflatun" },
+         { "LIGHT_PURPLE_2 22", "Açık Mor (2)" },
+         { "LIGHT_ORANGE 23",   "Açık Turuncu" },
+         { "ORANGE 24",         "Turuncu" },
+         { "LIGHT_PURPLE_3 25", "Açık Mor (3)" },
+         { "LIGHT_YELLOW 26",   "Açık Sarı" },
+         { "LIGHT_YELLOW_2 27", "Açık Sarı (2)" },
+         { "WHITE 28",          "Beyaz" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu1_pixel_off_color",
+      "VMU Screen 1 Piksel Yokken Renk",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "DEFAULT_OFF 01", "Varsayılan KAPALI" },
+         { "DEFAULT_ON 00",  "Varsayılan AÇIK" },
+         { "BLACK 02",          "Siyah" },
+         { "BLUE 03",           "Mavi" },
+         { "LIGHT_BLUE 04",     "Açık Mavi" },
+         { "GREEN 05",          "Yeşil" },
+         { "CYAN 06",           "Camgöbeği" },
+         { "CYAN_BLUE 07",      "Camgöbeği Mavi" },
+         { "LIGHT_GREEN 08",    "Açık Yeşil" },
+         { "CYAN_GREEN 09",     "Camgöbeği Yeşil" },
+         { "LIGHT_CYAN 10",     "Açık Camgöbeği" },
+         { "RED 11",            "Kırmızı" },
+         { "PURPLE 12",         "Mor" },
+         { "LIGHT_PURPLE 13",   "Açık Mor" },
+         { "YELLOW 14",         "Sarı" },
+         { "GRAY 15",           "Gri" },
+         { "LIGHT_PURPLE_2 16", "Açık Mor (2)" },
+         { "LIGHT_GREEN_2 17",  "Açık Yeşil (2)" },
+         { "LIGHT_GREEN_3 18",  "Açık Yeşil (3)" },
+         { "LIGHT_CYAN_2 19",   "Açık Cyan (2)" },
+         { "LIGHT_RED_2 20",    "Açık Kırmızı (2)" },
+         { "MAGENTA 21",        "Eflatun" },
+         { "LIGHT_PURPLE_2 22", "Açık Mor (2)" },
+         { "LIGHT_ORANGE 23",   "Açık Turuncu" },
+         { "ORANGE 24",         "Turuncu" },
+         { "LIGHT_PURPLE_3 25", "Açık Mor (3)" },
+         { "LIGHT_YELLOW 26",   "Açık Sarı" },
+         { "LIGHT_YELLOW_2 27", "Açık Sarı (2)" },
+         { "WHITE 28",          "Beyaz" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu1_screen_opacity",
+      "VMU Screen 1 Opaklık",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL,   NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu2_screen_display",
+      "VMU Screen 2 Görsel",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu2_screen_position",
+      "VMU Screen 2 Pozisyon",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "Upper Left",  "Sol Üst" },
+         { "Upper Right", "Sağ Üst" },
+         { "Lower Left",  "Sol Alt" },
+         { "Lower Right", "Sağ Alt" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu2_screen_size_mult",
+      "VMU Screen 2 Boyut",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu2_pixel_on_color",
+      "VMU Screen 2 Piksel Varken Renk",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "DEFAULT_OFF 01", "Varsayılan KAPALI" },
+         { "DEFAULT_ON 00",  "Varsayılan AÇIK" },
+         { "BLACK 02",          "Siyah" },
+         { "BLUE 03",           "Mavi" },
+         { "LIGHT_BLUE 04",     "Açık Mavi" },
+         { "GREEN 05",          "Yeşil" },
+         { "CYAN 06",           "Camgöbeği" },
+         { "CYAN_BLUE 07",      "Camgöbeği Mavi" },
+         { "LIGHT_GREEN 08",    "Açık Yeşil" },
+         { "CYAN_GREEN 09",     "Camgöbeği Yeşil" },
+         { "LIGHT_CYAN 10",     "Açık Camgöbeği" },
+         { "RED 11",            "Kırmızı" },
+         { "PURPLE 12",         "Mor" },
+         { "LIGHT_PURPLE 13",   "Açık Mor" },
+         { "YELLOW 14",         "Sarı" },
+         { "GRAY 15",           "Gri" },
+         { "LIGHT_PURPLE_2 16", "Açık Mor (2)" },
+         { "LIGHT_GREEN_2 17",  "Açık Yeşil (2)" },
+         { "LIGHT_GREEN_3 18",  "Açık Yeşil (3)" },
+         { "LIGHT_CYAN_2 19",   "Açık Cyan (2)" },
+         { "LIGHT_RED_2 20",    "Açık Kırmızı (2)" },
+         { "MAGENTA 21",        "Eflatun" },
+         { "LIGHT_PURPLE_2 22", "Açık Mor (2)" },
+         { "LIGHT_ORANGE 23",   "Açık Turuncu" },
+         { "ORANGE 24",         "Turuncu" },
+         { "LIGHT_PURPLE_3 25", "Açık Mor (3)" },
+         { "LIGHT_YELLOW 26",   "Açık Sarı" },
+         { "LIGHT_YELLOW_2 27", "Açık Sarı (2)" },
+         { "WHITE 28",          "Beyaz" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu2_pixel_off_color",
+      "VMU Screen 2 Piksel Yokken Renk",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "DEFAULT_OFF 01", "Varsayılan KAPALI" },
+         { "DEFAULT_ON 00",  "Varsayılan AÇIK" },
+         { "BLACK 02",          "Siyah" },
+         { "BLUE 03",           "Mavi" },
+         { "LIGHT_BLUE 04",     "Açık Mavi" },
+         { "GREEN 05",          "Yeşil" },
+         { "CYAN 06",           "Camgöbeği" },
+         { "CYAN_BLUE 07",      "Camgöbeği Mavi" },
+         { "LIGHT_GREEN 08",    "Açık Yeşil" },
+         { "CYAN_GREEN 09",     "Camgöbeği Yeşil" },
+         { "LIGHT_CYAN 10",     "Açık Camgöbeği" },
+         { "RED 11",            "Kırmızı" },
+         { "PURPLE 12",         "Mor" },
+         { "LIGHT_PURPLE 13",   "Açık Mor" },
+         { "YELLOW 14",         "Sarı" },
+         { "GRAY 15",           "Gri" },
+         { "LIGHT_PURPLE_2 16", "Açık Mor (2)" },
+         { "LIGHT_GREEN_2 17",  "Açık Yeşil (2)" },
+         { "LIGHT_GREEN_3 18",  "Açık Yeşil (3)" },
+         { "LIGHT_CYAN_2 19",   "Açık Cyan (2)" },
+         { "LIGHT_RED_2 20",    "Açık Kırmızı (2)" },
+         { "MAGENTA 21",        "Eflatun" },
+         { "LIGHT_PURPLE_2 22", "Açık Mor (2)" },
+         { "LIGHT_ORANGE 23",   "Açık Turuncu" },
+         { "ORANGE 24",         "Turuncu" },
+         { "LIGHT_PURPLE_3 25", "Açık Mor (3)" },
+         { "LIGHT_YELLOW 26",   "Açık Sarı" },
+         { "LIGHT_YELLOW_2 27", "Açık Sarı (2)" },
+         { "WHITE 28",          "Beyaz" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu2_screen_opacity",
+      "VMU Screen 2 Opaklık",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL,   NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu3_screen_display",
+      "VMU Screen 3 Görsel",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu3_screen_position",
+      "VMU Screen 3 Pozisyon",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "Upper Left",  "Sol Üst" },
+         { "Upper Right", "Sağ Üst" },
+         { "Lower Left",  "Sol Alt" },
+         { "Lower Right", "Sağ Alt" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu3_screen_size_mult",
+      "VMU Screen 3 Boyut",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu3_pixel_on_color",
+      "VMU Screen 3 Piksel Varken Renk",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "DEFAULT_OFF 01", "Varsayılan KAPALI" },
+         { "DEFAULT_ON 00",  "Varsayılan AÇIK" },
+         { "BLACK 02",          "Siyah" },
+         { "BLUE 03",           "Mavi" },
+         { "LIGHT_BLUE 04",     "Açık Mavi" },
+         { "GREEN 05",          "Yeşil" },
+         { "CYAN 06",           "Camgöbeği" },
+         { "CYAN_BLUE 07",      "Camgöbeği Mavi" },
+         { "LIGHT_GREEN 08",    "Açık Yeşil" },
+         { "CYAN_GREEN 09",     "Camgöbeği Yeşil" },
+         { "LIGHT_CYAN 10",     "Açık Camgöbeği" },
+         { "RED 11",            "Kırmızı" },
+         { "PURPLE 12",         "Mor" },
+         { "LIGHT_PURPLE 13",   "Açık Mor" },
+         { "YELLOW 14",         "Sarı" },
+         { "GRAY 15",           "Gri" },
+         { "LIGHT_PURPLE_2 16", "Açık Mor (2)" },
+         { "LIGHT_GREEN_2 17",  "Açık Yeşil (2)" },
+         { "LIGHT_GREEN_3 18",  "Açık Yeşil (3)" },
+         { "LIGHT_CYAN_2 19",   "Açık Cyan (2)" },
+         { "LIGHT_RED_2 20",    "Açık Kırmızı (2)" },
+         { "MAGENTA 21",        "Eflatun" },
+         { "LIGHT_PURPLE_2 22", "Açık Mor (2)" },
+         { "LIGHT_ORANGE 23",   "Açık Turuncu" },
+         { "ORANGE 24",         "Turuncu" },
+         { "LIGHT_PURPLE_3 25", "Açık Mor (3)" },
+         { "LIGHT_YELLOW 26",   "Açık Sarı" },
+         { "LIGHT_YELLOW_2 27", "Açık Sarı (2)" },
+         { "WHITE 28",          "Beyaz" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu3_pixel_off_color",
+      "VMU Screen 3 Piksel Yokken Renk",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "DEFAULT_OFF 01", "Varsayılan KAPALI" },
+         { "DEFAULT_ON 00",  "Varsayılan AÇIK" },
+         { "BLACK 02",          "Siyah" },
+         { "BLUE 03",           "Mavi" },
+         { "LIGHT_BLUE 04",     "Açık Mavi" },
+         { "GREEN 05",          "Yeşil" },
+         { "CYAN 06",           "Camgöbeği" },
+         { "CYAN_BLUE 07",      "Camgöbeği Mavi" },
+         { "LIGHT_GREEN 08",    "Açık Yeşil" },
+         { "CYAN_GREEN 09",     "Camgöbeği Yeşil" },
+         { "LIGHT_CYAN 10",     "Açık Camgöbeği" },
+         { "RED 11",            "Kırmızı" },
+         { "PURPLE 12",         "Mor" },
+         { "LIGHT_PURPLE 13",   "Açık Mor" },
+         { "YELLOW 14",         "Sarı" },
+         { "GRAY 15",           "Gri" },
+         { "LIGHT_PURPLE_2 16", "Açık Mor (2)" },
+         { "LIGHT_GREEN_2 17",  "Açık Yeşil (2)" },
+         { "LIGHT_GREEN_3 18",  "Açık Yeşil (3)" },
+         { "LIGHT_CYAN_2 19",   "Açık Cyan (2)" },
+         { "LIGHT_RED_2 20",    "Açık Kırmızı (2)" },
+         { "MAGENTA 21",        "Eflatun" },
+         { "LIGHT_PURPLE_2 22", "Açık Mor (2)" },
+         { "LIGHT_ORANGE 23",   "Açık Turuncu" },
+         { "ORANGE 24",         "Turuncu" },
+         { "LIGHT_PURPLE_3 25", "Açık Mor (3)" },
+         { "LIGHT_YELLOW 26",   "Açık Sarı" },
+         { "LIGHT_YELLOW_2 27", "Açık Sarı (2)" },
+         { "WHITE 28",          "Beyaz" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu3_screen_opacity",
+      "VMU Screen 3 Opaklık",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL,   NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu4_screen_display",
+      "VMU Screen 4 Görsel",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu4_screen_position",
+      "VMU Screen 4 Pozisyon",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "Upper Left",  "Sol Üst" },
+         { "Upper Right", "Sağ Üst" },
+         { "Lower Left",  "Sol Alt" },
+         { "Lower Right", "Sağ Alt" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu4_screen_size_mult",
+      "VMU Screen 4 Boyut",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu4_pixel_on_color",
+      "VMU Screen 4 Piksel Varken Renk",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "DEFAULT_OFF 01", "Varsayılan KAPALI" },
+         { "DEFAULT_ON 00",  "Varsayılan AÇIK" },
+         { "BLACK 02",          "Siyah" },
+         { "BLUE 03",           "Mavi" },
+         { "LIGHT_BLUE 04",     "Açık Mavi" },
+         { "GREEN 05",          "Yeşil" },
+         { "CYAN 06",           "Camgöbeği" },
+         { "CYAN_BLUE 07",      "Camgöbeği Mavi" },
+         { "LIGHT_GREEN 08",    "Açık Yeşil" },
+         { "CYAN_GREEN 09",     "Camgöbeği Yeşil" },
+         { "LIGHT_CYAN 10",     "Açık Camgöbeği" },
+         { "RED 11",            "Kırmızı" },
+         { "PURPLE 12",         "Mor" },
+         { "LIGHT_PURPLE 13",   "Açık Mor" },
+         { "YELLOW 14",         "Sarı" },
+         { "GRAY 15",           "Gri" },
+         { "LIGHT_PURPLE_2 16", "Açık Mor (2)" },
+         { "LIGHT_GREEN_2 17",  "Açık Yeşil (2)" },
+         { "LIGHT_GREEN_3 18",  "Açık Yeşil (3)" },
+         { "LIGHT_CYAN_2 19",   "Açık Cyan (2)" },
+         { "LIGHT_RED_2 20",    "Açık Kırmızı (2)" },
+         { "MAGENTA 21",        "Eflatun" },
+         { "LIGHT_PURPLE_2 22", "Açık Mor (2)" },
+         { "LIGHT_ORANGE 23",   "Açık Turuncu" },
+         { "ORANGE 24",         "Turuncu" },
+         { "LIGHT_PURPLE_3 25", "Açık Mor (3)" },
+         { "LIGHT_YELLOW 26",   "Açık Sarı" },
+         { "LIGHT_YELLOW_2 27", "Açık Sarı (2)" },
+         { "WHITE 28",          "Beyaz" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu4_pixel_off_color",
+      "VMU Screen 4 Piksel Yokken Renk",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "DEFAULT_OFF 01", "Varsayılan KAPALI" },
+         { "DEFAULT_ON 00",  "Varsayılan AÇIK" },
+         { "BLACK 02",          "Siyah" },
+         { "BLUE 03",           "Mavi" },
+         { "LIGHT_BLUE 04",     "Açık Mavi" },
+         { "GREEN 05",          "Yeşil" },
+         { "CYAN 06",           "Camgöbeği" },
+         { "CYAN_BLUE 07",      "Camgöbeği Mavi" },
+         { "LIGHT_GREEN 08",    "Açık Yeşil" },
+         { "CYAN_GREEN 09",     "Camgöbeği Yeşil" },
+         { "LIGHT_CYAN 10",     "Açık Camgöbeği" },
+         { "RED 11",            "Kırmızı" },
+         { "PURPLE 12",         "Mor" },
+         { "LIGHT_PURPLE 13",   "Açık Mor" },
+         { "YELLOW 14",         "Sarı" },
+         { "GRAY 15",           "Gri" },
+         { "LIGHT_PURPLE_2 16", "Açık Mor (2)" },
+         { "LIGHT_GREEN_2 17",  "Açık Yeşil (2)" },
+         { "LIGHT_GREEN_3 18",  "Açık Yeşil (3)" },
+         { "LIGHT_CYAN_2 19",   "Açık Cyan (2)" },
+         { "LIGHT_RED_2 20",    "Açık Kırmızı (2)" },
+         { "MAGENTA 21",        "Eflatun" },
+         { "LIGHT_PURPLE_2 22", "Açık Mor (2)" },
+         { "LIGHT_ORANGE 23",   "Açık Turuncu" },
+         { "ORANGE 24",         "Turuncu" },
+         { "LIGHT_PURPLE_3 25", "Açık Mor (3)" },
+         { "LIGHT_YELLOW 26",   "Açık Sarı" },
+         { "LIGHT_YELLOW_2 27", "Açık Sarı (2)" },
+         { "WHITE 28",          "Beyaz" },
+         { NULL, NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_vmu4_screen_opacity",
+      "VMU Screen 4 Opaklık",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { NULL,   NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_lightgun1_crosshair",
+      "Gun Crosshair 1 Görsel",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "disabled", NULL },
+         { "White",    NULL },
+         { "Red",      NULL },
+         { "Green",    NULL },
+         { "Blue",     NULL },
+         { NULL,       NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_lightgun2_crosshair",
+      "Gun Crosshair 2 Görsel",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "disabled", NULL },
+         { "White",    NULL },
+         { "Red",      NULL },
+         { "Green",    NULL },
+         { "Blue",     NULL },
+         { NULL,       NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_lightgun3_crosshair",
+      "Gun Crosshair 3 Görsel",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "disabled", NULL },
+         { "White",    NULL },
+         { "Red",      NULL },
+         { "Green",    NULL },
+         { "Blue",     NULL },
+         { NULL,       NULL },
+      },
+      NULL,
+   },
+   {
+      CORE_OPTION_NAME "_lightgun4_crosshair",
+      "Gun Crosshair 4 Görsel",
+      NULL,
+      "",
+      NULL,
+      NULL,
+      {
+         { "disabled", NULL },
+         { "White",    NULL },
+         { "Red",      NULL },
+         { "Green",    NULL },
+         { "Blue",     NULL },
+         { NULL,       NULL },
+      },
+      NULL,
+   },
+   { NULL, NULL, NULL, NULL, NULL, NULL, {{0}}, NULL },
+};
+
+struct retro_core_options_v2 options_tr = {
+   option_cats_tr,
+   option_defs_tr
 };
 
 #ifdef __cplusplus

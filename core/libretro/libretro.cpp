@@ -114,6 +114,8 @@ static bool allow_service_buttons = false;
 
 static bool libretro_supports_bitmasks = false;
 
+static bool categoriesSupported = false;
+
 u32 kcode[4] = {0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF};
 u8 rt[4] = {0, 0, 0, 0};
 u8 lt[4] = {0, 0, 0, 0};
@@ -285,7 +287,7 @@ void retro_set_environment(retro_environment_t cb)
 {
    environ_cb = cb;
 
-   libretro_set_core_options(environ_cb);
+   libretro_set_core_options(environ_cb, &categoriesSupported);
 
    static const struct retro_controller_description ports_default[] =
    {
@@ -398,6 +400,10 @@ static void set_variable_visibility(void)
    environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
    option_display.key = CORE_OPTION_NAME "_per_content_vmus";
    environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+
+   /* only show, if categories not supported */
+   option_display.visible = ((settings.System == DC_PLATFORM_DREAMCAST) &&
+                             (!categoriesSupported));
    option_display.key = CORE_OPTION_NAME "_show_vmu_screen_settings";
    environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
 
@@ -436,7 +442,9 @@ static void set_variable_visibility(void)
       option_display.visible = true;
       var.key = CORE_OPTION_NAME "_show_vmu_screen_settings";
 
-      if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+      if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var)
+          && var.value
+          && !categoriesSupported)
          if (!strcmp(var.value, "disabled"))
             option_display.visible = false;
    }
@@ -467,11 +475,18 @@ static void set_variable_visibility(void)
       environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
    }
 
+   /* only show, if categories not supported */
+   option_display.visible = !categoriesSupported;
+   option_display.key = CORE_OPTION_NAME "_show_lightgun_settings";
+   environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+
    /* Show/hide light gun options */
    option_display.visible = true;
    var.key = CORE_OPTION_NAME "_show_lightgun_settings";
 
-   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+   if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var)
+       && var.value
+       && !categoriesSupported)
       if (!strcmp(var.value, "disabled"))
          option_display.visible = false;
 
