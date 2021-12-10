@@ -39,9 +39,9 @@ extern "C" {
 */
 /* RETRO_LANGUAGE_AR */
 
-#define CATEGORY_VIDEO_LABEL_AR NULL
+#define CATEGORY_VIDEO_LABEL_AR "فيديو"
 #define CATEGORY_VIDEO_INFO_0_AR NULL
-#define CATEGORY_INPUT_LABEL_AR NULL
+#define CATEGORY_INPUT_LABEL_AR "الإدخال"
 #define CATEGORY_INPUT_INFO_0_AR NULL
 #define CATEGORY_VMU_LABEL_AR NULL
 #define CATEGORY_VMU_INFO_0_AR NULL
@@ -53,7 +53,7 @@ extern "C" {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_AR NULL
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_AR NULL
 #define CORE_OPTION_NAME_SYSTEM_LABEL_AR NULL
-#define OPTION_VAL_AUTO_AR NULL
+#define OPTION_VAL_AUTO_AR "تلقائي"
 #define OPTION_VAL_DREAMCAST_AR NULL
 #define OPTION_VAL_NAOMI_AR NULL
 #define OPTION_VAL_ATOMISWAVE_AR NULL
@@ -94,7 +94,7 @@ extern "C" {
 #define OPTION_VAL_11520X8640_AR NULL
 #define OPTION_VAL_12160X9120_AR NULL
 #define OPTION_VAL_12800X9600_AR NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_AR NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_AR "اتجاه الشاشة"
 #define OPTION_VAL_HORIZONTAL_AR NULL
 #define OPTION_VAL_VERTICAL_AR NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_AR NULL
@@ -124,18 +124,18 @@ extern "C" {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_AR NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_AR NULL
 #define OPTION_VAL_FULLSPEED_AR NULL
-#define OPTION_VAL_NORMAL_AR NULL
-#define CORE_OPTION_NAME_REGION_LABEL_AR NULL
+#define OPTION_VAL_NORMAL_AR "عادي"
+#define CORE_OPTION_NAME_REGION_LABEL_AR "المنطقة"
 #define OPTION_VAL_JAPAN_AR NULL
 #define OPTION_VAL_USA_AR NULL
 #define OPTION_VAL_EUROPE_AR NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_AR NULL
-#define OPTION_VAL_JAPANESE_AR NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_AR "اللّغة"
+#define OPTION_VAL_JAPANESE_AR "Japanese - 日本語"
 #define OPTION_VAL_ENGLISH_AR NULL
-#define OPTION_VAL_GERMAN_AR NULL
-#define OPTION_VAL_FRENCH_AR NULL
-#define OPTION_VAL_SPANISH_AR NULL
-#define OPTION_VAL_ITALIAN_AR NULL
+#define OPTION_VAL_GERMAN_AR "German - Deutsch"
+#define OPTION_VAL_FRENCH_AR "French - Français"
+#define OPTION_VAL_SPANISH_AR "Spanish - Español"
+#define OPTION_VAL_ITALIAN_AR "Italian - Italiano"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_AR NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_AR NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_AR NULL
@@ -203,18 +203,18 @@ extern "C" {
 #define OPTION_VAL_DEFAULT_OFF_01_AR NULL
 #define OPTION_VAL_DEFAULT_ON_00_AR NULL
 #define OPTION_VAL_BLACK_02_AR NULL
-#define OPTION_VAL_BLUE_03_AR NULL
+#define OPTION_VAL_BLUE_03_AR "أزرق"
 #define OPTION_VAL_LIGHT_BLUE_04_AR NULL
-#define OPTION_VAL_GREEN_05_AR NULL
+#define OPTION_VAL_GREEN_05_AR "أخضر"
 #define OPTION_VAL_CYAN_06_AR NULL
 #define OPTION_VAL_CYAN_BLUE_07_AR NULL
 #define OPTION_VAL_LIGHT_GREEN_08_AR NULL
 #define OPTION_VAL_CYAN_GREEN_09_AR NULL
 #define OPTION_VAL_LIGHT_CYAN_10_AR NULL
-#define OPTION_VAL_RED_11_AR NULL
+#define OPTION_VAL_RED_11_AR "أحمر"
 #define OPTION_VAL_PURPLE_12_AR NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_AR NULL
-#define OPTION_VAL_YELLOW_14_AR NULL
+#define OPTION_VAL_YELLOW_14_AR "أصفر"
 #define OPTION_VAL_GRAY_15_AR NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_AR NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_AR NULL
@@ -1671,10 +1671,10 @@ struct retro_core_options_v2 options_ar = {
 
 #define CATEGORY_VIDEO_LABEL_AST "Videu"
 #define CATEGORY_VIDEO_INFO_0_AST NULL
-#define CATEGORY_INPUT_LABEL_AST NULL
+#define CATEGORY_INPUT_LABEL_AST "Entrada"
 #define CATEGORY_INPUT_INFO_0_AST NULL
 #define CATEGORY_VMU_LABEL_AST NULL
-#define CATEGORY_VMU_INFO_0_AST NULL
+#define CATEGORY_VMU_INFO_0_AST "Configura los axustes rellacionaos coles VMU."
 #define CATEGORY_HACKS_LABEL_AST NULL
 #define CATEGORY_HACKS_INFO_0_AST NULL
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_AST NULL
@@ -1732,7 +1732,7 @@ struct retro_core_options_v2 options_ar = {
 #define OPTION_VAL_PER_TRIANGLE_NORMAL_AST NULL
 #define OPTION_VAL_PER_PIXEL_ACCURATE_AST NULL
 #define CORE_OPTION_NAME_GDROM_FAST_LOADING_LABEL_AST NULL
-#define CORE_OPTION_NAME_GDROM_FAST_LOADING_INFO_0_AST NULL
+#define CORE_OPTION_NAME_GDROM_FAST_LOADING_INFO_0_AST "Aumenta la velocidá de carga de los GD-ROMs."
 #define CORE_OPTION_NAME_MIPMAPPING_LABEL_AST NULL
 #define CORE_OPTION_NAME_FOG_LABEL_AST NULL
 #define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_LABEL_AST "Modificador del volume"
@@ -1768,7 +1768,7 @@ struct retro_core_options_v2 options_ar = {
 #define OPTION_VAL_ITALIAN_AST "Italianu"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_AST NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_AST NULL
-#define CORE_OPTION_NAME_FORCE_WINCE_LABEL_AST NULL
+#define CORE_OPTION_NAME_FORCE_WINCE_LABEL_AST "Forciar el mou de Windows CE"
 #define CORE_OPTION_NAME_FORCE_WINCE_INFO_0_AST NULL
 #define CORE_OPTION_NAME_ANALOG_STICK_DEADZONE_LABEL_AST NULL
 #define OPTION_VAL_0_AST NULL
@@ -4929,13 +4929,13 @@ struct retro_core_options_v2 options_ca = {
 
 /* RETRO_LANGUAGE_CHS */
 
-#define CATEGORY_VIDEO_LABEL_CHS NULL
+#define CATEGORY_VIDEO_LABEL_CHS "视频"
 #define CATEGORY_VIDEO_INFO_0_CHS NULL
-#define CATEGORY_INPUT_LABEL_CHS NULL
+#define CATEGORY_INPUT_LABEL_CHS "输入"
 #define CATEGORY_INPUT_INFO_0_CHS NULL
 #define CATEGORY_VMU_LABEL_CHS NULL
 #define CATEGORY_VMU_INFO_0_CHS NULL
-#define CATEGORY_HACKS_LABEL_CHS NULL
+#define CATEGORY_HACKS_LABEL_CHS "模拟修改"
 #define CATEGORY_HACKS_INFO_0_CHS NULL
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_CHS NULL
 #define OPTION_VAL_DYNAMIC_RECOMPILER_CHS NULL
@@ -4943,7 +4943,7 @@ struct retro_core_options_v2 options_ca = {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_CHS NULL
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_CHS NULL
 #define CORE_OPTION_NAME_SYSTEM_LABEL_CHS NULL
-#define OPTION_VAL_AUTO_CHS NULL
+#define OPTION_VAL_AUTO_CHS "自动"
 #define OPTION_VAL_DREAMCAST_CHS NULL
 #define OPTION_VAL_NAOMI_CHS NULL
 #define OPTION_VAL_ATOMISWAVE_CHS NULL
@@ -4984,9 +4984,9 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_11520X8640_CHS NULL
 #define OPTION_VAL_12160X9120_CHS NULL
 #define OPTION_VAL_12800X9600_CHS NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_CHS NULL
-#define OPTION_VAL_HORIZONTAL_CHS NULL
-#define OPTION_VAL_VERTICAL_CHS NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_CHS "屏幕方向"
+#define OPTION_VAL_HORIZONTAL_CHS "水平"
+#define OPTION_VAL_VERTICAL_CHS "垂直"
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_CHS NULL
 #define OPTION_VAL_PER_STRIP_FAST_LEAST_ACCURATE_CHS NULL
 #define OPTION_VAL_PER_TRIANGLE_NORMAL_CHS NULL
@@ -5006,26 +5006,26 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_TV_COMPOSITE_CHS NULL
 #define OPTION_VAL_VGA_RGB_CHS NULL
 #define CORE_OPTION_NAME_BROADCAST_LABEL_CHS NULL
-#define OPTION_VAL_DEFAULT_CHS NULL
+#define OPTION_VAL_DEFAULT_CHS "默认值"
 #define OPTION_VAL_PAL_M_CHS NULL
 #define OPTION_VAL_PAL_N_CHS NULL
 #define OPTION_VAL_NTSC_CHS NULL
 #define OPTION_VAL_PAL_CHS NULL
-#define CORE_OPTION_NAME_FRAMERATE_LABEL_CHS NULL
+#define CORE_OPTION_NAME_FRAMERATE_LABEL_CHS "帧率"
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_CHS NULL
 #define OPTION_VAL_FULLSPEED_CHS NULL
-#define OPTION_VAL_NORMAL_CHS NULL
-#define CORE_OPTION_NAME_REGION_LABEL_CHS NULL
-#define OPTION_VAL_JAPAN_CHS NULL
+#define OPTION_VAL_NORMAL_CHS "正常"
+#define CORE_OPTION_NAME_REGION_LABEL_CHS "区域"
+#define OPTION_VAL_JAPAN_CHS "日本"
 #define OPTION_VAL_USA_CHS NULL
-#define OPTION_VAL_EUROPE_CHS NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_CHS NULL
-#define OPTION_VAL_JAPANESE_CHS NULL
-#define OPTION_VAL_ENGLISH_CHS NULL
-#define OPTION_VAL_GERMAN_CHS NULL
-#define OPTION_VAL_FRENCH_CHS NULL
-#define OPTION_VAL_SPANISH_CHS NULL
-#define OPTION_VAL_ITALIAN_CHS NULL
+#define OPTION_VAL_EUROPE_CHS "欧洲"
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_CHS "语言"
+#define OPTION_VAL_JAPANESE_CHS "日本历"
+#define OPTION_VAL_ENGLISH_CHS "英语"
+#define OPTION_VAL_GERMAN_CHS "德语"
+#define OPTION_VAL_FRENCH_CHS "法语"
+#define OPTION_VAL_SPANISH_CHS "西班牙语"
+#define OPTION_VAL_ITALIAN_CHS "意大利语"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_CHS NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_CHS NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_CHS NULL
@@ -5048,15 +5048,15 @@ struct retro_core_options_v2 options_ca = {
 #define CORE_OPTION_NAME_PVR2_FILTERING_INFO_0_CHS NULL
 #define CORE_OPTION_NAME_TEXUPSCALE_LABEL_CHS NULL
 #define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_CHS NULL
-#define OPTION_VAL_2X_CHS NULL
-#define OPTION_VAL_4X_CHS NULL
+#define OPTION_VAL_2X_CHS "2 倍"
+#define OPTION_VAL_4X_CHS "4 倍"
 #define OPTION_VAL_6X_CHS NULL
 #define CORE_OPTION_NAME_TEXUPSCALE_MAX_FILTERED_TEXTURE_SIZE_LABEL_CHS NULL
 #define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_CHS NULL
 #define CORE_OPTION_NAME_RENDER_TO_TEXTURE_UPSCALING_LABEL_CHS NULL
 #define OPTION_VAL_1X_CHS NULL
 #define OPTION_VAL_3X_CHS NULL
-#define OPTION_VAL_8X_CHS NULL
+#define OPTION_VAL_8X_CHS "8 倍"
 #define CORE_OPTION_NAME_THREADED_RENDERING_LABEL_CHS NULL
 #define CORE_OPTION_NAME_THREADED_RENDERING_INFO_0_CHS NULL
 #define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_LABEL_CHS NULL
@@ -5092,32 +5092,32 @@ struct retro_core_options_v2 options_ca = {
 #define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_CHS NULL
 #define OPTION_VAL_DEFAULT_OFF_01_CHS NULL
 #define OPTION_VAL_DEFAULT_ON_00_CHS NULL
-#define OPTION_VAL_BLACK_02_CHS NULL
-#define OPTION_VAL_BLUE_03_CHS NULL
-#define OPTION_VAL_LIGHT_BLUE_04_CHS NULL
-#define OPTION_VAL_GREEN_05_CHS NULL
-#define OPTION_VAL_CYAN_06_CHS NULL
+#define OPTION_VAL_BLACK_02_CHS "浓体 (Black)"
+#define OPTION_VAL_BLUE_03_CHS "蓝色"
+#define OPTION_VAL_LIGHT_BLUE_04_CHS "浅蓝"
+#define OPTION_VAL_GREEN_05_CHS "绿色"
+#define OPTION_VAL_CYAN_06_CHS "青色"
 #define OPTION_VAL_CYAN_BLUE_07_CHS NULL
-#define OPTION_VAL_LIGHT_GREEN_08_CHS NULL
+#define OPTION_VAL_LIGHT_GREEN_08_CHS "浅绿色"
 #define OPTION_VAL_CYAN_GREEN_09_CHS NULL
-#define OPTION_VAL_LIGHT_CYAN_10_CHS NULL
-#define OPTION_VAL_RED_11_CHS NULL
-#define OPTION_VAL_PURPLE_12_CHS NULL
+#define OPTION_VAL_LIGHT_CYAN_10_CHS "浅青色"
+#define OPTION_VAL_RED_11_CHS "红色"
+#define OPTION_VAL_PURPLE_12_CHS "紫色"
 #define OPTION_VAL_LIGHT_PURPLE_13_CHS NULL
-#define OPTION_VAL_YELLOW_14_CHS NULL
-#define OPTION_VAL_GRAY_15_CHS NULL
+#define OPTION_VAL_YELLOW_14_CHS "黄色"
+#define OPTION_VAL_GRAY_15_CHS "灰"
 #define OPTION_VAL_LIGHT_PURPLE_2_16_CHS NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_CHS NULL
 #define OPTION_VAL_LIGHT_GREEN_3_18_CHS NULL
 #define OPTION_VAL_LIGHT_CYAN_2_19_CHS NULL
 #define OPTION_VAL_LIGHT_RED_2_20_CHS NULL
-#define OPTION_VAL_MAGENTA_21_CHS NULL
-#define OPTION_VAL_LIGHT_ORANGE_22_CHS NULL
-#define OPTION_VAL_ORANGE_23_CHS NULL
+#define OPTION_VAL_MAGENTA_21_CHS "品红"
+#define OPTION_VAL_LIGHT_ORANGE_22_CHS "浅橙色"
+#define OPTION_VAL_ORANGE_23_CHS "奥朗日"
 #define OPTION_VAL_LIGHT_PURPLE_3_24_CHS NULL
-#define OPTION_VAL_LIGHT_YELLOW_25_CHS NULL
+#define OPTION_VAL_LIGHT_YELLOW_25_CHS "淡黄色"
 #define OPTION_VAL_LIGHT_YELLOW_2_26_CHS NULL
-#define OPTION_VAL_WHITE_27_CHS NULL
+#define OPTION_VAL_WHITE_27_CHS "白色"
 #define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_CHS NULL
 #define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_CHS NULL
 #define OPTION_VAL_40_CHS NULL
@@ -6559,9 +6559,9 @@ struct retro_core_options_v2 options_chs = {
 
 /* RETRO_LANGUAGE_CHT */
 
-#define CATEGORY_VIDEO_LABEL_CHT NULL
+#define CATEGORY_VIDEO_LABEL_CHT "視訊"
 #define CATEGORY_VIDEO_INFO_0_CHT NULL
-#define CATEGORY_INPUT_LABEL_CHT NULL
+#define CATEGORY_INPUT_LABEL_CHT "輸入"
 #define CATEGORY_INPUT_INFO_0_CHT NULL
 #define CATEGORY_VMU_LABEL_CHT NULL
 #define CATEGORY_VMU_INFO_0_CHT NULL
@@ -6573,7 +6573,7 @@ struct retro_core_options_v2 options_chs = {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_CHT NULL
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_CHT NULL
 #define CORE_OPTION_NAME_SYSTEM_LABEL_CHT NULL
-#define OPTION_VAL_AUTO_CHT NULL
+#define OPTION_VAL_AUTO_CHT "自動"
 #define OPTION_VAL_DREAMCAST_CHT NULL
 #define OPTION_VAL_NAOMI_CHT NULL
 #define OPTION_VAL_ATOMISWAVE_CHT NULL
@@ -6614,7 +6614,7 @@ struct retro_core_options_v2 options_chs = {
 #define OPTION_VAL_11520X8640_CHT NULL
 #define OPTION_VAL_12160X9120_CHT NULL
 #define OPTION_VAL_12800X9600_CHT NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_CHT NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_CHT "螢幕顯示方向"
 #define OPTION_VAL_HORIZONTAL_CHT NULL
 #define OPTION_VAL_VERTICAL_CHT NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_CHT NULL
@@ -6644,18 +6644,18 @@ struct retro_core_options_v2 options_chs = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_CHT NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_CHT NULL
 #define OPTION_VAL_FULLSPEED_CHT NULL
-#define OPTION_VAL_NORMAL_CHT NULL
+#define OPTION_VAL_NORMAL_CHT "正常"
 #define CORE_OPTION_NAME_REGION_LABEL_CHT NULL
 #define OPTION_VAL_JAPAN_CHT NULL
 #define OPTION_VAL_USA_CHT NULL
 #define OPTION_VAL_EUROPE_CHT NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_CHT NULL
-#define OPTION_VAL_JAPANESE_CHT NULL
-#define OPTION_VAL_ENGLISH_CHT NULL
-#define OPTION_VAL_GERMAN_CHT NULL
-#define OPTION_VAL_FRENCH_CHT NULL
-#define OPTION_VAL_SPANISH_CHT NULL
-#define OPTION_VAL_ITALIAN_CHT NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_CHT "語言"
+#define OPTION_VAL_JAPANESE_CHT "日語"
+#define OPTION_VAL_ENGLISH_CHT "英語"
+#define OPTION_VAL_GERMAN_CHT "德語"
+#define OPTION_VAL_FRENCH_CHT "法語"
+#define OPTION_VAL_SPANISH_CHT "西班牙語"
+#define OPTION_VAL_ITALIAN_CHT "意大利語"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_CHT NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_CHT NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_CHT NULL
@@ -6723,18 +6723,18 @@ struct retro_core_options_v2 options_chs = {
 #define OPTION_VAL_DEFAULT_OFF_01_CHT NULL
 #define OPTION_VAL_DEFAULT_ON_00_CHT NULL
 #define OPTION_VAL_BLACK_02_CHT NULL
-#define OPTION_VAL_BLUE_03_CHT NULL
+#define OPTION_VAL_BLUE_03_CHT "藍色"
 #define OPTION_VAL_LIGHT_BLUE_04_CHT NULL
-#define OPTION_VAL_GREEN_05_CHT NULL
+#define OPTION_VAL_GREEN_05_CHT "綠色"
 #define OPTION_VAL_CYAN_06_CHT NULL
 #define OPTION_VAL_CYAN_BLUE_07_CHT NULL
 #define OPTION_VAL_LIGHT_GREEN_08_CHT NULL
 #define OPTION_VAL_CYAN_GREEN_09_CHT NULL
 #define OPTION_VAL_LIGHT_CYAN_10_CHT NULL
-#define OPTION_VAL_RED_11_CHT NULL
+#define OPTION_VAL_RED_11_CHT "紅色"
 #define OPTION_VAL_PURPLE_12_CHT NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_CHT NULL
-#define OPTION_VAL_YELLOW_14_CHT NULL
+#define OPTION_VAL_YELLOW_14_CHT "黃色"
 #define OPTION_VAL_GRAY_15_CHT NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_CHT NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_CHT NULL
@@ -8191,7 +8191,7 @@ struct retro_core_options_v2 options_cht = {
 
 #define CATEGORY_VIDEO_LABEL_CS NULL
 #define CATEGORY_VIDEO_INFO_0_CS NULL
-#define CATEGORY_INPUT_LABEL_CS NULL
+#define CATEGORY_INPUT_LABEL_CS "Vstup"
 #define CATEGORY_INPUT_INFO_0_CS NULL
 #define CATEGORY_VMU_LABEL_CS NULL
 #define CATEGORY_VMU_INFO_0_CS NULL
@@ -9821,7 +9821,7 @@ struct retro_core_options_v2 options_cs = {
 
 #define CATEGORY_VIDEO_LABEL_CY NULL
 #define CATEGORY_VIDEO_INFO_0_CY NULL
-#define CATEGORY_INPUT_LABEL_CY NULL
+#define CATEGORY_INPUT_LABEL_CY "Mewnbwn"
 #define CATEGORY_INPUT_INFO_0_CY NULL
 #define CATEGORY_VMU_LABEL_CY NULL
 #define CATEGORY_VMU_INFO_0_CY NULL
@@ -9991,7 +9991,7 @@ struct retro_core_options_v2 options_cs = {
 #define OPTION_VAL_LIGHT_GREEN_08_CY NULL
 #define OPTION_VAL_CYAN_GREEN_09_CY NULL
 #define OPTION_VAL_LIGHT_CYAN_10_CY NULL
-#define OPTION_VAL_RED_11_CY NULL
+#define OPTION_VAL_RED_11_CY "Coch"
 #define OPTION_VAL_PURPLE_12_CY NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_CY NULL
 #define OPTION_VAL_YELLOW_14_CY NULL
@@ -14709,9 +14709,9 @@ struct retro_core_options_v2 options_de = {
 
 /* RETRO_LANGUAGE_EL */
 
-#define CATEGORY_VIDEO_LABEL_EL NULL
+#define CATEGORY_VIDEO_LABEL_EL "Οδηγός Βίντεο"
 #define CATEGORY_VIDEO_INFO_0_EL NULL
-#define CATEGORY_INPUT_LABEL_EL NULL
+#define CATEGORY_INPUT_LABEL_EL "Οδηγός Εισαγωγής"
 #define CATEGORY_INPUT_INFO_0_EL NULL
 #define CATEGORY_VMU_LABEL_EL NULL
 #define CATEGORY_VMU_INFO_0_EL NULL
@@ -14764,7 +14764,7 @@ struct retro_core_options_v2 options_de = {
 #define OPTION_VAL_11520X8640_EL NULL
 #define OPTION_VAL_12160X9120_EL NULL
 #define OPTION_VAL_12800X9600_EL NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_EL NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_EL "Περιστροφή οθόνης"
 #define OPTION_VAL_HORIZONTAL_EL NULL
 #define OPTION_VAL_VERTICAL_EL NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_EL NULL
@@ -14794,18 +14794,18 @@ struct retro_core_options_v2 options_de = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_EL NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_EL NULL
 #define OPTION_VAL_FULLSPEED_EL NULL
-#define OPTION_VAL_NORMAL_EL NULL
-#define CORE_OPTION_NAME_REGION_LABEL_EL NULL
+#define OPTION_VAL_NORMAL_EL "Φυσιολογικά"
+#define CORE_OPTION_NAME_REGION_LABEL_EL "Περιοχή"
 #define OPTION_VAL_JAPAN_EL NULL
 #define OPTION_VAL_USA_EL NULL
 #define OPTION_VAL_EUROPE_EL NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_EL NULL
-#define OPTION_VAL_JAPANESE_EL NULL
-#define OPTION_VAL_ENGLISH_EL NULL
-#define OPTION_VAL_GERMAN_EL NULL
-#define OPTION_VAL_FRENCH_EL NULL
-#define OPTION_VAL_SPANISH_EL NULL
-#define OPTION_VAL_ITALIAN_EL NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_EL "Γλώσσα"
+#define OPTION_VAL_JAPANESE_EL "Ιαπωνικά"
+#define OPTION_VAL_ENGLISH_EL "Αγγλικά"
+#define OPTION_VAL_GERMAN_EL "Γερμανός"
+#define OPTION_VAL_FRENCH_EL "Γαλλική γλώσσα"
+#define OPTION_VAL_SPANISH_EL "Ισπανικά"
+#define OPTION_VAL_ITALIAN_EL "Ιταλικά"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_EL NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_EL NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_EL NULL
@@ -14873,18 +14873,18 @@ struct retro_core_options_v2 options_de = {
 #define OPTION_VAL_DEFAULT_OFF_01_EL NULL
 #define OPTION_VAL_DEFAULT_ON_00_EL NULL
 #define OPTION_VAL_BLACK_02_EL NULL
-#define OPTION_VAL_BLUE_03_EL NULL
+#define OPTION_VAL_BLUE_03_EL "Μπλε"
 #define OPTION_VAL_LIGHT_BLUE_04_EL NULL
-#define OPTION_VAL_GREEN_05_EL NULL
+#define OPTION_VAL_GREEN_05_EL "Πράσινο"
 #define OPTION_VAL_CYAN_06_EL NULL
 #define OPTION_VAL_CYAN_BLUE_07_EL NULL
 #define OPTION_VAL_LIGHT_GREEN_08_EL NULL
 #define OPTION_VAL_CYAN_GREEN_09_EL NULL
 #define OPTION_VAL_LIGHT_CYAN_10_EL NULL
-#define OPTION_VAL_RED_11_EL NULL
+#define OPTION_VAL_RED_11_EL "Κόκκινο"
 #define OPTION_VAL_PURPLE_12_EL NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_EL NULL
-#define OPTION_VAL_YELLOW_14_EL NULL
+#define OPTION_VAL_YELLOW_14_EL "Κίτρινο"
 #define OPTION_VAL_GRAY_15_EL NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_EL NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_EL NULL
@@ -16339,9 +16339,9 @@ struct retro_core_options_v2 options_el = {
 
 /* RETRO_LANGUAGE_EO */
 
-#define CATEGORY_VIDEO_LABEL_EO NULL
+#define CATEGORY_VIDEO_LABEL_EO "Video Driver"
 #define CATEGORY_VIDEO_INFO_0_EO NULL
-#define CATEGORY_INPUT_LABEL_EO NULL
+#define CATEGORY_INPUT_LABEL_EO "Input Driver"
 #define CATEGORY_INPUT_INFO_0_EO NULL
 #define CATEGORY_VMU_LABEL_EO NULL
 #define CATEGORY_VMU_INFO_0_EO NULL
@@ -17972,11 +17972,11 @@ struct retro_core_options_v2 options_eo = {
 #define CATEGORY_VIDEO_LABEL_ES "Vídeo"
 #define CATEGORY_VIDEO_INFO_0_ES "Cambia los ajustes de los búfers y efectos visuales, los parámetros de imagen, la velocidad u omisión de fotogramas y los ajustes de renderizado y texturas."
 #define CATEGORY_INPUT_LABEL_ES "Entrada"
-#define CATEGORY_INPUT_INFO_0_ES "Cambia los ajustes de mandos y «lightguns»."
+#define CATEGORY_INPUT_INFO_0_ES "Cambia los ajustes de los mandos y las pistolas de luz."
 #define CATEGORY_VMU_LABEL_ES NULL
 #define CATEGORY_VMU_INFO_0_ES "Cambia los ajustes relacionados con las Visual Memory (VMU)."
 #define CATEGORY_HACKS_LABEL_ES "Arreglos de emulación"
-#define CATEGORY_HACKS_INFO_0_ES "Configura varios arreglos de la emulación."
+#define CATEGORY_HACKS_INFO_0_ES "Cambia varias alteraciones de la emulación."
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_ES "Modo de CPU (es necesario reiniciar)"
 #define OPTION_VAL_DYNAMIC_RECOMPILER_ES "Recompilador dinámico"
 #define OPTION_VAL_GENERIC_RECOMPILER_ES "Recompilador genérico"
@@ -17988,7 +17988,7 @@ struct retro_core_options_v2 options_eo = {
 #define OPTION_VAL_NAOMI_ES NULL
 #define OPTION_VAL_ATOMISWAVE_ES NULL
 #define CORE_OPTION_NAME_HLE_BIOS_LABEL_ES "BIOS HLE"
-#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_ES "Fuerza una BIOS emulada a alto nivel."
+#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_ES "Fuerza el uso de una BIOS creada con emulación de alto nivel."
 #define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_ES "Tamaño del búfer de acumulación de píxeles (es necesario reiniciar)"
 #define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_INFO_0_ES "Es posible que sea necesario un valor alto para que la imagen se muestre bien a resoluciones superiores a la nativa."
 #define OPTION_VAL_512MB_ES "512 MB"
@@ -18028,9 +18028,9 @@ struct retro_core_options_v2 options_eo = {
 #define OPTION_VAL_HORIZONTAL_ES NULL
 #define OPTION_VAL_VERTICAL_ES NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_ES "Ordenación de transparencias"
-#define OPTION_VAL_PER_STRIP_FAST_LEAST_ACCURATE_ES "Por bandas (rápido, menos preciso)"
+#define OPTION_VAL_PER_STRIP_FAST_LEAST_ACCURATE_ES "Por bandas (rápida, menos precisa)"
 #define OPTION_VAL_PER_TRIANGLE_NORMAL_ES "Por triángulos (normal)"
-#define OPTION_VAL_PER_PIXEL_ACCURATE_ES "Por píxeles (preciso, pero lento)"
+#define OPTION_VAL_PER_PIXEL_ACCURATE_ES "Por píxeles (precisa, pero lenta)"
 #define CORE_OPTION_NAME_GDROM_FAST_LOADING_LABEL_ES "Lectura rápida de GD-ROM (inexacta)"
 #define CORE_OPTION_NAME_GDROM_FAST_LOADING_INFO_0_ES "Acelera la carga de los GD-ROM."
 #define CORE_OPTION_NAME_MIPMAPPING_LABEL_ES "«Mipmapping»"
@@ -18104,7 +18104,7 @@ struct retro_core_options_v2 options_eo = {
 #define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_LABEL_ES "Retrasar cambio de fotogramas"
 #define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_INFO_0_ES "Sirve para evitar destellos en las imágenes o defectos de vídeo. No se recomienda su uso en plataformas lentas. Nota: este ajuste solo surtirá efecto cuando la opción «Renderizado multihilo» esté activada."
 #define CORE_OPTION_NAME_FRAME_SKIPPING_LABEL_ES "Omisión de fotogramas"
-#define CORE_OPTION_NAME_FRAME_SKIPPING_INFO_0_ES "Establece la cantidad de fotogramas que se omitirán entre cada fotograma que se muestre."
+#define CORE_OPTION_NAME_FRAME_SKIPPING_INFO_0_ES "Establece la cantidad de fotogramas que se omitirán tras cada fotograma que se muestre."
 #define CORE_OPTION_NAME_ENABLE_PURUPURU_LABEL_ES "Puru Puru/Vibration Pack (Vibración)"
 #define CORE_OPTION_NAME_ENABLE_PURUPURU_INFO_0_ES "Activa la vibración del mando."
 #define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_LABEL_ES "Activar botones de servicio de NAOMI"
@@ -18114,10 +18114,10 @@ struct retro_core_options_v2 options_eo = {
 #define CORE_OPTION_NAME_CUSTOM_TEXTURES_LABEL_ES "Cargar texturas personalizadas"
 #define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_ES "Volcar texturas"
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_ES "Separar Visual Memory (VMU) por juego"
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_ES "VMU para cada juego"
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_ES "VMUs individuales para cada juego"
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_ES "Al desactivar esta opción, todos los juegos compartirán cuatro archivos de guardado de VMU (A1, B1, C1 y D1) que se encontrarán en el directorio del sistema de RetroArch. El ajuste «VMU A1» creará un archivo único de la VMU A1 en el directorio de guardados de RetroArch para cada juego que se ejecute. «Todas las VMU» creará cuatro archivos VMU únicos (A1, B1, C1 y D1) para cada juego que se ejecute."
 #define OPTION_VAL_VMU_A1_ES NULL
-#define OPTION_VAL_ALL_VMUS_ES "Todas las VMU"
+#define OPTION_VAL_ALL_VMUS_ES "Todas las VMUs"
 #define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_ES "Mostrar ajustes de visualización de las Visual Memory (VMU)"
 #define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_CAT_ES "Mostrar ajustes de visualización de las VMU"
 #define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_INFO_0_ES "Permite configurar la visibilidad, tamaño, posición y color de las pantallas LCD emuladas de las VMU. NOTA: es necesario salir y volver a entrar del menú rápido para que el cambio surta efecto."
@@ -18129,15 +18129,15 @@ struct retro_core_options_v2 options_eo = {
 #define OPTION_VAL_LOWER_RIGHT_ES "Esquina interior derecha"
 #define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_ES "Tamaño de la pantalla de la VMU 1"
 #define OPTION_VAL_5X_ES NULL
-#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_ES "Color de píxeles encendidos de la pantalla de la VMU 1"
+#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_ES "Color de píxeles encendidos de la VMU 1"
 #define OPTION_VAL_DEFAULT_OFF_01_ES "Apagar por defecto"
 #define OPTION_VAL_DEFAULT_ON_00_ES "Encender por defecto"
 #define OPTION_VAL_BLACK_02_ES "Negro"
 #define OPTION_VAL_BLUE_03_ES "Azul"
 #define OPTION_VAL_LIGHT_BLUE_04_ES "Azul claro"
 #define OPTION_VAL_GREEN_05_ES "Verde"
-#define OPTION_VAL_CYAN_06_ES "Turquesa"
-#define OPTION_VAL_CYAN_BLUE_07_ES "Azul cian"
+#define OPTION_VAL_CYAN_06_ES "Cian"
+#define OPTION_VAL_CYAN_BLUE_07_ES "Azul celeste"
 #define OPTION_VAL_LIGHT_GREEN_08_ES "Verde claro"
 #define OPTION_VAL_CYAN_GREEN_09_ES "Verde cian"
 #define OPTION_VAL_LIGHT_CYAN_10_ES "Cian claro"
@@ -18158,7 +18158,7 @@ struct retro_core_options_v2 options_eo = {
 #define OPTION_VAL_LIGHT_YELLOW_25_ES "Amarillo claro"
 #define OPTION_VAL_LIGHT_YELLOW_2_26_ES "Amarillo claro (2)"
 #define OPTION_VAL_WHITE_27_ES "Blanco"
-#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_ES "Color de píxeles apagados de la pantalla de la VMU 1"
+#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_ES "Color de píxeles apagados de la VMU 1"
 #define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_ES "Opacidad de la pantalla de la VMU 1"
 #define OPTION_VAL_40_ES "40 %"
 #define OPTION_VAL_50_ES "50 %"
@@ -18170,23 +18170,23 @@ struct retro_core_options_v2 options_eo = {
 #define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_ES "Pantalla de la VMU 2"
 #define CORE_OPTION_NAME_VMU2_SCREEN_POSITION_LABEL_ES "Posición de la pantalla de la VMU 2"
 #define CORE_OPTION_NAME_VMU2_SCREEN_SIZE_MULT_LABEL_ES "Tamaño de la pantalla de la VMU 2"
-#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_ES "Color de píxeles encendidos de la pantalla de la VMU 2"
-#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_ES "Color de píxeles apagados de la pantalla de la VMU 2"
+#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_ES "Color de píxeles encendidos de la VMU 2"
+#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_ES "Color de píxeles apagados de la VMU 2"
 #define CORE_OPTION_NAME_VMU2_SCREEN_OPACITY_LABEL_ES "Opacidad de la pantalla de la VMU 2"
 #define CORE_OPTION_NAME_VMU3_SCREEN_DISPLAY_LABEL_ES "Pantalla de la VMU 3"
 #define CORE_OPTION_NAME_VMU3_SCREEN_POSITION_LABEL_ES "Posición de la pantalla de la VMU 3"
 #define CORE_OPTION_NAME_VMU3_SCREEN_SIZE_MULT_LABEL_ES "Tamaño de la pantalla de la VMU 3"
-#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_ES "Color de píxeles encendidos de la pantalla de la VMU 3"
-#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_ES "Color de píxeles apagados de la pantalla de la VMU 3"
+#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_ES "Color de píxeles encendidos de la VMU 3"
+#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_ES "Color de píxeles apagados de la VMU 3"
 #define CORE_OPTION_NAME_VMU3_SCREEN_OPACITY_LABEL_ES "Opacidad de la pantalla de la VMU 3"
 #define CORE_OPTION_NAME_VMU4_SCREEN_DISPLAY_LABEL_ES "Pantalla de la VMU 4"
 #define CORE_OPTION_NAME_VMU4_SCREEN_POSITION_LABEL_ES "Posición de la pantalla de la VMU 4"
 #define CORE_OPTION_NAME_VMU4_SCREEN_SIZE_MULT_LABEL_ES "Tamaño de la pantalla de la VMU 4"
-#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_ES "Color de píxeles encendidos de la pantalla de la VMU 4"
-#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_ES "Color de píxeles apagados de la pantalla de la VMU 4"
+#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_ES "Color de píxeles encendidos de la VMU 4"
+#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_ES "Color de píxeles apagados de la VMU 4"
 #define CORE_OPTION_NAME_VMU4_SCREEN_OPACITY_LABEL_ES "Opacidad de la pantalla de la VMU 4"
-#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_LABEL_ES "Mostrar ajustes de las «lightgun»"
-#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_INFO_0_ES "Permite configurar los puntos de mira de las «lightgun». NOTA: es necesario salir y volver a entrar del menú rápido para que el cambio surta efecto."
+#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_LABEL_ES "Mostrar ajustes de las pistolas de luz"
+#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_INFO_0_ES "Permite configurar los puntos de mira de las pistolas de luz. NOTA: es necesario salir y volver a entrar del menú rápido para que el cambio surta efecto."
 #define CORE_OPTION_NAME_LIGHTGUN1_CROSSHAIR_LABEL_ES "Mostrar punto de mira del arma 1"
 #define CORE_OPTION_NAME_LIGHTGUN2_CROSSHAIR_LABEL_ES "Mostrar punto de mira del arma 2"
 #define CORE_OPTION_NAME_LIGHTGUN3_CROSSHAIR_LABEL_ES "Mostrar punto de mira del arma 3"
@@ -19599,9 +19599,9 @@ struct retro_core_options_v2 options_es = {
 
 /* RETRO_LANGUAGE_FA */
 
-#define CATEGORY_VIDEO_LABEL_FA NULL
+#define CATEGORY_VIDEO_LABEL_FA "ویدیو"
 #define CATEGORY_VIDEO_INFO_0_FA NULL
-#define CATEGORY_INPUT_LABEL_FA NULL
+#define CATEGORY_INPUT_LABEL_FA "داده"
 #define CATEGORY_INPUT_INFO_0_FA NULL
 #define CATEGORY_VMU_LABEL_FA NULL
 #define CATEGORY_VMU_INFO_0_FA NULL
@@ -19689,7 +19689,7 @@ struct retro_core_options_v2 options_es = {
 #define OPTION_VAL_JAPAN_FA NULL
 #define OPTION_VAL_USA_FA NULL
 #define OPTION_VAL_EUROPE_FA NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_FA NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_FA "زبان"
 #define OPTION_VAL_JAPANESE_FA NULL
 #define OPTION_VAL_ENGLISH_FA NULL
 #define OPTION_VAL_GERMAN_FA NULL
@@ -21235,7 +21235,7 @@ struct retro_core_options_v2 options_fa = {
 #define CATEGORY_INPUT_INFO_0_FI "Määritä ohjaimen ja valoaseen asetukset."
 #define CATEGORY_VMU_LABEL_FI NULL
 #define CATEGORY_VMU_INFO_0_FI NULL
-#define CATEGORY_HACKS_LABEL_FI NULL
+#define CATEGORY_HACKS_LABEL_FI "Emulointikikat"
 #define CATEGORY_HACKS_INFO_0_FI NULL
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_FI NULL
 #define OPTION_VAL_DYNAMIC_RECOMPILER_FI NULL
@@ -21243,7 +21243,7 @@ struct retro_core_options_v2 options_fa = {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_FI "Käynnistä BIOS:iin (Uudelleenkäynnistys vaaditaan)"
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_FI "Käynnistä suoraan Dreamcastin BIOS-valikkoon."
 #define CORE_OPTION_NAME_SYSTEM_LABEL_FI NULL
-#define OPTION_VAL_AUTO_FI NULL
+#define OPTION_VAL_AUTO_FI "Automaattinen"
 #define OPTION_VAL_DREAMCAST_FI NULL
 #define OPTION_VAL_NAOMI_FI NULL
 #define OPTION_VAL_ATOMISWAVE_FI NULL
@@ -21314,7 +21314,7 @@ struct retro_core_options_v2 options_fa = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_FI NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_FI NULL
 #define OPTION_VAL_FULLSPEED_FI NULL
-#define OPTION_VAL_NORMAL_FI NULL
+#define OPTION_VAL_NORMAL_FI "Normaali"
 #define CORE_OPTION_NAME_REGION_LABEL_FI "Alue"
 #define OPTION_VAL_JAPAN_FI NULL
 #define OPTION_VAL_USA_FI NULL
@@ -21396,13 +21396,13 @@ struct retro_core_options_v2 options_fa = {
 #define OPTION_VAL_BLUE_03_FI "Sininen"
 #define OPTION_VAL_LIGHT_BLUE_04_FI "Vaaleansininen"
 #define OPTION_VAL_GREEN_05_FI "Vihreä"
-#define OPTION_VAL_CYAN_06_FI NULL
+#define OPTION_VAL_CYAN_06_FI "Syaani"
 #define OPTION_VAL_CYAN_BLUE_07_FI NULL
 #define OPTION_VAL_LIGHT_GREEN_08_FI "Vaaleanvihreä"
 #define OPTION_VAL_CYAN_GREEN_09_FI NULL
 #define OPTION_VAL_LIGHT_CYAN_10_FI NULL
 #define OPTION_VAL_RED_11_FI "Punainen"
-#define OPTION_VAL_PURPLE_12_FI NULL
+#define OPTION_VAL_PURPLE_12_FI "Violetti"
 #define OPTION_VAL_LIGHT_PURPLE_13_FI NULL
 #define OPTION_VAL_YELLOW_14_FI "Keltainen"
 #define OPTION_VAL_GRAY_15_FI "Harmaa"
@@ -22870,7 +22870,7 @@ struct retro_core_options_v2 options_fi = {
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_FR "Mode du processeur (Redémarrage requis)"
 #define OPTION_VAL_DYNAMIC_RECOMPILER_FR "Recompilateur dynamique"
 #define OPTION_VAL_GENERIC_RECOMPILER_FR "Recompilateur générique"
-#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_FR "Démarrer sur la BIOS (Redémarrage requis)"
+#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_FR "Démarrer sur le BIOS (Redémarrage requis)"
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_FR "Démarrer directement sur le menu BIOS Dreamcast."
 #define CORE_OPTION_NAME_SYSTEM_LABEL_FR "Type du système (Redémarrage requis)"
 #define OPTION_VAL_AUTO_FR NULL
@@ -22878,7 +22878,7 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_NAOMI_FR NULL
 #define OPTION_VAL_ATOMISWAVE_FR NULL
 #define CORE_OPTION_NAME_HLE_BIOS_LABEL_FR "BIOS HLE"
-#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_FR "Forcer l'utilisation d'une BIOS en émulation de haut niveau."
+#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_FR "Forcer l'utilisation d'un BIOS en émulation de haut niveau."
 #define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_FR "Taille du tampon des pixels d'accumulation (Redémarrage requis)"
 #define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_INFO_0_FR "Des valeurs plus élevées peuvent être requises pour que les résolutions plus élevées s'affichent correctement."
 #define OPTION_VAL_512MB_FR "512 Mo"
@@ -22899,7 +22899,7 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_2560X1920_FR NULL
 #define OPTION_VAL_2880X2160_FR NULL
 #define OPTION_VAL_3200X2400_FR NULL
-#define OPTION_VAL_3840X2880_FR "340x2880"
+#define OPTION_VAL_3840X2880_FR NULL
 #define OPTION_VAL_4480X3360_FR NULL
 #define OPTION_VAL_5120X3840_FR NULL
 #define OPTION_VAL_5760X4320_FR NULL
@@ -22926,7 +22926,7 @@ struct retro_core_options_v2 options_fi = {
 #define CORE_OPTION_NAME_MIPMAPPING_LABEL_FR NULL
 #define CORE_OPTION_NAME_FOG_LABEL_FR "Effets de brouillard"
 #define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_LABEL_FR "Modificateur du volume"
-#define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_INFO_0_FR "Une fonctionnalité du processeur graphique de la Dreamcast qui est généralement utilisée par les jeux pour dessiner les ombres des objets. Cette option devrait normalement être activée — l'impact sur les performances va généralement de minimal à négligeable."
+#define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_INFO_0_FR "Une fonctionnalité du processeur graphique de la Dreamcast qui est généralement utilisée par les jeux pour le rendu des ombres d'objets. Cette option devrait normalement être activée — l'impact sur les performances va généralement de minimal à négligeable."
 #define CORE_OPTION_NAME_WIDESCREEN_HACK_LABEL_FR "Hack d'écran large (Redémarrage requis)"
 #define CORE_OPTION_NAME_WIDESCREEN_CHEATS_LABEL_FR "Cheats d'écran large (Redémarrage requis)"
 #define CORE_OPTION_NAME_WIDESCREEN_CHEATS_INFO_0_FR "Active les cheats qui permettent à certains jeux de s'afficher au format écran large."
@@ -22942,7 +22942,7 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_NTSC_FR NULL
 #define OPTION_VAL_PAL_FR "PAL (Monde)"
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_FR "Fréquence d'images"
-#define CORE_OPTION_NAME_FRAMERATE_INFO_0_FR "Affecte la façon dont l'émulateur interagit avec le frontend. 'Pleine vitesse' — l'émulateur redonne le contrôle à RetroArch à chaque fois qu'une image a été rendue. 'Normale' — l'émulateur redonne le contrôle à RetroArch à chaque fois qu'une interruption de rafraîchissement vertical est générée. 'Pleine Vitesse' devrait être utilisé dans la plupart des cas. 'Normal' peut améliorer la cadence des images sur certains systèmes, mais peut causer une entrée non réactive lorsque l'écran est statique (durant les écrans de chargement/mise en pause par exemple). Note : Cette option s'applique uniquement lorsque 'Rendu sur plusieurs fils d'exécution' est désactivé."
+#define CORE_OPTION_NAME_FRAMERATE_INFO_0_FR "Affecte la façon dont l'émulateur interagit avec l'interface. 'Pleine vitesse' — l'émulateur redonne le contrôle à RetroArch à chaque fois qu'une image a été rendue. 'Normale' — l'émulateur redonne le contrôle à RetroArch à chaque fois qu'une interruption de rafraîchissement vertical est générée. 'Pleine Vitesse' devrait être utilisé dans la plupart des cas. 'Normal' peut améliorer la cadence d'images sur certains systèmes, mais peut causer une entrée non réactive lorsque l'écran est statique (durant les écrans de chargement/mise en pause par exemple). Remarque : Cette option s'applique uniquement lorsque le 'Rendu sur plusieurs fils d'exécution' est désactivé."
 #define OPTION_VAL_FULLSPEED_FR "Pleine vitesse"
 #define OPTION_VAL_NORMAL_FR "Normale"
 #define CORE_OPTION_NAME_REGION_LABEL_FR "Région"
@@ -22976,13 +22976,13 @@ struct retro_core_options_v2 options_fi = {
 #define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_FR "Améliore la qualité des textures sur les surfaces qui sont à des angles de vue obliques par rapport à la caméra."
 #define CORE_OPTION_NAME_PVR2_FILTERING_LABEL_FR "Filtre de post-traitement PowerVR2"
 #define CORE_OPTION_NAME_PVR2_FILTERING_INFO_0_FR "Post-traitement de l'image rendue pour simuler les effets spécifiques au processeur graphique PowerVR2 et aux signaux vidéo analogiques."
-#define CORE_OPTION_NAME_TEXUPSCALE_LABEL_FR "Agrandissement de textures (xBRZ)"
-#define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_FR "Améliorer les graphismes en pixels 2D dessinés à la main. Doit être utilisé uniquement avec les jeux en 2D pixelisés."
+#define CORE_OPTION_NAME_TEXUPSCALE_LABEL_FR "Agrandissement des textures (xBRZ)"
+#define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_FR "Améliorer les graphismes en pixels 2D dessinés à la main. Devrait être utilisé uniquement avec les jeux en 2D pixelisés."
 #define OPTION_VAL_2X_FR "x2"
 #define OPTION_VAL_4X_FR "x4"
 #define OPTION_VAL_6X_FR "x6"
 #define CORE_OPTION_NAME_TEXUPSCALE_MAX_FILTERED_TEXTURE_SIZE_LABEL_FR "Facteur maximal du filtre d'agrandissement de textures"
-#define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_FR "Activer la mémoire tampon du RTT (rendu vers les texture)"
+#define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_FR "Activer la mémoire tampon du RTT (rendu vers texture)"
 #define CORE_OPTION_NAME_RENDER_TO_TEXTURE_UPSCALING_LABEL_FR "Agrandissement du rendu vers les textures"
 #define OPTION_VAL_1X_FR "x1"
 #define OPTION_VAL_3X_FR "x3"
@@ -22990,9 +22990,9 @@ struct retro_core_options_v2 options_fi = {
 #define CORE_OPTION_NAME_THREADED_RENDERING_LABEL_FR "Rendu sur plusieurs fils d'exécution (Redémarrage requis)"
 #define CORE_OPTION_NAME_THREADED_RENDERING_INFO_0_FR "Fais tourner le processeur graphique et le processeur sur différents fils d'exécution. Fortement recommandé."
 #define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_LABEL_FR "Rendu synchronisé"
-#define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_INFO_0_FR "Attend que le processeur graphique termine le rendu de l'image précédente au lieu de supprimer l'image courante. Note : Cette option ne s'applique que lorsque 'Rendu sur plusieurs fils d'exécution' est activé."
+#define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_INFO_0_FR "Attend que le processeur graphique termine le rendu de l'image précédente au lieu de supprimer l'image courante. Remarque : Cette option ne s'applique que lorsque 'Rendu sur plusieurs fils d'exécution' est activé."
 #define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_LABEL_FR "Retarder l'échange d'images"
-#define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_INFO_0_FR "Utile pour éviter les clignotements d'écran ou les vidéos buggées. Non recommandé sur les plates-formes lentes. Note : Cette option ne s'applique que lorsque 'Rendu sur plusieurs fils d'exécution' est activé."
+#define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_INFO_0_FR "Utile pour éviter les clignotements d'écran ou les vidéos buggées. Non recommandé sur les plates-formes lentes. Remarque : Cette option ne s'applique que lorsque 'Rendu sur plusieurs fils d'exécution' est activé."
 #define CORE_OPTION_NAME_FRAME_SKIPPING_LABEL_FR "Saut d'images"
 #define CORE_OPTION_NAME_FRAME_SKIPPING_INFO_0_FR "Définit le nombre d'images à sauter entre chaque image affichée."
 #define CORE_OPTION_NAME_ENABLE_PURUPURU_LABEL_FR "Pack Puru Puru/vibration"
@@ -23010,16 +23010,16 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_ALL_VMUS_FR "Tous les VMU"
 #define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_FR "Afficher les réglage d'affichage de l'unité/système de mémoire visuelle (VMU)"
 #define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_CAT_FR "Afficher les réglages d'affichage du VMU"
-#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_INFO_0_FR "Activer la configuration de la visibilité, de la taille, de la position et de la couleur de l'écran du VMU émulé. NOTE : Le menu rapide doit être réouvert pour que ce réglage prenne effet."
-#define CORE_OPTION_NAME_VMU1_SCREEN_DISPLAY_LABEL_FR "Affichage de l'écran 1 du VMU"
-#define CORE_OPTION_NAME_VMU1_SCREEN_POSITION_LABEL_FR "Position de l'écran 1 du VMU"
+#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_INFO_0_FR "Activer la configuration de la visibilité, de la taille, de la position et de la couleur de l'écran du VMU émulé. REMARQUE : Le menu rapide doit être réouvert pour que ce réglage prenne effet."
+#define CORE_OPTION_NAME_VMU1_SCREEN_DISPLAY_LABEL_FR "Affichage de l'écran du VMU 1"
+#define CORE_OPTION_NAME_VMU1_SCREEN_POSITION_LABEL_FR "Position de l'écran du VMU 1"
 #define OPTION_VAL_UPPER_LEFT_FR "En haut à gauche"
 #define OPTION_VAL_UPPER_RIGHT_FR "En haut à droite"
 #define OPTION_VAL_LOWER_LEFT_FR "En bas à gauche"
 #define OPTION_VAL_LOWER_RIGHT_FR "En bas à droite"
-#define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_FR "Taille de l'écran 1 du VMU"
+#define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_FR "Taille de l'écran du VMU 1"
 #define OPTION_VAL_5X_FR "x5"
-#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_FR "Couleur des pixels allumés de l'écran 1 du VMU"
+#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_FR "Couleur des pixels allumés de l'écran du VMU 1"
 #define OPTION_VAL_DEFAULT_OFF_01_FR "Par défaut désactivé"
 #define OPTION_VAL_DEFAULT_ON_00_FR "Par défaut activé"
 #define OPTION_VAL_BLACK_02_FR "Noire"
@@ -23048,8 +23048,8 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_LIGHT_YELLOW_25_FR "Jaune clair"
 #define OPTION_VAL_LIGHT_YELLOW_2_26_FR "Jaune clair (2)"
 #define OPTION_VAL_WHITE_27_FR "Blanche"
-#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_FR "Couleur des pixels éteints de l'écran 1 du VMU"
-#define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_FR "Opacité de l'écran 1 du VMU"
+#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_FR "Couleur des pixels éteints de l'écran du VMU 1"
+#define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_FR "Opacité de l'écran du VMU 1"
 #define OPTION_VAL_40_FR NULL
 #define OPTION_VAL_50_FR NULL
 #define OPTION_VAL_60_FR NULL
@@ -23057,26 +23057,26 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_80_FR NULL
 #define OPTION_VAL_90_FR NULL
 #define OPTION_VAL_100_FR NULL
-#define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_FR "Affichage de l'écran 2 du VMU"
-#define CORE_OPTION_NAME_VMU2_SCREEN_POSITION_LABEL_FR "Position de l'écran 2 du VMU"
-#define CORE_OPTION_NAME_VMU2_SCREEN_SIZE_MULT_LABEL_FR "Taille de l'écran 2 du VMU"
-#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_FR "Couleur des pixels allumés de l'écran 2 du VMU"
-#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_FR "Couleur des pixels éteints de l'écran 2 du VMU"
-#define CORE_OPTION_NAME_VMU2_SCREEN_OPACITY_LABEL_FR "Opacité de l'écran 2 du VMU"
-#define CORE_OPTION_NAME_VMU3_SCREEN_DISPLAY_LABEL_FR "Affichage de l'écran 3 du VMU"
-#define CORE_OPTION_NAME_VMU3_SCREEN_POSITION_LABEL_FR "Position de l'écran 3 du VMU"
-#define CORE_OPTION_NAME_VMU3_SCREEN_SIZE_MULT_LABEL_FR "Taille de l'écran 3 du VMU"
-#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_FR "Couleur des pixels allumés de l'écran 3 du VMU"
-#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_FR "Couleur des pixels éteints de l'écran 3 du VMU"
-#define CORE_OPTION_NAME_VMU3_SCREEN_OPACITY_LABEL_FR "Opacité de l'écran 3 du VMU"
-#define CORE_OPTION_NAME_VMU4_SCREEN_DISPLAY_LABEL_FR "Affichage de l'écran 4 du VMU"
-#define CORE_OPTION_NAME_VMU4_SCREEN_POSITION_LABEL_FR "Position de l'écran 4 du VMU"
-#define CORE_OPTION_NAME_VMU4_SCREEN_SIZE_MULT_LABEL_FR "Taille de l'écran 4 du VMU"
-#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_FR "Couleur des pixels allumés de l'écran 4 du VMU"
-#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_FR "Couleur des pixels éteints de l'écran 4 du VMU"
-#define CORE_OPTION_NAME_VMU4_SCREEN_OPACITY_LABEL_FR "Opacité de l'écran 4 du VMU"
+#define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_FR "Affichage de l'écran du VMU 2"
+#define CORE_OPTION_NAME_VMU2_SCREEN_POSITION_LABEL_FR "Position de l'écran du VMU 2"
+#define CORE_OPTION_NAME_VMU2_SCREEN_SIZE_MULT_LABEL_FR "Taille de l'écran du VMU 2"
+#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_FR "Couleur des pixels allumés de l'écran du VMU 2"
+#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_FR "Couleur des pixels éteints de l'écran du VMU 2"
+#define CORE_OPTION_NAME_VMU2_SCREEN_OPACITY_LABEL_FR "Opacité de l'écran du VMU 2"
+#define CORE_OPTION_NAME_VMU3_SCREEN_DISPLAY_LABEL_FR "Affichage de l'écran du VMU 3"
+#define CORE_OPTION_NAME_VMU3_SCREEN_POSITION_LABEL_FR "Position de l'écran du VMU 3"
+#define CORE_OPTION_NAME_VMU3_SCREEN_SIZE_MULT_LABEL_FR "Taille de l'écran du VMU 3"
+#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_FR "Couleur des pixels allumés de l'écran du VMU 3"
+#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_FR "Couleur des pixels éteints de l'écran du VMU 3"
+#define CORE_OPTION_NAME_VMU3_SCREEN_OPACITY_LABEL_FR "Opacité de l'écran du VMU 3"
+#define CORE_OPTION_NAME_VMU4_SCREEN_DISPLAY_LABEL_FR "Affichage de l'écran du VMU 4"
+#define CORE_OPTION_NAME_VMU4_SCREEN_POSITION_LABEL_FR "Position de l'écran du VMU 4"
+#define CORE_OPTION_NAME_VMU4_SCREEN_SIZE_MULT_LABEL_FR "Taille de l'écran du VMU 4"
+#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_FR "Couleur des pixels allumés de l'écran du VMU 4"
+#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_FR "Couleur des pixels éteints de l'écran du VMU 4"
+#define CORE_OPTION_NAME_VMU4_SCREEN_OPACITY_LABEL_FR "Opacité de l'écran du VMU 4"
 #define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_LABEL_FR "Afficher les réglages du pistolet"
-#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_INFO_0_FR "Activer la configuration des options d'affichage du viseur des pistolets. NOTE : le menu rapide doit être réouvert pour que ce paramètre prenne effet."
+#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_INFO_0_FR "Activer la configuration des options d'affichage du viseur des pistolets. REMARQUE : le menu rapide doit être réouvert pour que ce paramètre prenne effet."
 #define CORE_OPTION_NAME_LIGHTGUN1_CROSSHAIR_LABEL_FR "Afficher le viseur du pistolet 1"
 #define CORE_OPTION_NAME_LIGHTGUN2_CROSSHAIR_LABEL_FR "Afficher le viseur du pistolet 2"
 #define CORE_OPTION_NAME_LIGHTGUN3_CROSSHAIR_LABEL_FR "Afficher le viseur du pistolet 3"
@@ -24489,34 +24489,34 @@ struct retro_core_options_v2 options_fr = {
 
 /* RETRO_LANGUAGE_GL */
 
-#define CATEGORY_VIDEO_LABEL_GL NULL
-#define CATEGORY_VIDEO_INFO_0_GL NULL
-#define CATEGORY_INPUT_LABEL_GL NULL
-#define CATEGORY_INPUT_INFO_0_GL NULL
-#define CATEGORY_VMU_LABEL_GL NULL
-#define CATEGORY_VMU_INFO_0_GL NULL
-#define CATEGORY_HACKS_LABEL_GL NULL
-#define CATEGORY_HACKS_INFO_0_GL NULL
+#define CATEGORY_VIDEO_LABEL_GL "Vídeo"
+#define CATEGORY_VIDEO_INFO_0_GL "Configura os buffers visuais e os efectos, parámetros da pantalla, velocidade de fotogramas / salto de fotogramas e os parámetros de renderizado/textura."
+#define CATEGORY_INPUT_LABEL_GL "Entrada"
+#define CATEGORY_INPUT_INFO_0_GL "Configura o mando e a pistola."
+#define CATEGORY_VMU_LABEL_GL "Memoria visual"
+#define CATEGORY_VMU_INFO_0_GL "Configura os parámetros relacionados coa Unidade/Sistema de Memoria Visual (VMU)."
+#define CATEGORY_HACKS_LABEL_GL "Hacks de emulación"
+#define CATEGORY_HACKS_INFO_0_GL "Configura diferentes hacks de emulación."
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_GL NULL
 #define OPTION_VAL_DYNAMIC_RECOMPILER_GL NULL
 #define OPTION_VAL_GENERIC_RECOMPILER_GL NULL
-#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_GL NULL
-#define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_GL NULL
+#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_GL "Arranca na BIOS (requírese reiniciar)"
+#define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_GL "Arranca directamente no menú da BIOS de Dreamcast."
 #define CORE_OPTION_NAME_SYSTEM_LABEL_GL NULL
 #define OPTION_VAL_AUTO_GL NULL
 #define OPTION_VAL_DREAMCAST_GL NULL
 #define OPTION_VAL_NAOMI_GL NULL
 #define OPTION_VAL_ATOMISWAVE_GL NULL
-#define CORE_OPTION_NAME_HLE_BIOS_LABEL_GL NULL
-#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_GL NULL
-#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_GL NULL
-#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_INFO_0_GL NULL
+#define CORE_OPTION_NAME_HLE_BIOS_LABEL_GL "BIOS HLE"
+#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_GL "Forza o uso de emulación BIOS de alto nivel."
+#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_GL "Tamaño do buffer de píxeis de acumulación (requírese reiniciar)"
+#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_INFO_0_GL "É posible que se precisen valores máis altos para que as resolucións máis altas saian correctamente."
 #define OPTION_VAL_512MB_GL NULL
 #define OPTION_VAL_1GB_GL NULL
 #define OPTION_VAL_2GB_GL NULL
 #define OPTION_VAL_4GB_GL NULL
-#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_LABEL_GL NULL
-#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_INFO_0_GL NULL
+#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_LABEL_GL "Resolución interna (requírese reiniciar)"
+#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_INFO_0_GL "Modificar a resolución do renderizado."
 #define OPTION_VAL_320X240_GL NULL
 #define OPTION_VAL_640X480_GL NULL
 #define OPTION_VAL_800X600_GL NULL
@@ -24544,12 +24544,12 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_11520X8640_GL NULL
 #define OPTION_VAL_12160X9120_GL NULL
 #define OPTION_VAL_12800X9600_GL NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_GL NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_GL "Orientación da Pantalla"
 #define OPTION_VAL_HORIZONTAL_GL NULL
 #define OPTION_VAL_VERTICAL_GL NULL
-#define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_GL NULL
-#define OPTION_VAL_PER_STRIP_FAST_LEAST_ACCURATE_GL NULL
-#define OPTION_VAL_PER_TRIANGLE_NORMAL_GL NULL
+#define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_GL "Clasificación Alpha"
+#define OPTION_VAL_PER_STRIP_FAST_LEAST_ACCURATE_GL "Por franxa (rápido, menos preciso)"
+#define OPTION_VAL_PER_TRIANGLE_NORMAL_GL "Por triángulo (normal)"
 #define OPTION_VAL_PER_PIXEL_ACCURATE_GL NULL
 #define CORE_OPTION_NAME_GDROM_FAST_LOADING_LABEL_GL NULL
 #define CORE_OPTION_NAME_GDROM_FAST_LOADING_INFO_0_GL NULL
@@ -24602,84 +24602,84 @@ struct retro_core_options_v2 options_fr = {
 #define CORE_OPTION_NAME_DIGITAL_TRIGGERS_LABEL_GL NULL
 #define CORE_OPTION_NAME_ENABLE_DSP_LABEL_GL NULL
 #define CORE_OPTION_NAME_ENABLE_DSP_INFO_0_GL NULL
-#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_GL NULL
-#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_GL NULL
-#define CORE_OPTION_NAME_PVR2_FILTERING_LABEL_GL NULL
-#define CORE_OPTION_NAME_PVR2_FILTERING_INFO_0_GL NULL
-#define CORE_OPTION_NAME_TEXUPSCALE_LABEL_GL NULL
-#define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_GL NULL
+#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_GL "Filtrado anisotrópico"
+#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_GL "Millora a calidade das texturas nas superficies que se atopan en ángulos de visión oblicuos con respecto á cámara."
+#define CORE_OPTION_NAME_PVR2_FILTERING_LABEL_GL "Filtrado de postprocesado PowerVR2"
+#define CORE_OPTION_NAME_PVR2_FILTERING_INFO_0_GL "Postproceso da imaxe renderizada para simular efectos específicos da PowerVR2 GPU e os sinais analóxicos de vídeo."
+#define CORE_OPTION_NAME_TEXUPSCALE_LABEL_GL "Aumento das texturas (xBRZ)"
+#define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_GL "Millora dos gráficos 2D pixel art debuxados a man. Só se debería usar con xogos pixelados en 2D."
 #define OPTION_VAL_2X_GL NULL
 #define OPTION_VAL_4X_GL NULL
 #define OPTION_VAL_6X_GL NULL
-#define CORE_OPTION_NAME_TEXUPSCALE_MAX_FILTERED_TEXTURE_SIZE_LABEL_GL NULL
-#define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_GL NULL
+#define CORE_OPTION_NAME_TEXUPSCALE_MAX_FILTERED_TEXTURE_SIZE_LABEL_GL "Aumento da escala das texturas. Tamaño filtrado"
+#define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_GL "Activa o buffer RTT (Render To Texture)"
 #define CORE_OPTION_NAME_RENDER_TO_TEXTURE_UPSCALING_LABEL_GL NULL
 #define OPTION_VAL_1X_GL NULL
 #define OPTION_VAL_3X_GL NULL
 #define OPTION_VAL_8X_GL NULL
 #define CORE_OPTION_NAME_THREADED_RENDERING_LABEL_GL NULL
-#define CORE_OPTION_NAME_THREADED_RENDERING_INFO_0_GL NULL
+#define CORE_OPTION_NAME_THREADED_RENDERING_INFO_0_GL "Fai funcionar a GPU e a CPU en fíos diferentes. Altamente recomendado."
 #define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_LABEL_GL NULL
 #define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_INFO_0_GL NULL
-#define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_LABEL_GL NULL
+#define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_LABEL_GL "Intercambio de fotogramas con retardo"
 #define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_INFO_0_GL NULL
-#define CORE_OPTION_NAME_FRAME_SKIPPING_LABEL_GL NULL
-#define CORE_OPTION_NAME_FRAME_SKIPPING_INFO_0_GL NULL
-#define CORE_OPTION_NAME_ENABLE_PURUPURU_LABEL_GL NULL
-#define CORE_OPTION_NAME_ENABLE_PURUPURU_INFO_0_GL NULL
-#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_LABEL_GL NULL
-#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_INFO_0_GL NULL
+#define CORE_OPTION_NAME_FRAME_SKIPPING_LABEL_GL "Salto de fotogramas"
+#define CORE_OPTION_NAME_FRAME_SKIPPING_INFO_0_GL "Especifica o número de fotogramas para saltar entre cada fotograma que é mostrado."
+#define CORE_OPTION_NAME_ENABLE_PURUPURU_LABEL_GL "Pack Purupuru/Pack de vibración"
+#define CORE_OPTION_NAME_ENABLE_PURUPURU_INFO_0_GL "Activa a retroalimentación de forza do controlador."
+#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_LABEL_GL "Permite os botóns de servizo Naomi"
+#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_INFO_0_GL "Activa o botón SERVIZO para NAOMI, para entrar nas opcións da recreativa."
 #define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_LABEL_GL NULL
 #define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_INFO_0_GL NULL
-#define CORE_OPTION_NAME_CUSTOM_TEXTURES_LABEL_GL NULL
-#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_GL NULL
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_GL NULL
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_GL NULL
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_GL NULL
+#define CORE_OPTION_NAME_CUSTOM_TEXTURES_LABEL_GL "Carga as texturas personalizadas"
+#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_GL "Texturas de volcado"
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_GL "Unidades/sistemas de memoria visual (VMU) por xogo"
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_GL "VMUs por xogo"
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_GL "Cando se desactiva, todos os xogos comparten 4 arquivos de gardado VMU (A1, B1, C1, D1) localizados no directorio do sistema de RetroArch. O axuste \"VMU A1\" crea un único arquivo VMU \"A1\" no directorio de gardado de RetroArch para cada xogo que se inicie. A opción \"Todas as VMU\" crea 4 arquivos VMU únicos (A1, B1, C1, D1) para cada xogo que se inicie."
 #define OPTION_VAL_VMU_A1_GL NULL
-#define OPTION_VAL_ALL_VMUS_GL NULL
-#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_GL NULL
-#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_CAT_GL NULL
-#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_INFO_0_GL NULL
-#define CORE_OPTION_NAME_VMU1_SCREEN_DISPLAY_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU1_SCREEN_POSITION_LABEL_GL NULL
-#define OPTION_VAL_UPPER_LEFT_GL NULL
-#define OPTION_VAL_UPPER_RIGHT_GL NULL
-#define OPTION_VAL_LOWER_LEFT_GL NULL
-#define OPTION_VAL_LOWER_RIGHT_GL NULL
-#define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_GL NULL
+#define OPTION_VAL_ALL_VMUS_GL "Todas as VMU"
+#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_GL "Amosa as opcións de pantalla da Unidade/Sistema de Memoria visual (VMU)"
+#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_CAT_GL "Amosa as opcións de pantalla da VMU"
+#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_INFO_0_GL "Permite configurar a visibilidade, o tamaño, a posición e a cor da pantalla LCD da VMU emulada. NOTA: O Menú Rápido debe estar activado para que este axuste teña efecto."
+#define CORE_OPTION_NAME_VMU1_SCREEN_DISPLAY_LABEL_GL "Pantalla 1 da VMU"
+#define CORE_OPTION_NAME_VMU1_SCREEN_POSITION_LABEL_GL "Posición da pantalla 1 VMU"
+#define OPTION_VAL_UPPER_LEFT_GL "Superior esquerda"
+#define OPTION_VAL_UPPER_RIGHT_GL "Superior dereita"
+#define OPTION_VAL_LOWER_LEFT_GL "Inferior esquerda"
+#define OPTION_VAL_LOWER_RIGHT_GL "Inferior dereita"
+#define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_GL "Tamaño da pantalla 1 VMU"
 #define OPTION_VAL_5X_GL NULL
-#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_GL NULL
-#define OPTION_VAL_DEFAULT_OFF_01_GL NULL
-#define OPTION_VAL_DEFAULT_ON_00_GL NULL
-#define OPTION_VAL_BLACK_02_GL NULL
-#define OPTION_VAL_BLUE_03_GL NULL
-#define OPTION_VAL_LIGHT_BLUE_04_GL NULL
-#define OPTION_VAL_GREEN_05_GL NULL
-#define OPTION_VAL_CYAN_06_GL NULL
-#define OPTION_VAL_CYAN_BLUE_07_GL NULL
-#define OPTION_VAL_LIGHT_GREEN_08_GL NULL
-#define OPTION_VAL_CYAN_GREEN_09_GL NULL
-#define OPTION_VAL_LIGHT_CYAN_10_GL NULL
-#define OPTION_VAL_RED_11_GL NULL
-#define OPTION_VAL_PURPLE_12_GL NULL
-#define OPTION_VAL_LIGHT_PURPLE_13_GL NULL
-#define OPTION_VAL_YELLOW_14_GL NULL
-#define OPTION_VAL_GRAY_15_GL NULL
-#define OPTION_VAL_LIGHT_PURPLE_2_16_GL NULL
-#define OPTION_VAL_LIGHT_GREEN_2_17_GL NULL
-#define OPTION_VAL_LIGHT_GREEN_3_18_GL NULL
-#define OPTION_VAL_LIGHT_CYAN_2_19_GL NULL
-#define OPTION_VAL_LIGHT_RED_2_20_GL NULL
-#define OPTION_VAL_MAGENTA_21_GL NULL
-#define OPTION_VAL_LIGHT_ORANGE_22_GL NULL
-#define OPTION_VAL_ORANGE_23_GL NULL
-#define OPTION_VAL_LIGHT_PURPLE_3_24_GL NULL
-#define OPTION_VAL_LIGHT_YELLOW_25_GL NULL
-#define OPTION_VAL_LIGHT_YELLOW_2_26_GL NULL
-#define OPTION_VAL_WHITE_27_GL NULL
-#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_GL NULL
+#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_GL "Activar pixel en cor na pantalla 1 VMU"
+#define OPTION_VAL_DEFAULT_OFF_01_GL "Por defecto desactivado"
+#define OPTION_VAL_DEFAULT_ON_00_GL "Por defecto activado"
+#define OPTION_VAL_BLACK_02_GL "Negro"
+#define OPTION_VAL_BLUE_03_GL "Azul"
+#define OPTION_VAL_LIGHT_BLUE_04_GL "Azul claro"
+#define OPTION_VAL_GREEN_05_GL "Verde"
+#define OPTION_VAL_CYAN_06_GL "Azul ceo"
+#define OPTION_VAL_CYAN_BLUE_07_GL "Cián"
+#define OPTION_VAL_LIGHT_GREEN_08_GL "Verde claro"
+#define OPTION_VAL_CYAN_GREEN_09_GL "Cián Verde"
+#define OPTION_VAL_LIGHT_CYAN_10_GL "Cián claro"
+#define OPTION_VAL_RED_11_GL "Vermello"
+#define OPTION_VAL_PURPLE_12_GL "Malva"
+#define OPTION_VAL_LIGHT_PURPLE_13_GL "Malva claro"
+#define OPTION_VAL_YELLOW_14_GL "Amarelo"
+#define OPTION_VAL_GRAY_15_GL "Gris"
+#define OPTION_VAL_LIGHT_PURPLE_2_16_GL "Malva claro (2)"
+#define OPTION_VAL_LIGHT_GREEN_2_17_GL "Verde claro (2)"
+#define OPTION_VAL_LIGHT_GREEN_3_18_GL "Verde claro (3)"
+#define OPTION_VAL_LIGHT_CYAN_2_19_GL "Cián claro (2)"
+#define OPTION_VAL_LIGHT_RED_2_20_GL "Vermello claro (2)"
+#define OPTION_VAL_MAGENTA_21_GL "Maxenta"
+#define OPTION_VAL_LIGHT_ORANGE_22_GL "Laranxa claro"
+#define OPTION_VAL_ORANGE_23_GL "Laranxa"
+#define OPTION_VAL_LIGHT_PURPLE_3_24_GL "Malva claro (3)"
+#define OPTION_VAL_LIGHT_YELLOW_25_GL "Amarelo claro"
+#define OPTION_VAL_LIGHT_YELLOW_2_26_GL "Amarelo claro (2)"
+#define OPTION_VAL_WHITE_27_GL "Branco"
+#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_GL "Desactivar píxel en cor na pantalla 1 VMU"
+#define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_GL "Opacidade da pantalla 1 VMU"
 #define OPTION_VAL_40_GL NULL
 #define OPTION_VAL_50_GL NULL
 #define OPTION_VAL_60_GL NULL
@@ -24687,24 +24687,24 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_80_GL NULL
 #define OPTION_VAL_90_GL NULL
 #define OPTION_VAL_100_GL NULL
-#define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU2_SCREEN_POSITION_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU2_SCREEN_SIZE_MULT_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU2_SCREEN_OPACITY_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU3_SCREEN_DISPLAY_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU3_SCREEN_POSITION_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU3_SCREEN_SIZE_MULT_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU3_SCREEN_OPACITY_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU4_SCREEN_DISPLAY_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU4_SCREEN_POSITION_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU4_SCREEN_SIZE_MULT_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_GL NULL
-#define CORE_OPTION_NAME_VMU4_SCREEN_OPACITY_LABEL_GL NULL
+#define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_GL "Pantalla 2 da VMU"
+#define CORE_OPTION_NAME_VMU2_SCREEN_POSITION_LABEL_GL "Posición da pantalla 2 VMU"
+#define CORE_OPTION_NAME_VMU2_SCREEN_SIZE_MULT_LABEL_GL "Tamaño da pantalla 2 VMU"
+#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_GL "Activar pixel en cor na pantalla 2 VMU"
+#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_GL "Desactivar píxel en cor na pantalla 2 VMU"
+#define CORE_OPTION_NAME_VMU2_SCREEN_OPACITY_LABEL_GL "Opacidade da pantalla 2 VMU"
+#define CORE_OPTION_NAME_VMU3_SCREEN_DISPLAY_LABEL_GL "Pantalla 3 da VMU"
+#define CORE_OPTION_NAME_VMU3_SCREEN_POSITION_LABEL_GL "Posición da pantalla 3 VMU"
+#define CORE_OPTION_NAME_VMU3_SCREEN_SIZE_MULT_LABEL_GL "Tamaño da pantalla 3 VMU"
+#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_GL "Activar pixel en cor na pantalla 3 VMU"
+#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_GL "Desactivar píxel en cor na pantalla 3 VMU"
+#define CORE_OPTION_NAME_VMU3_SCREEN_OPACITY_LABEL_GL "Opacidade da pantalla 3 VMU"
+#define CORE_OPTION_NAME_VMU4_SCREEN_DISPLAY_LABEL_GL "Pantalla 4 da VMU"
+#define CORE_OPTION_NAME_VMU4_SCREEN_POSITION_LABEL_GL "Posición da pantalla 4 VMU"
+#define CORE_OPTION_NAME_VMU4_SCREEN_SIZE_MULT_LABEL_GL "Tamaño da pantalla 4 VMU"
+#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_GL "Activar pixel en cor na pantalla 4 VMU"
+#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_GL "Desactivar píxel en cor na pantalla 4 VMU"
+#define CORE_OPTION_NAME_VMU4_SCREEN_OPACITY_LABEL_GL "Opacidade da pantalla 4 VMU"
 #define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_LABEL_GL NULL
 #define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_INFO_0_GL NULL
 #define CORE_OPTION_NAME_LIGHTGUN1_CROSSHAIR_LABEL_GL NULL
@@ -26119,9 +26119,9 @@ struct retro_core_options_v2 options_gl = {
 
 /* RETRO_LANGUAGE_HE */
 
-#define CATEGORY_VIDEO_LABEL_HE NULL
+#define CATEGORY_VIDEO_LABEL_HE "וידאו"
 #define CATEGORY_VIDEO_INFO_0_HE NULL
-#define CATEGORY_INPUT_LABEL_HE NULL
+#define CATEGORY_INPUT_LABEL_HE "קלט"
 #define CATEGORY_INPUT_INFO_0_HE NULL
 #define CATEGORY_VMU_LABEL_HE NULL
 #define CATEGORY_VMU_INFO_0_HE NULL
@@ -27749,9 +27749,9 @@ struct retro_core_options_v2 options_he = {
 
 /* RETRO_LANGUAGE_HU */
 
-#define CATEGORY_VIDEO_LABEL_HU NULL
+#define CATEGORY_VIDEO_LABEL_HU "Videó"
 #define CATEGORY_VIDEO_INFO_0_HU NULL
-#define CATEGORY_INPUT_LABEL_HU NULL
+#define CATEGORY_INPUT_LABEL_HU "Bevitel"
 #define CATEGORY_INPUT_INFO_0_HU NULL
 #define CATEGORY_VMU_LABEL_HU NULL
 #define CATEGORY_VMU_INFO_0_HU NULL
@@ -27804,7 +27804,7 @@ struct retro_core_options_v2 options_he = {
 #define OPTION_VAL_11520X8640_HU NULL
 #define OPTION_VAL_12160X9120_HU NULL
 #define OPTION_VAL_12800X9600_HU NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_HU NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_HU "Képernyő tájolása"
 #define OPTION_VAL_HORIZONTAL_HU NULL
 #define OPTION_VAL_VERTICAL_HU NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_HU NULL
@@ -27834,12 +27834,12 @@ struct retro_core_options_v2 options_he = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_HU NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_HU NULL
 #define OPTION_VAL_FULLSPEED_HU NULL
-#define OPTION_VAL_NORMAL_HU NULL
-#define CORE_OPTION_NAME_REGION_LABEL_HU NULL
+#define OPTION_VAL_NORMAL_HU "Normál"
+#define CORE_OPTION_NAME_REGION_LABEL_HU "Terület"
 #define OPTION_VAL_JAPAN_HU NULL
 #define OPTION_VAL_USA_HU NULL
 #define OPTION_VAL_EUROPE_HU NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_HU NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_HU "Nyelv"
 #define OPTION_VAL_JAPANESE_HU NULL
 #define OPTION_VAL_ENGLISH_HU NULL
 #define OPTION_VAL_GERMAN_HU NULL
@@ -29381,7 +29381,7 @@ struct retro_core_options_v2 options_hu = {
 
 #define CATEGORY_VIDEO_LABEL_ID NULL
 #define CATEGORY_VIDEO_INFO_0_ID NULL
-#define CATEGORY_INPUT_LABEL_ID NULL
+#define CATEGORY_INPUT_LABEL_ID "Masukan"
 #define CATEGORY_INPUT_INFO_0_ID NULL
 #define CATEGORY_VMU_LABEL_ID NULL
 #define CATEGORY_VMU_INFO_0_ID NULL
@@ -29434,7 +29434,7 @@ struct retro_core_options_v2 options_hu = {
 #define OPTION_VAL_11520X8640_ID NULL
 #define OPTION_VAL_12160X9120_ID NULL
 #define OPTION_VAL_12800X9600_ID NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_ID NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_ID "Orientasi Layar"
 #define OPTION_VAL_HORIZONTAL_ID NULL
 #define OPTION_VAL_VERTICAL_ID NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_ID NULL
@@ -32639,9 +32639,9 @@ struct retro_core_options_v2 options_it = {
 
 /* RETRO_LANGUAGE_JA */
 
-#define CATEGORY_VIDEO_LABEL_JA NULL
+#define CATEGORY_VIDEO_LABEL_JA "ビデオのドライバ"
 #define CATEGORY_VIDEO_INFO_0_JA NULL
-#define CATEGORY_INPUT_LABEL_JA NULL
+#define CATEGORY_INPUT_LABEL_JA "入力"
 #define CATEGORY_INPUT_INFO_0_JA NULL
 #define CATEGORY_VMU_LABEL_JA NULL
 #define CATEGORY_VMU_INFO_0_JA NULL
@@ -32653,7 +32653,7 @@ struct retro_core_options_v2 options_it = {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_JA NULL
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_JA NULL
 #define CORE_OPTION_NAME_SYSTEM_LABEL_JA NULL
-#define OPTION_VAL_AUTO_JA NULL
+#define OPTION_VAL_AUTO_JA "自動"
 #define OPTION_VAL_DREAMCAST_JA NULL
 #define OPTION_VAL_NAOMI_JA NULL
 #define OPTION_VAL_ATOMISWAVE_JA NULL
@@ -32694,7 +32694,7 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_11520X8640_JA NULL
 #define OPTION_VAL_12160X9120_JA NULL
 #define OPTION_VAL_12800X9600_JA NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_JA NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_JA "スクリーンの回転"
 #define OPTION_VAL_HORIZONTAL_JA NULL
 #define OPTION_VAL_VERTICAL_JA NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_JA NULL
@@ -32716,7 +32716,7 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_TV_COMPOSITE_JA NULL
 #define OPTION_VAL_VGA_RGB_JA NULL
 #define CORE_OPTION_NAME_BROADCAST_LABEL_JA NULL
-#define OPTION_VAL_DEFAULT_JA NULL
+#define OPTION_VAL_DEFAULT_JA "デフォルト"
 #define OPTION_VAL_PAL_M_JA NULL
 #define OPTION_VAL_PAL_N_JA NULL
 #define OPTION_VAL_NTSC_JA NULL
@@ -32724,18 +32724,18 @@ struct retro_core_options_v2 options_it = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_JA NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_JA NULL
 #define OPTION_VAL_FULLSPEED_JA NULL
-#define OPTION_VAL_NORMAL_JA NULL
-#define CORE_OPTION_NAME_REGION_LABEL_JA NULL
+#define OPTION_VAL_NORMAL_JA "普通"
+#define CORE_OPTION_NAME_REGION_LABEL_JA "地域"
 #define OPTION_VAL_JAPAN_JA NULL
 #define OPTION_VAL_USA_JA NULL
 #define OPTION_VAL_EUROPE_JA NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_JA NULL
-#define OPTION_VAL_JAPANESE_JA NULL
-#define OPTION_VAL_ENGLISH_JA NULL
-#define OPTION_VAL_GERMAN_JA NULL
-#define OPTION_VAL_FRENCH_JA NULL
-#define OPTION_VAL_SPANISH_JA NULL
-#define OPTION_VAL_ITALIAN_JA NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_JA "言語"
+#define OPTION_VAL_JAPANESE_JA "Japanese - 日本語"
+#define OPTION_VAL_ENGLISH_JA "英語"
+#define OPTION_VAL_GERMAN_JA "German - ドイツ語"
+#define OPTION_VAL_FRENCH_JA "French - フランス語"
+#define OPTION_VAL_SPANISH_JA "Spanish - スペイン語"
+#define OPTION_VAL_ITALIAN_JA "Italian - イタリア語"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_JA NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_JA NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_JA NULL
@@ -32803,18 +32803,18 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_DEFAULT_OFF_01_JA NULL
 #define OPTION_VAL_DEFAULT_ON_00_JA NULL
 #define OPTION_VAL_BLACK_02_JA NULL
-#define OPTION_VAL_BLUE_03_JA NULL
+#define OPTION_VAL_BLUE_03_JA "ブルー"
 #define OPTION_VAL_LIGHT_BLUE_04_JA NULL
-#define OPTION_VAL_GREEN_05_JA NULL
+#define OPTION_VAL_GREEN_05_JA "グリーン"
 #define OPTION_VAL_CYAN_06_JA NULL
 #define OPTION_VAL_CYAN_BLUE_07_JA NULL
 #define OPTION_VAL_LIGHT_GREEN_08_JA NULL
 #define OPTION_VAL_CYAN_GREEN_09_JA NULL
 #define OPTION_VAL_LIGHT_CYAN_10_JA NULL
-#define OPTION_VAL_RED_11_JA NULL
+#define OPTION_VAL_RED_11_JA "レッド"
 #define OPTION_VAL_PURPLE_12_JA NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_JA NULL
-#define OPTION_VAL_YELLOW_14_JA NULL
+#define OPTION_VAL_YELLOW_14_JA "イエロー"
 #define OPTION_VAL_GRAY_15_JA NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_JA NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_JA NULL
@@ -34269,13 +34269,13 @@ struct retro_core_options_v2 options_ja = {
 
 /* RETRO_LANGUAGE_KO */
 
-#define CATEGORY_VIDEO_LABEL_KO NULL
+#define CATEGORY_VIDEO_LABEL_KO "비디오"
 #define CATEGORY_VIDEO_INFO_0_KO NULL
-#define CATEGORY_INPUT_LABEL_KO NULL
+#define CATEGORY_INPUT_LABEL_KO "입력"
 #define CATEGORY_INPUT_INFO_0_KO NULL
 #define CATEGORY_VMU_LABEL_KO NULL
 #define CATEGORY_VMU_INFO_0_KO NULL
-#define CATEGORY_HACKS_LABEL_KO NULL
+#define CATEGORY_HACKS_LABEL_KO "에뮬레이션 핵"
 #define CATEGORY_HACKS_INFO_0_KO NULL
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_KO NULL
 #define OPTION_VAL_DYNAMIC_RECOMPILER_KO NULL
@@ -34283,7 +34283,7 @@ struct retro_core_options_v2 options_ja = {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_KO NULL
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_KO NULL
 #define CORE_OPTION_NAME_SYSTEM_LABEL_KO NULL
-#define OPTION_VAL_AUTO_KO NULL
+#define OPTION_VAL_AUTO_KO "자동"
 #define OPTION_VAL_DREAMCAST_KO NULL
 #define OPTION_VAL_NAOMI_KO NULL
 #define OPTION_VAL_ATOMISWAVE_KO NULL
@@ -34324,7 +34324,7 @@ struct retro_core_options_v2 options_ja = {
 #define OPTION_VAL_11520X8640_KO NULL
 #define OPTION_VAL_12160X9120_KO NULL
 #define OPTION_VAL_12800X9600_KO NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_KO NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_KO "화면 방향"
 #define OPTION_VAL_HORIZONTAL_KO NULL
 #define OPTION_VAL_VERTICAL_KO NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_KO NULL
@@ -34346,7 +34346,7 @@ struct retro_core_options_v2 options_ja = {
 #define OPTION_VAL_TV_COMPOSITE_KO NULL
 #define OPTION_VAL_VGA_RGB_KO NULL
 #define CORE_OPTION_NAME_BROADCAST_LABEL_KO NULL
-#define OPTION_VAL_DEFAULT_KO NULL
+#define OPTION_VAL_DEFAULT_KO "기본"
 #define OPTION_VAL_PAL_M_KO NULL
 #define OPTION_VAL_PAL_N_KO NULL
 #define OPTION_VAL_NTSC_KO NULL
@@ -34354,18 +34354,18 @@ struct retro_core_options_v2 options_ja = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_KO NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_KO NULL
 #define OPTION_VAL_FULLSPEED_KO NULL
-#define OPTION_VAL_NORMAL_KO NULL
-#define CORE_OPTION_NAME_REGION_LABEL_KO NULL
+#define OPTION_VAL_NORMAL_KO "보통"
+#define CORE_OPTION_NAME_REGION_LABEL_KO "지역"
 #define OPTION_VAL_JAPAN_KO NULL
 #define OPTION_VAL_USA_KO NULL
 #define OPTION_VAL_EUROPE_KO NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_KO NULL
-#define OPTION_VAL_JAPANESE_KO NULL
-#define OPTION_VAL_ENGLISH_KO NULL
-#define OPTION_VAL_GERMAN_KO NULL
-#define OPTION_VAL_FRENCH_KO NULL
-#define OPTION_VAL_SPANISH_KO NULL
-#define OPTION_VAL_ITALIAN_KO NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_KO "언어"
+#define OPTION_VAL_JAPANESE_KO "일본어"
+#define OPTION_VAL_ENGLISH_KO "영어"
+#define OPTION_VAL_GERMAN_KO "독일어"
+#define OPTION_VAL_FRENCH_KO "프랑스어"
+#define OPTION_VAL_SPANISH_KO "스페인어"
+#define OPTION_VAL_ITALIAN_KO "이탈리아어"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_KO NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_KO NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_KO NULL
@@ -34412,7 +34412,7 @@ struct retro_core_options_v2 options_ja = {
 #define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_LABEL_KO NULL
 #define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_INFO_0_KO NULL
 #define CORE_OPTION_NAME_CUSTOM_TEXTURES_LABEL_KO NULL
-#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_KO NULL
+#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_KO "텍스쳐 덤프하기"
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_KO NULL
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_KO NULL
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_KO NULL
@@ -34432,19 +34432,19 @@ struct retro_core_options_v2 options_ja = {
 #define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_KO NULL
 #define OPTION_VAL_DEFAULT_OFF_01_KO NULL
 #define OPTION_VAL_DEFAULT_ON_00_KO NULL
-#define OPTION_VAL_BLACK_02_KO NULL
-#define OPTION_VAL_BLUE_03_KO NULL
+#define OPTION_VAL_BLACK_02_KO "검정"
+#define OPTION_VAL_BLUE_03_KO "파란색"
 #define OPTION_VAL_LIGHT_BLUE_04_KO NULL
-#define OPTION_VAL_GREEN_05_KO NULL
-#define OPTION_VAL_CYAN_06_KO NULL
+#define OPTION_VAL_GREEN_05_KO "녹색"
+#define OPTION_VAL_CYAN_06_KO "청록"
 #define OPTION_VAL_CYAN_BLUE_07_KO NULL
 #define OPTION_VAL_LIGHT_GREEN_08_KO NULL
 #define OPTION_VAL_CYAN_GREEN_09_KO NULL
 #define OPTION_VAL_LIGHT_CYAN_10_KO NULL
-#define OPTION_VAL_RED_11_KO NULL
-#define OPTION_VAL_PURPLE_12_KO NULL
+#define OPTION_VAL_RED_11_KO "빨간색"
+#define OPTION_VAL_PURPLE_12_KO "보라"
 #define OPTION_VAL_LIGHT_PURPLE_13_KO NULL
-#define OPTION_VAL_YELLOW_14_KO NULL
+#define OPTION_VAL_YELLOW_14_KO "노란색"
 #define OPTION_VAL_GRAY_15_KO NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_KO NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_KO NULL
@@ -34453,11 +34453,11 @@ struct retro_core_options_v2 options_ja = {
 #define OPTION_VAL_LIGHT_RED_2_20_KO NULL
 #define OPTION_VAL_MAGENTA_21_KO NULL
 #define OPTION_VAL_LIGHT_ORANGE_22_KO NULL
-#define OPTION_VAL_ORANGE_23_KO NULL
+#define OPTION_VAL_ORANGE_23_KO "오렌지"
 #define OPTION_VAL_LIGHT_PURPLE_3_24_KO NULL
 #define OPTION_VAL_LIGHT_YELLOW_25_KO NULL
 #define OPTION_VAL_LIGHT_YELLOW_2_26_KO NULL
-#define OPTION_VAL_WHITE_27_KO NULL
+#define OPTION_VAL_WHITE_27_KO "흰색"
 #define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_KO NULL
 #define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_KO NULL
 #define OPTION_VAL_40_KO NULL
@@ -37531,7 +37531,7 @@ struct retro_core_options_v2 options_mt = {
 
 #define CATEGORY_VIDEO_LABEL_NL NULL
 #define CATEGORY_VIDEO_INFO_0_NL NULL
-#define CATEGORY_INPUT_LABEL_NL NULL
+#define CATEGORY_INPUT_LABEL_NL "Invoer"
 #define CATEGORY_INPUT_INFO_0_NL NULL
 #define CATEGORY_VMU_LABEL_NL NULL
 #define CATEGORY_VMU_INFO_0_NL NULL
@@ -37543,7 +37543,7 @@ struct retro_core_options_v2 options_mt = {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_NL NULL
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_NL NULL
 #define CORE_OPTION_NAME_SYSTEM_LABEL_NL NULL
-#define OPTION_VAL_AUTO_NL NULL
+#define OPTION_VAL_AUTO_NL "Automatisch"
 #define OPTION_VAL_DREAMCAST_NL NULL
 #define OPTION_VAL_NAOMI_NL NULL
 #define OPTION_VAL_ATOMISWAVE_NL NULL
@@ -37584,7 +37584,7 @@ struct retro_core_options_v2 options_mt = {
 #define OPTION_VAL_11520X8640_NL NULL
 #define OPTION_VAL_12160X9120_NL NULL
 #define OPTION_VAL_12800X9600_NL NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_NL NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_NL "Schermoriëntatie"
 #define OPTION_VAL_HORIZONTAL_NL NULL
 #define OPTION_VAL_VERTICAL_NL NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_NL NULL
@@ -37614,18 +37614,18 @@ struct retro_core_options_v2 options_mt = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_NL NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_NL NULL
 #define OPTION_VAL_FULLSPEED_NL NULL
-#define OPTION_VAL_NORMAL_NL NULL
+#define OPTION_VAL_NORMAL_NL "Normaal"
 #define CORE_OPTION_NAME_REGION_LABEL_NL NULL
 #define OPTION_VAL_JAPAN_NL NULL
 #define OPTION_VAL_USA_NL NULL
 #define OPTION_VAL_EUROPE_NL NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_NL NULL
-#define OPTION_VAL_JAPANESE_NL NULL
-#define OPTION_VAL_ENGLISH_NL NULL
-#define OPTION_VAL_GERMAN_NL NULL
-#define OPTION_VAL_FRENCH_NL NULL
-#define OPTION_VAL_SPANISH_NL NULL
-#define OPTION_VAL_ITALIAN_NL NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_NL "Taal"
+#define OPTION_VAL_JAPANESE_NL "Japans"
+#define OPTION_VAL_ENGLISH_NL "Engels"
+#define OPTION_VAL_GERMAN_NL "Duits"
+#define OPTION_VAL_FRENCH_NL "Frans"
+#define OPTION_VAL_SPANISH_NL "Spaans"
+#define OPTION_VAL_ITALIAN_NL "Italiaans"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_NL NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_NL NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_NL NULL
@@ -37693,18 +37693,18 @@ struct retro_core_options_v2 options_mt = {
 #define OPTION_VAL_DEFAULT_OFF_01_NL NULL
 #define OPTION_VAL_DEFAULT_ON_00_NL NULL
 #define OPTION_VAL_BLACK_02_NL NULL
-#define OPTION_VAL_BLUE_03_NL NULL
+#define OPTION_VAL_BLUE_03_NL "Blauw"
 #define OPTION_VAL_LIGHT_BLUE_04_NL NULL
-#define OPTION_VAL_GREEN_05_NL NULL
+#define OPTION_VAL_GREEN_05_NL "Groen"
 #define OPTION_VAL_CYAN_06_NL NULL
 #define OPTION_VAL_CYAN_BLUE_07_NL NULL
 #define OPTION_VAL_LIGHT_GREEN_08_NL NULL
 #define OPTION_VAL_CYAN_GREEN_09_NL NULL
 #define OPTION_VAL_LIGHT_CYAN_10_NL NULL
-#define OPTION_VAL_RED_11_NL NULL
+#define OPTION_VAL_RED_11_NL "Rood"
 #define OPTION_VAL_PURPLE_12_NL NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_NL NULL
-#define OPTION_VAL_YELLOW_14_NL NULL
+#define OPTION_VAL_YELLOW_14_NL "Geel"
 #define OPTION_VAL_GRAY_15_NL NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_NL NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_NL NULL
@@ -39159,7 +39159,7 @@ struct retro_core_options_v2 options_nl = {
 
 /* RETRO_LANGUAGE_OC */
 
-#define CATEGORY_VIDEO_LABEL_OC NULL
+#define CATEGORY_VIDEO_LABEL_OC "Vidèo"
 #define CATEGORY_VIDEO_INFO_0_OC NULL
 #define CATEGORY_INPUT_LABEL_OC NULL
 #define CATEGORY_INPUT_INFO_0_OC NULL
@@ -40789,13 +40789,13 @@ struct retro_core_options_v2 options_oc = {
 
 /* RETRO_LANGUAGE_PL */
 
-#define CATEGORY_VIDEO_LABEL_PL NULL
+#define CATEGORY_VIDEO_LABEL_PL "Wideo"
 #define CATEGORY_VIDEO_INFO_0_PL NULL
-#define CATEGORY_INPUT_LABEL_PL NULL
+#define CATEGORY_INPUT_LABEL_PL "Wejście"
 #define CATEGORY_INPUT_INFO_0_PL NULL
 #define CATEGORY_VMU_LABEL_PL NULL
 #define CATEGORY_VMU_INFO_0_PL NULL
-#define CATEGORY_HACKS_LABEL_PL NULL
+#define CATEGORY_HACKS_LABEL_PL "Hacki emulacyjne"
 #define CATEGORY_HACKS_INFO_0_PL NULL
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_PL NULL
 #define OPTION_VAL_DYNAMIC_RECOMPILER_PL NULL
@@ -40844,7 +40844,7 @@ struct retro_core_options_v2 options_oc = {
 #define OPTION_VAL_11520X8640_PL NULL
 #define OPTION_VAL_12160X9120_PL NULL
 #define OPTION_VAL_12800X9600_PL NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_PL NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_PL "Orientacja ekranu"
 #define OPTION_VAL_HORIZONTAL_PL NULL
 #define OPTION_VAL_VERTICAL_PL NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_PL NULL
@@ -40866,7 +40866,7 @@ struct retro_core_options_v2 options_oc = {
 #define OPTION_VAL_TV_COMPOSITE_PL NULL
 #define OPTION_VAL_VGA_RGB_PL NULL
 #define CORE_OPTION_NAME_BROADCAST_LABEL_PL NULL
-#define OPTION_VAL_DEFAULT_PL NULL
+#define OPTION_VAL_DEFAULT_PL "Domyślny"
 #define OPTION_VAL_PAL_M_PL NULL
 #define OPTION_VAL_PAL_N_PL NULL
 #define OPTION_VAL_NTSC_PL NULL
@@ -40874,18 +40874,18 @@ struct retro_core_options_v2 options_oc = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_PL NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_PL NULL
 #define OPTION_VAL_FULLSPEED_PL NULL
-#define OPTION_VAL_NORMAL_PL NULL
+#define OPTION_VAL_NORMAL_PL "Normalny"
 #define CORE_OPTION_NAME_REGION_LABEL_PL NULL
 #define OPTION_VAL_JAPAN_PL NULL
 #define OPTION_VAL_USA_PL NULL
 #define OPTION_VAL_EUROPE_PL NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_PL NULL
-#define OPTION_VAL_JAPANESE_PL NULL
-#define OPTION_VAL_ENGLISH_PL NULL
-#define OPTION_VAL_GERMAN_PL NULL
-#define OPTION_VAL_FRENCH_PL NULL
-#define OPTION_VAL_SPANISH_PL NULL
-#define OPTION_VAL_ITALIAN_PL NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_PL "Język"
+#define OPTION_VAL_JAPANESE_PL "japoński"
+#define OPTION_VAL_ENGLISH_PL "angielski"
+#define OPTION_VAL_GERMAN_PL "niemiecki"
+#define OPTION_VAL_FRENCH_PL "francuski"
+#define OPTION_VAL_SPANISH_PL "hiszpański"
+#define OPTION_VAL_ITALIAN_PL "włoski"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_PL NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_PL NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_PL NULL
@@ -40897,7 +40897,7 @@ struct retro_core_options_v2 options_oc = {
 #define OPTION_VAL_15_PL NULL
 #define OPTION_VAL_20_PL NULL
 #define OPTION_VAL_25_PL NULL
-#define OPTION_VAL_30_PL NULL
+#define OPTION_VAL_30_PL "30 %"
 #define CORE_OPTION_NAME_TRIGGER_DEADZONE_LABEL_PL NULL
 #define CORE_OPTION_NAME_DIGITAL_TRIGGERS_LABEL_PL NULL
 #define CORE_OPTION_NAME_ENABLE_DSP_LABEL_PL NULL
@@ -40953,18 +40953,18 @@ struct retro_core_options_v2 options_oc = {
 #define OPTION_VAL_DEFAULT_OFF_01_PL NULL
 #define OPTION_VAL_DEFAULT_ON_00_PL NULL
 #define OPTION_VAL_BLACK_02_PL NULL
-#define OPTION_VAL_BLUE_03_PL NULL
+#define OPTION_VAL_BLUE_03_PL "Niebieski"
 #define OPTION_VAL_LIGHT_BLUE_04_PL NULL
-#define OPTION_VAL_GREEN_05_PL NULL
+#define OPTION_VAL_GREEN_05_PL "Zielony"
 #define OPTION_VAL_CYAN_06_PL NULL
 #define OPTION_VAL_CYAN_BLUE_07_PL NULL
 #define OPTION_VAL_LIGHT_GREEN_08_PL NULL
 #define OPTION_VAL_CYAN_GREEN_09_PL NULL
 #define OPTION_VAL_LIGHT_CYAN_10_PL NULL
-#define OPTION_VAL_RED_11_PL NULL
+#define OPTION_VAL_RED_11_PL "Czerwony"
 #define OPTION_VAL_PURPLE_12_PL NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_PL NULL
-#define OPTION_VAL_YELLOW_14_PL NULL
+#define OPTION_VAL_YELLOW_14_PL "Żółty"
 #define OPTION_VAL_GRAY_15_PL NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_PL NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_PL NULL
@@ -40981,10 +40981,10 @@ struct retro_core_options_v2 options_oc = {
 #define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_PL NULL
 #define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_PL NULL
 #define OPTION_VAL_40_PL NULL
-#define OPTION_VAL_50_PL NULL
-#define OPTION_VAL_60_PL NULL
+#define OPTION_VAL_50_PL "50 %"
+#define OPTION_VAL_60_PL "60 %"
 #define OPTION_VAL_70_PL NULL
-#define OPTION_VAL_80_PL NULL
+#define OPTION_VAL_80_PL "80 %"
 #define OPTION_VAL_90_PL NULL
 #define OPTION_VAL_100_PL NULL
 #define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_PL NULL
@@ -42420,33 +42420,33 @@ struct retro_core_options_v2 options_pl = {
 /* RETRO_LANGUAGE_PT_BR */
 
 #define CATEGORY_VIDEO_LABEL_PT_BR "Vídeo"
-#define CATEGORY_VIDEO_INFO_0_PT_BR NULL
+#define CATEGORY_VIDEO_INFO_0_PT_BR "Configura os parâmetros dos buffers e efeitos visuais, os parâmetros de imagem, a taxa ou pulo de quadros e de renderização e textura."
 #define CATEGORY_INPUT_LABEL_PT_BR "Entrada"
-#define CATEGORY_INPUT_INFO_0_PT_BR "Configurar controle e pistola de luz."
+#define CATEGORY_INPUT_INFO_0_PT_BR "Configura os ajustes de controle e pistola de luz."
 #define CATEGORY_VMU_LABEL_PT_BR NULL
-#define CATEGORY_VMU_INFO_0_PT_BR NULL
+#define CATEGORY_VMU_INFO_0_PT_BR "Altera as configurações relacionadas com as Visual Memory (VMU)."
 #define CATEGORY_HACKS_LABEL_PT_BR "Hacks de emulação"
-#define CATEGORY_HACKS_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_CPU_MODE_LABEL_PT_BR NULL
-#define OPTION_VAL_DYNAMIC_RECOMPILER_PT_BR NULL
-#define OPTION_VAL_GENERIC_RECOMPILER_PT_BR NULL
-#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_SYSTEM_LABEL_PT_BR NULL
-#define OPTION_VAL_AUTO_PT_BR NULL
+#define CATEGORY_HACKS_INFO_0_PT_BR "Configura diferentes hacks da emulação."
+#define CORE_OPTION_NAME_CPU_MODE_LABEL_PT_BR "Modo de CPU (requer reinício)"
+#define OPTION_VAL_DYNAMIC_RECOMPILER_PT_BR "Recompilador dinâmico"
+#define OPTION_VAL_GENERIC_RECOMPILER_PT_BR "Recompilador genérico"
+#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_PT_BR "Inicialização a partir da BIOS (requer reinício)"
+#define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_PT_BR "Inicializa diretamente no menu da BIOS do Dreamcast."
+#define CORE_OPTION_NAME_SYSTEM_LABEL_PT_BR "Tipo de sistema (requer reinício)"
+#define OPTION_VAL_AUTO_PT_BR "Automática"
 #define OPTION_VAL_DREAMCAST_PT_BR NULL
 #define OPTION_VAL_NAOMI_PT_BR NULL
 #define OPTION_VAL_ATOMISWAVE_PT_BR NULL
-#define CORE_OPTION_NAME_HLE_BIOS_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_INFO_0_PT_BR NULL
+#define CORE_OPTION_NAME_HLE_BIOS_LABEL_PT_BR "BIOS HLE"
+#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_PT_BR "Força o uso de uma BIOS criada com emulação de alto nível."
+#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_PT_BR "Tamanho do buffer de acumulação de pixel (requer reinício)"
+#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_INFO_0_PT_BR "Um alto valor pode ser necessário para que a imagem seja bem exibida em resoluções superiores às nativas."
 #define OPTION_VAL_512MB_PT_BR NULL
 #define OPTION_VAL_1GB_PT_BR NULL
 #define OPTION_VAL_2GB_PT_BR NULL
 #define OPTION_VAL_4GB_PT_BR NULL
-#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_INFO_0_PT_BR NULL
+#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_LABEL_PT_BR "Resolução interna (requer reinício)"
+#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_INFO_0_PT_BR "Modificar resolução de renderização."
 #define OPTION_VAL_320X240_PT_BR NULL
 #define OPTION_VAL_640X480_PT_BR NULL
 #define OPTION_VAL_800X600_PT_BR NULL
@@ -42474,53 +42474,53 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_11520X8640_PT_BR NULL
 #define OPTION_VAL_12160X9120_PT_BR NULL
 #define OPTION_VAL_12800X9600_PT_BR NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_PT_BR NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_PT_BR "Orientação da tela"
 #define OPTION_VAL_HORIZONTAL_PT_BR NULL
 #define OPTION_VAL_VERTICAL_PT_BR NULL
-#define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_PT_BR NULL
-#define OPTION_VAL_PER_STRIP_FAST_LEAST_ACCURATE_PT_BR NULL
-#define OPTION_VAL_PER_TRIANGLE_NORMAL_PT_BR NULL
-#define OPTION_VAL_PER_PIXEL_ACCURATE_PT_BR NULL
-#define CORE_OPTION_NAME_GDROM_FAST_LOADING_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_GDROM_FAST_LOADING_INFO_0_PT_BR NULL
+#define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_PT_BR "Classificação de transparências"
+#define OPTION_VAL_PER_STRIP_FAST_LEAST_ACCURATE_PT_BR "Por faixa (rápido, menos preciso)"
+#define OPTION_VAL_PER_TRIANGLE_NORMAL_PT_BR "Por triângulo (normal)"
+#define OPTION_VAL_PER_PIXEL_ACCURATE_PT_BR "Por pixel (preciso, mas lento)"
+#define CORE_OPTION_NAME_GDROM_FAST_LOADING_LABEL_PT_BR "Carregamento rápido do GD-ROM (impreciso)"
+#define CORE_OPTION_NAME_GDROM_FAST_LOADING_INFO_0_PT_BR "Acelera o carregamento do GD-ROM."
 #define CORE_OPTION_NAME_MIPMAPPING_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_FOG_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_WIDESCREEN_HACK_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_CABLE_TYPE_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_CABLE_TYPE_INFO_0_PT_BR NULL
+#define CORE_OPTION_NAME_FOG_LABEL_PT_BR "Efeitos de nevoeiro"
+#define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_LABEL_PT_BR "Modificador de volume"
+#define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_INFO_0_PT_BR "Uma característica da GPU do Dreamcast que é frequentemente usada por jogos para desenhar sombras em objetos. Esta opção deve geralmente ser ativada; tem pouco efeito sobre o desempenho."
+#define CORE_OPTION_NAME_WIDESCREEN_HACK_LABEL_PT_BR "Hack de widescreen (requer reinício)"
+#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_LABEL_PT_BR "Hack de trapaças (requer reinício)"
+#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_INFO_0_PT_BR "Ativa trapaças que permitem a exibição de certos jogos em formato widescreen."
+#define CORE_OPTION_NAME_CABLE_TYPE_LABEL_PT_BR "Tipo de cabo"
+#define CORE_OPTION_NAME_CABLE_TYPE_INFO_0_PT_BR "Selecione o tipo de sinal de saída da imagem. É recomendado usar VGA, mas alguns jogos não são suportados."
 #define OPTION_VAL_TV_RGB_PT_BR NULL
-#define OPTION_VAL_TV_COMPOSITE_PT_BR NULL
+#define OPTION_VAL_TV_COMPOSITE_PT_BR "TV (Composto)"
 #define OPTION_VAL_VGA_RGB_PT_BR NULL
-#define CORE_OPTION_NAME_BROADCAST_LABEL_PT_BR NULL
-#define OPTION_VAL_DEFAULT_PT_BR NULL
-#define OPTION_VAL_PAL_M_PT_BR NULL
-#define OPTION_VAL_PAL_N_PT_BR NULL
+#define CORE_OPTION_NAME_BROADCAST_LABEL_PT_BR "Padrão de transmissão"
+#define OPTION_VAL_DEFAULT_PT_BR "Padrão"
+#define OPTION_VAL_PAL_M_PT_BR "PAL-M (Brasil)"
+#define OPTION_VAL_PAL_N_PT_BR "PAL-N (Argentina, Paraguai, Uruguai)"
 #define OPTION_VAL_NTSC_PT_BR NULL
-#define OPTION_VAL_PAL_PT_BR NULL
-#define CORE_OPTION_NAME_FRAMERATE_LABEL_PT_BR NULL
+#define OPTION_VAL_PAL_PT_BR "PAL (Resto do mundo)"
+#define CORE_OPTION_NAME_FRAMERATE_LABEL_PT_BR "Taxa de quadros"
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_PT_BR "Afeta como o emulador interage com a interface. 'Velocidade total' dará o controle ao RetroArch toda vez que um quadro for renderizado. 'Normal' dará o controle ao RetroArch toda vez que for gerada uma interrupção V-blank. É recomendado usar 'Velocidade total' na maioria dos casos. 'Normal' pode melhorar o ritmo dos quadros em alguns sistemas, mas também pode fazer com que os controles não respondam quando a imagem está estática (ex: durante uma tela de carregamento ou pausa). Nota: Esta configuração só será aplicada quando a 'Renderização multi-thread' estiver desativada."
-#define OPTION_VAL_FULLSPEED_PT_BR NULL
+#define OPTION_VAL_FULLSPEED_PT_BR "Velocidade máxima"
 #define OPTION_VAL_NORMAL_PT_BR NULL
-#define CORE_OPTION_NAME_REGION_LABEL_PT_BR NULL
-#define OPTION_VAL_JAPAN_PT_BR NULL
-#define OPTION_VAL_USA_PT_BR NULL
-#define OPTION_VAL_EUROPE_PT_BR NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_PT_BR NULL
-#define OPTION_VAL_JAPANESE_PT_BR NULL
-#define OPTION_VAL_ENGLISH_PT_BR NULL
-#define OPTION_VAL_GERMAN_PT_BR NULL
-#define OPTION_VAL_FRENCH_PT_BR NULL
-#define OPTION_VAL_SPANISH_PT_BR NULL
-#define OPTION_VAL_ITALIAN_PT_BR NULL
-#define CORE_OPTION_NAME_DIV_MATCHING_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_FORCE_WINCE_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_FORCE_WINCE_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_ANALOG_STICK_DEADZONE_LABEL_PT_BR NULL
+#define CORE_OPTION_NAME_REGION_LABEL_PT_BR "Região"
+#define OPTION_VAL_JAPAN_PT_BR "Japão"
+#define OPTION_VAL_USA_PT_BR "EUA"
+#define OPTION_VAL_EUROPE_PT_BR "Europa"
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_PT_BR "Idioma"
+#define OPTION_VAL_JAPANESE_PT_BR "Japonês"
+#define OPTION_VAL_ENGLISH_PT_BR "Inglês"
+#define OPTION_VAL_GERMAN_PT_BR "Alemão"
+#define OPTION_VAL_FRENCH_PT_BR "Francês"
+#define OPTION_VAL_SPANISH_PT_BR "Espanhol"
+#define OPTION_VAL_ITALIAN_PT_BR "Italiano"
+#define CORE_OPTION_NAME_DIV_MATCHING_LABEL_PT_BR "Unificar instruções DIV"
+#define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_PT_BR "Otimizar divisão de inteiros"
+#define CORE_OPTION_NAME_FORCE_WINCE_LABEL_PT_BR "Forçar o modo Windows CE"
+#define CORE_OPTION_NAME_FORCE_WINCE_INFO_0_PT_BR "Ativa a emulação completa da MMU (Unidade de Gerenciamento de Memória) e outras configurações para jogos compatíveis com o Windows CE."
+#define CORE_OPTION_NAME_ANALOG_STICK_DEADZONE_LABEL_PT_BR "Zona morta do direcional analógico"
 #define OPTION_VAL_0_PT_BR NULL
 #define OPTION_VAL_5_PT_BR NULL
 #define OPTION_VAL_10_PT_BR NULL
@@ -42528,88 +42528,88 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_20_PT_BR NULL
 #define OPTION_VAL_25_PT_BR NULL
 #define OPTION_VAL_30_PT_BR NULL
-#define CORE_OPTION_NAME_TRIGGER_DEADZONE_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_DIGITAL_TRIGGERS_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_ENABLE_DSP_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_ENABLE_DSP_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_PVR2_FILTERING_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_PVR2_FILTERING_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_TEXUPSCALE_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_PT_BR NULL
+#define CORE_OPTION_NAME_TRIGGER_DEADZONE_LABEL_PT_BR "Zona morta dos gatilhos"
+#define CORE_OPTION_NAME_DIGITAL_TRIGGERS_LABEL_PT_BR "Gatilhos digitais"
+#define CORE_OPTION_NAME_ENABLE_DSP_LABEL_PT_BR "Ativar DSP"
+#define CORE_OPTION_NAME_ENABLE_DSP_INFO_0_PT_BR "Ativa a emulação Dreamcast do DSP (processador de sinal digital) de áudio. Melhora a precisão do som gerado ao custo de requisitos maiores."
+#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_PT_BR "Filtro anisotrópico"
+#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_PT_BR "Melhora a qualidade das texturas em superfícies que estão em um ângulo oblíquo em relação à câmera."
+#define CORE_OPTION_NAME_PVR2_FILTERING_LABEL_PT_BR "Filtro de pós-processamento do PowerVR2"
+#define CORE_OPTION_NAME_PVR2_FILTERING_INFO_0_PT_BR "Pós-processa a imagem renderizada para simular efeitos específicos da GPU PowerVR2 e os sinais de vídeo analógicos."
+#define CORE_OPTION_NAME_TEXUPSCALE_LABEL_PT_BR "Redimensionamento de textura (xBRZ)"
+#define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_PT_BR "Melhora os gráficos 2D de 'pixel arte' desenhados à mão. Usar somente com jogos em 2D pixelado."
 #define OPTION_VAL_2X_PT_BR NULL
 #define OPTION_VAL_4X_PT_BR NULL
 #define OPTION_VAL_6X_PT_BR NULL
-#define CORE_OPTION_NAME_TEXUPSCALE_MAX_FILTERED_TEXTURE_SIZE_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_RENDER_TO_TEXTURE_UPSCALING_LABEL_PT_BR NULL
+#define CORE_OPTION_NAME_TEXUPSCALE_MAX_FILTERED_TEXTURE_SIZE_LABEL_PT_BR "Tamanho máximo do redimensionamento de texturas"
+#define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_PT_BR "Ativar o buffer RTT (renderização para texturas)"
+#define CORE_OPTION_NAME_RENDER_TO_TEXTURE_UPSCALING_LABEL_PT_BR "Redimensionamento da RTT"
 #define OPTION_VAL_1X_PT_BR NULL
 #define OPTION_VAL_3X_PT_BR NULL
 #define OPTION_VAL_8X_PT_BR NULL
 #define CORE_OPTION_NAME_THREADED_RENDERING_LABEL_PT_BR "Renderização multi-thread (requer reinício)"
 #define CORE_OPTION_NAME_THREADED_RENDERING_INFO_0_PT_BR "Executa a GPU e a CPU em diferentes threads. Altamente recomendado."
-#define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_LABEL_PT_BR NULL
+#define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_LABEL_PT_BR "Renderização síncrona"
 #define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_INFO_0_PT_BR "Espera que a GPU termine de renderizar o quadro anterior em vez de jogar o atual. Nota: Esta configuração só será aplicada quando a 'Renderização multi-thread' estiver ativada."
-#define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_LABEL_PT_BR NULL
+#define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_LABEL_PT_BR "Atrasar troca de quadro"
 #define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_INFO_0_PT_BR "Útil para evitar tremulações da imagem ou defeitos de vídeo. Não recomendado para uso em plataformas lentas. Esta configuração só será aplicada quando a 'Renderização multi-thread' estiver ativada."
-#define CORE_OPTION_NAME_FRAME_SKIPPING_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_FRAME_SKIPPING_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_ENABLE_PURUPURU_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_ENABLE_PURUPURU_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_CUSTOM_TEXTURES_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_PT_BR NULL
+#define CORE_OPTION_NAME_FRAME_SKIPPING_LABEL_PT_BR "Pulo de quadro"
+#define CORE_OPTION_NAME_FRAME_SKIPPING_INFO_0_PT_BR "Define o número de quadros a serem pulados após cada quadro ser exibido."
+#define CORE_OPTION_NAME_ENABLE_PURUPURU_LABEL_PT_BR "Purupuru Pack (vibração)"
+#define CORE_OPTION_NAME_ENABLE_PURUPURU_INFO_0_PT_BR "Habilita a vibração do controle."
+#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_LABEL_PT_BR "Ativar botões de serviço da NAOMI"
+#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_INFO_0_PT_BR "Ativa o botão SERVICE da placa NAOMI para acessar a configuração do gabinete."
+#define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_LABEL_PT_BR "Habilita o interruptor DIP de 15 kHz da NAOMI"
+#define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_INFO_0_PT_BR "Esta opção pode forçar a imagem a ser exibida em 240p, 480i ou não ter efeito algum, dependendo do jogo."
+#define CORE_OPTION_NAME_CUSTOM_TEXTURES_LABEL_PT_BR "Carregar texturas personalizadas"
+#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_PT_BR "Despejo de texturas"
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_PT_BR "Separar Visual Memory (VMU) por jogo"
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_PT_BR "VMUs por jogo"
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_PT_BR NULL
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_PT_BR "Ao desativar esta opção, todos os jogos compartilharão quatro arquivos de salvamento da VMU (A1, B1, C1, D1) que serão localizados no diretório de sistema do RetroArch. A configuração 'VMU A1' criará um arquivo único da VMU A1 no diretório de salvamento do RetroArch para cada jogo que for executado. A configuração 'Todas as VMUs' criará quatro arquivos únicos VMU (A1, B1, C1, D1) para cada jogo que for executado."
 #define OPTION_VAL_VMU_A1_PT_BR NULL
-#define OPTION_VAL_ALL_VMUS_PT_BR NULL
-#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_PT_BR NULL
+#define OPTION_VAL_ALL_VMUS_PT_BR "Todas as VMUs"
+#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_PT_BR "Mostrar configurações de visualização das Visual Memory (VMU)"
 #define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_CAT_PT_BR "Mostrar configurações da exibição da VMU"
-#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_VMU1_SCREEN_DISPLAY_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU1_SCREEN_POSITION_LABEL_PT_BR NULL
-#define OPTION_VAL_UPPER_LEFT_PT_BR NULL
-#define OPTION_VAL_UPPER_RIGHT_PT_BR NULL
-#define OPTION_VAL_LOWER_LEFT_PT_BR NULL
-#define OPTION_VAL_LOWER_RIGHT_PT_BR NULL
-#define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_PT_BR NULL
+#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_INFO_0_PT_BR "Ativa a configuração de visibilidade, tamanho, posição e cor das telas de LCD emulados da VMU. NOTA: É necessário sair e entrar novamente no 'Menu rápido' para que as mudanças tenham efeito."
+#define CORE_OPTION_NAME_VMU1_SCREEN_DISPLAY_LABEL_PT_BR "Tela da VMU 1"
+#define CORE_OPTION_NAME_VMU1_SCREEN_POSITION_LABEL_PT_BR "Posição da tela da VMU 1"
+#define OPTION_VAL_UPPER_LEFT_PT_BR "Canto superior esquerdo"
+#define OPTION_VAL_UPPER_RIGHT_PT_BR "Canto superior direito"
+#define OPTION_VAL_LOWER_LEFT_PT_BR "Canto inferior esquerdo"
+#define OPTION_VAL_LOWER_RIGHT_PT_BR "Canto inferior direito"
+#define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_PT_BR "Tamanho da tela da VMU 1"
 #define OPTION_VAL_5X_PT_BR NULL
-#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_PT_BR NULL
-#define OPTION_VAL_DEFAULT_OFF_01_PT_BR NULL
-#define OPTION_VAL_DEFAULT_ON_00_PT_BR NULL
-#define OPTION_VAL_BLACK_02_PT_BR NULL
-#define OPTION_VAL_BLUE_03_PT_BR NULL
-#define OPTION_VAL_LIGHT_BLUE_04_PT_BR NULL
-#define OPTION_VAL_GREEN_05_PT_BR NULL
-#define OPTION_VAL_CYAN_06_PT_BR NULL
-#define OPTION_VAL_CYAN_BLUE_07_PT_BR NULL
-#define OPTION_VAL_LIGHT_GREEN_08_PT_BR NULL
-#define OPTION_VAL_CYAN_GREEN_09_PT_BR NULL
-#define OPTION_VAL_LIGHT_CYAN_10_PT_BR NULL
-#define OPTION_VAL_RED_11_PT_BR NULL
-#define OPTION_VAL_PURPLE_12_PT_BR NULL
-#define OPTION_VAL_LIGHT_PURPLE_13_PT_BR NULL
-#define OPTION_VAL_YELLOW_14_PT_BR NULL
-#define OPTION_VAL_GRAY_15_PT_BR NULL
-#define OPTION_VAL_LIGHT_PURPLE_2_16_PT_BR NULL
-#define OPTION_VAL_LIGHT_GREEN_2_17_PT_BR NULL
-#define OPTION_VAL_LIGHT_GREEN_3_18_PT_BR NULL
-#define OPTION_VAL_LIGHT_CYAN_2_19_PT_BR NULL
-#define OPTION_VAL_LIGHT_RED_2_20_PT_BR NULL
+#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_PT_BR "Cor dos pixels acesos da VMU 1"
+#define OPTION_VAL_DEFAULT_OFF_01_PT_BR "Desligar por padrão"
+#define OPTION_VAL_DEFAULT_ON_00_PT_BR "Ligar por padrão"
+#define OPTION_VAL_BLACK_02_PT_BR "Preta"
+#define OPTION_VAL_BLUE_03_PT_BR "Azul"
+#define OPTION_VAL_LIGHT_BLUE_04_PT_BR "Azul claro"
+#define OPTION_VAL_GREEN_05_PT_BR "Verde"
+#define OPTION_VAL_CYAN_06_PT_BR "Azul-marinho"
+#define OPTION_VAL_CYAN_BLUE_07_PT_BR "Azul ciano"
+#define OPTION_VAL_LIGHT_GREEN_08_PT_BR "Verde claro"
+#define OPTION_VAL_CYAN_GREEN_09_PT_BR "Verde ciano"
+#define OPTION_VAL_LIGHT_CYAN_10_PT_BR "Ciano claro"
+#define OPTION_VAL_RED_11_PT_BR "Vermelho"
+#define OPTION_VAL_PURPLE_12_PT_BR "Violeta"
+#define OPTION_VAL_LIGHT_PURPLE_13_PT_BR "Roxo claro"
+#define OPTION_VAL_YELLOW_14_PT_BR "Amarelo"
+#define OPTION_VAL_GRAY_15_PT_BR "Cinza"
+#define OPTION_VAL_LIGHT_PURPLE_2_16_PT_BR "Roxo claro (2)"
+#define OPTION_VAL_LIGHT_GREEN_2_17_PT_BR "Verde claro (2)"
+#define OPTION_VAL_LIGHT_GREEN_3_18_PT_BR "Verde claro (3)"
+#define OPTION_VAL_LIGHT_CYAN_2_19_PT_BR "Ciano claro (2)"
+#define OPTION_VAL_LIGHT_RED_2_20_PT_BR "Vermelho claro (2)"
 #define OPTION_VAL_MAGENTA_21_PT_BR NULL
-#define OPTION_VAL_LIGHT_ORANGE_22_PT_BR NULL
-#define OPTION_VAL_ORANGE_23_PT_BR NULL
-#define OPTION_VAL_LIGHT_PURPLE_3_24_PT_BR NULL
-#define OPTION_VAL_LIGHT_YELLOW_25_PT_BR NULL
-#define OPTION_VAL_LIGHT_YELLOW_2_26_PT_BR NULL
-#define OPTION_VAL_WHITE_27_PT_BR NULL
-#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_PT_BR NULL
+#define OPTION_VAL_LIGHT_ORANGE_22_PT_BR "Laranja claro"
+#define OPTION_VAL_ORANGE_23_PT_BR "Laranja"
+#define OPTION_VAL_LIGHT_PURPLE_3_24_PT_BR "Roxo claro (3)"
+#define OPTION_VAL_LIGHT_YELLOW_25_PT_BR "Amarelo claro"
+#define OPTION_VAL_LIGHT_YELLOW_2_26_PT_BR "Amarelo claro (2)"
+#define OPTION_VAL_WHITE_27_PT_BR "Branca"
+#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_PT_BR "Cor dos pixels apagados da VMU 1"
+#define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_PT_BR "Opacidade da tela da VMU 1"
 #define OPTION_VAL_40_PT_BR NULL
 #define OPTION_VAL_50_PT_BR NULL
 #define OPTION_VAL_60_PT_BR NULL
@@ -42617,30 +42617,30 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_80_PT_BR NULL
 #define OPTION_VAL_90_PT_BR NULL
 #define OPTION_VAL_100_PT_BR NULL
-#define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU2_SCREEN_POSITION_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU2_SCREEN_SIZE_MULT_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU2_SCREEN_OPACITY_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU3_SCREEN_DISPLAY_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU3_SCREEN_POSITION_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU3_SCREEN_SIZE_MULT_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU3_SCREEN_OPACITY_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU4_SCREEN_DISPLAY_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU4_SCREEN_POSITION_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU4_SCREEN_SIZE_MULT_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_VMU4_SCREEN_OPACITY_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_INFO_0_PT_BR NULL
-#define CORE_OPTION_NAME_LIGHTGUN1_CROSSHAIR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_LIGHTGUN2_CROSSHAIR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_LIGHTGUN3_CROSSHAIR_LABEL_PT_BR NULL
-#define CORE_OPTION_NAME_LIGHTGUN4_CROSSHAIR_LABEL_PT_BR NULL
+#define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_PT_BR "Tela da VMU 2"
+#define CORE_OPTION_NAME_VMU2_SCREEN_POSITION_LABEL_PT_BR "Posição da tela da VMU 2"
+#define CORE_OPTION_NAME_VMU2_SCREEN_SIZE_MULT_LABEL_PT_BR "Tamanho da tela da VMU 2"
+#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_PT_BR "Cor dos pixels acesos da VMU 2"
+#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_PT_BR "Cor dos pixels apagados da VMU 2"
+#define CORE_OPTION_NAME_VMU2_SCREEN_OPACITY_LABEL_PT_BR "Opacidade da tela da VMU 2"
+#define CORE_OPTION_NAME_VMU3_SCREEN_DISPLAY_LABEL_PT_BR "Tela da VMU 3"
+#define CORE_OPTION_NAME_VMU3_SCREEN_POSITION_LABEL_PT_BR "Posição da tela da VMU 3"
+#define CORE_OPTION_NAME_VMU3_SCREEN_SIZE_MULT_LABEL_PT_BR "Tamanho da tela da VMU 3"
+#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_PT_BR "Cor dos pixels acesos da VMU 3"
+#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_PT_BR "Cor dos pixels apagados da VMU 3"
+#define CORE_OPTION_NAME_VMU3_SCREEN_OPACITY_LABEL_PT_BR "Opacidade da tela da VMU 3"
+#define CORE_OPTION_NAME_VMU4_SCREEN_DISPLAY_LABEL_PT_BR "Tela da VMU 4"
+#define CORE_OPTION_NAME_VMU4_SCREEN_POSITION_LABEL_PT_BR "Posição da tela da VMU 4"
+#define CORE_OPTION_NAME_VMU4_SCREEN_SIZE_MULT_LABEL_PT_BR "Tamanho da tela da VMU 4"
+#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_PT_BR "Cor dos pixels acesos da VMU 4"
+#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_PT_BR "Cor dos pixels apagados da VMU 4"
+#define CORE_OPTION_NAME_VMU4_SCREEN_OPACITY_LABEL_PT_BR "Opacidade da tela da VMU 4"
+#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_LABEL_PT_BR "Mostrar configurações das pistolas de luz"
+#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_INFO_0_PT_BR "Ativa a configuração dos pontos de mira das pistolas de luz. NOTA: É necessário sair e entrar novamente no 'Menu rápido' para que a mudança tenha efeito."
+#define CORE_OPTION_NAME_LIGHTGUN1_CROSSHAIR_LABEL_PT_BR "Mostrar ponto de mira da arma 1"
+#define CORE_OPTION_NAME_LIGHTGUN2_CROSSHAIR_LABEL_PT_BR "Mostrar ponto de mira da arma 2"
+#define CORE_OPTION_NAME_LIGHTGUN3_CROSSHAIR_LABEL_PT_BR "Mostrar ponto de mira da arma 3"
+#define CORE_OPTION_NAME_LIGHTGUN4_CROSSHAIR_LABEL_PT_BR "Mostrar ponto de mira da arma 4"
 
 struct retro_core_option_v2_category option_cats_pt_br[] = {
    {
@@ -44049,9 +44049,9 @@ struct retro_core_options_v2 options_pt_br = {
 
 /* RETRO_LANGUAGE_PT_PT */
 
-#define CATEGORY_VIDEO_LABEL_PT_PT NULL
+#define CATEGORY_VIDEO_LABEL_PT_PT "Vídeo"
 #define CATEGORY_VIDEO_INFO_0_PT_PT NULL
-#define CATEGORY_INPUT_LABEL_PT_PT NULL
+#define CATEGORY_INPUT_LABEL_PT_PT "Entrada"
 #define CATEGORY_INPUT_INFO_0_PT_PT NULL
 #define CATEGORY_VMU_LABEL_PT_PT NULL
 #define CATEGORY_VMU_INFO_0_PT_PT NULL
@@ -44104,7 +44104,7 @@ struct retro_core_options_v2 options_pt_br = {
 #define OPTION_VAL_11520X8640_PT_PT NULL
 #define OPTION_VAL_12160X9120_PT_PT NULL
 #define OPTION_VAL_12800X9600_PT_PT NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_PT_PT NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_PT_PT "Orientação do ecrã"
 #define OPTION_VAL_HORIZONTAL_PT_PT NULL
 #define OPTION_VAL_VERTICAL_PT_PT NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_PT_PT NULL
@@ -44139,13 +44139,13 @@ struct retro_core_options_v2 options_pt_br = {
 #define OPTION_VAL_JAPAN_PT_PT NULL
 #define OPTION_VAL_USA_PT_PT NULL
 #define OPTION_VAL_EUROPE_PT_PT NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_PT_PT NULL
-#define OPTION_VAL_JAPANESE_PT_PT NULL
-#define OPTION_VAL_ENGLISH_PT_PT NULL
-#define OPTION_VAL_GERMAN_PT_PT NULL
-#define OPTION_VAL_FRENCH_PT_PT NULL
-#define OPTION_VAL_SPANISH_PT_PT NULL
-#define OPTION_VAL_ITALIAN_PT_PT NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_PT_PT "Idioma"
+#define OPTION_VAL_JAPANESE_PT_PT "Japonês"
+#define OPTION_VAL_ENGLISH_PT_PT "Inglês"
+#define OPTION_VAL_GERMAN_PT_PT "Alemão"
+#define OPTION_VAL_FRENCH_PT_PT "Francês"
+#define OPTION_VAL_SPANISH_PT_PT "Espanhol"
+#define OPTION_VAL_ITALIAN_PT_PT "Italiano"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_PT_PT NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_PT_PT NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_PT_PT NULL
@@ -44213,18 +44213,18 @@ struct retro_core_options_v2 options_pt_br = {
 #define OPTION_VAL_DEFAULT_OFF_01_PT_PT NULL
 #define OPTION_VAL_DEFAULT_ON_00_PT_PT NULL
 #define OPTION_VAL_BLACK_02_PT_PT NULL
-#define OPTION_VAL_BLUE_03_PT_PT NULL
+#define OPTION_VAL_BLUE_03_PT_PT "Azul"
 #define OPTION_VAL_LIGHT_BLUE_04_PT_PT NULL
-#define OPTION_VAL_GREEN_05_PT_PT NULL
+#define OPTION_VAL_GREEN_05_PT_PT "Verde"
 #define OPTION_VAL_CYAN_06_PT_PT NULL
 #define OPTION_VAL_CYAN_BLUE_07_PT_PT NULL
 #define OPTION_VAL_LIGHT_GREEN_08_PT_PT NULL
 #define OPTION_VAL_CYAN_GREEN_09_PT_PT NULL
 #define OPTION_VAL_LIGHT_CYAN_10_PT_PT NULL
-#define OPTION_VAL_RED_11_PT_PT NULL
+#define OPTION_VAL_RED_11_PT_PT "Vermelho"
 #define OPTION_VAL_PURPLE_12_PT_PT NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_PT_PT NULL
-#define OPTION_VAL_YELLOW_14_PT_PT NULL
+#define OPTION_VAL_YELLOW_14_PT_PT "Amarelo"
 #define OPTION_VAL_GRAY_15_PT_PT NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_PT_PT NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_PT_PT NULL
@@ -47309,34 +47309,34 @@ struct retro_core_options_v2 options_ro = {
 
 /* RETRO_LANGUAGE_RU */
 
-#define CATEGORY_VIDEO_LABEL_RU NULL
+#define CATEGORY_VIDEO_LABEL_RU "Видео"
 #define CATEGORY_VIDEO_INFO_0_RU NULL
-#define CATEGORY_INPUT_LABEL_RU NULL
+#define CATEGORY_INPUT_LABEL_RU "Ввод"
 #define CATEGORY_INPUT_INFO_0_RU NULL
 #define CATEGORY_VMU_LABEL_RU "Визуальная память"
 #define CATEGORY_VMU_INFO_0_RU "Настройка параметров блоков визуальной памяти (VMU)."
 #define CATEGORY_HACKS_LABEL_RU "Хаки эмуляции"
 #define CATEGORY_HACKS_INFO_0_RU NULL
-#define CORE_OPTION_NAME_CPU_MODE_LABEL_RU NULL
-#define OPTION_VAL_DYNAMIC_RECOMPILER_RU NULL
-#define OPTION_VAL_GENERIC_RECOMPILER_RU NULL
-#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_RU NULL
-#define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_RU NULL
-#define CORE_OPTION_NAME_SYSTEM_LABEL_RU NULL
-#define OPTION_VAL_AUTO_RU NULL
+#define CORE_OPTION_NAME_CPU_MODE_LABEL_RU "Режим CPU (требуется перезапуск)"
+#define OPTION_VAL_DYNAMIC_RECOMPILER_RU "Динамический рекомпилятор"
+#define OPTION_VAL_GENERIC_RECOMPILER_RU "Типовой рекомпилятор"
+#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_RU "Загружаться в BIOS (требуется перезапуск)"
+#define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_RU "Загружаться непосредственно в меню Dreamcast BIOS."
+#define CORE_OPTION_NAME_SYSTEM_LABEL_RU "Тип системы (требуется перезапуск)"
+#define OPTION_VAL_AUTO_RU "Авто"
 #define OPTION_VAL_DREAMCAST_RU NULL
 #define OPTION_VAL_NAOMI_RU NULL
 #define OPTION_VAL_ATOMISWAVE_RU NULL
 #define CORE_OPTION_NAME_HLE_BIOS_LABEL_RU NULL
-#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_RU NULL
-#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_RU NULL
+#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_RU "Принудительное использование высокоуровневой эмуляции BIOS."
+#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_RU "Размер накопительного буфера (требуется перезапуск)"
 #define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_INFO_0_RU "Большие значения могут требоваться для правильного отображения высоких разрешений."
-#define OPTION_VAL_512MB_RU NULL
-#define OPTION_VAL_1GB_RU NULL
-#define OPTION_VAL_2GB_RU NULL
-#define OPTION_VAL_4GB_RU NULL
-#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_LABEL_RU NULL
-#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_INFO_0_RU NULL
+#define OPTION_VAL_512MB_RU "512 МБ"
+#define OPTION_VAL_1GB_RU "1 Гб"
+#define OPTION_VAL_2GB_RU "2 Гб"
+#define OPTION_VAL_4GB_RU "4 Гб"
+#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_LABEL_RU "Внутреннее разрешение (требуется перезапуск)"
+#define CORE_OPTION_NAME_INTERNAL_RESOLUTION_INFO_0_RU "Настройка разрешения рендеринга."
 #define OPTION_VAL_320X240_RU NULL
 #define OPTION_VAL_640X480_RU NULL
 #define OPTION_VAL_800X600_RU NULL
@@ -47364,7 +47364,7 @@ struct retro_core_options_v2 options_ro = {
 #define OPTION_VAL_11520X8640_RU NULL
 #define OPTION_VAL_12160X9120_RU NULL
 #define OPTION_VAL_12800X9600_RU NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_RU NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_RU "Положение экрана"
 #define OPTION_VAL_HORIZONTAL_RU NULL
 #define OPTION_VAL_VERTICAL_RU NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_RU NULL
@@ -47378,39 +47378,39 @@ struct retro_core_options_v2 options_ro = {
 #define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_LABEL_RU NULL
 #define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_INFO_0_RU NULL
 #define CORE_OPTION_NAME_WIDESCREEN_HACK_LABEL_RU NULL
-#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_LABEL_RU NULL
-#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_INFO_0_RU NULL
-#define CORE_OPTION_NAME_CABLE_TYPE_LABEL_RU NULL
+#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_LABEL_RU "Широкоэкранные чит-коды (требуется перезапуск)"
+#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_INFO_0_RU "Активирует чит-коды, которые позволяют отображать некоторые игры в широкоэкранном формате."
+#define CORE_OPTION_NAME_CABLE_TYPE_LABEL_RU "Тип кабеля"
 #define CORE_OPTION_NAME_CABLE_TYPE_INFO_0_RU "Тип выходного сигнала. Рекомендуется устанавливать VGA, но часть игр может быть несовместима с этим режимом."
-#define OPTION_VAL_TV_RGB_RU NULL
-#define OPTION_VAL_TV_COMPOSITE_RU NULL
+#define OPTION_VAL_TV_RGB_RU "ТВ (RGB)"
+#define OPTION_VAL_TV_COMPOSITE_RU "ТВ (композитный)"
 #define OPTION_VAL_VGA_RGB_RU NULL
 #define CORE_OPTION_NAME_BROADCAST_LABEL_RU "Стандарт вещания"
-#define OPTION_VAL_DEFAULT_RU NULL
-#define OPTION_VAL_PAL_M_RU NULL
-#define OPTION_VAL_PAL_N_RU NULL
+#define OPTION_VAL_DEFAULT_RU "Стандартный"
+#define OPTION_VAL_PAL_M_RU "PAL-M (Бразилия)"
+#define OPTION_VAL_PAL_N_RU "PAL-N (Аргентина, Парагвай, Уругвай)"
 #define OPTION_VAL_NTSC_RU NULL
-#define OPTION_VAL_PAL_RU NULL
-#define CORE_OPTION_NAME_FRAMERATE_LABEL_RU NULL
-#define CORE_OPTION_NAME_FRAMERATE_INFO_0_RU NULL
-#define OPTION_VAL_FULLSPEED_RU NULL
-#define OPTION_VAL_NORMAL_RU NULL
-#define CORE_OPTION_NAME_REGION_LABEL_RU NULL
-#define OPTION_VAL_JAPAN_RU NULL
-#define OPTION_VAL_USA_RU NULL
-#define OPTION_VAL_EUROPE_RU NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_RU NULL
-#define OPTION_VAL_JAPANESE_RU NULL
-#define OPTION_VAL_ENGLISH_RU NULL
-#define OPTION_VAL_GERMAN_RU NULL
-#define OPTION_VAL_FRENCH_RU NULL
-#define OPTION_VAL_SPANISH_RU NULL
-#define OPTION_VAL_ITALIAN_RU NULL
-#define CORE_OPTION_NAME_DIV_MATCHING_LABEL_RU NULL
-#define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_RU NULL
-#define CORE_OPTION_NAME_FORCE_WINCE_LABEL_RU NULL
+#define OPTION_VAL_PAL_RU "PAL (Мир)"
+#define CORE_OPTION_NAME_FRAMERATE_LABEL_RU "Частота кадров"
+#define CORE_OPTION_NAME_FRAMERATE_INFO_0_RU "Влияет на взаимодействие эмулятора с фронтендом. 'Полная скорость' - эмулятор возвращает управление RetroArch после рендеринга каждого кадра. 'Нормально' - эмулятор возвращает управление RetroArch при каждом прерывании интервала вертикального гашения. В большинстве случаев следует использовать режим 'Полная скорость'. 'Нормально' на некоторых системах может улучшать распределение кадров, но на статичных экранах (напр. при загрузке/паузе) может делать управление неотзывчивым. Примечание: работает только при откл. опции 'Рендеринг в отдельном потоке'."
+#define OPTION_VAL_FULLSPEED_RU "Полная скорость"
+#define OPTION_VAL_NORMAL_RU "Нормальный"
+#define CORE_OPTION_NAME_REGION_LABEL_RU "Регион"
+#define OPTION_VAL_JAPAN_RU "Япония"
+#define OPTION_VAL_USA_RU "США"
+#define OPTION_VAL_EUROPE_RU "Европа"
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_RU "Язык"
+#define OPTION_VAL_JAPANESE_RU "Японский"
+#define OPTION_VAL_ENGLISH_RU "Английский"
+#define OPTION_VAL_GERMAN_RU "Немецкий"
+#define OPTION_VAL_FRENCH_RU "Французский"
+#define OPTION_VAL_SPANISH_RU "Испанский"
+#define OPTION_VAL_ITALIAN_RU "Итальянский"
+#define CORE_OPTION_NAME_DIV_MATCHING_LABEL_RU "DIV-совпадение"
+#define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_RU "Оптимизация целочисленного деления."
+#define CORE_OPTION_NAME_FORCE_WINCE_LABEL_RU "Принудительный режим Windows CE"
 #define CORE_OPTION_NAME_FORCE_WINCE_INFO_0_RU "Включает полную эмуляцию MMU (блока управления памятью) и другие настройки для игр Windows CE."
-#define CORE_OPTION_NAME_ANALOG_STICK_DEADZONE_LABEL_RU NULL
+#define CORE_OPTION_NAME_ANALOG_STICK_DEADZONE_LABEL_RU "Мёртвая зона аналогового стика"
 #define OPTION_VAL_0_RU NULL
 #define OPTION_VAL_5_RU NULL
 #define OPTION_VAL_10_RU NULL
@@ -47418,12 +47418,12 @@ struct retro_core_options_v2 options_ro = {
 #define OPTION_VAL_20_RU NULL
 #define OPTION_VAL_25_RU NULL
 #define OPTION_VAL_30_RU NULL
-#define CORE_OPTION_NAME_TRIGGER_DEADZONE_LABEL_RU NULL
-#define CORE_OPTION_NAME_DIGITAL_TRIGGERS_LABEL_RU NULL
-#define CORE_OPTION_NAME_ENABLE_DSP_LABEL_RU NULL
-#define CORE_OPTION_NAME_ENABLE_DSP_INFO_0_RU NULL
-#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_RU NULL
-#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_RU NULL
+#define CORE_OPTION_NAME_TRIGGER_DEADZONE_LABEL_RU "Мёртвая зона триггеров"
+#define CORE_OPTION_NAME_DIGITAL_TRIGGERS_LABEL_RU "Цифровые триггеры"
+#define CORE_OPTION_NAME_ENABLE_DSP_LABEL_RU "Включить DSP"
+#define CORE_OPTION_NAME_ENABLE_DSP_INFO_0_RU "Включить эмуляцию звукового DSP (цифрового сигнального процессора) Dreamcast. Улучшает точность генерируемого звука, но повышает системные требования."
+#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_RU "Анизотропная фильтрация"
+#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_RU "Улучшает качество текстур на поверхностях, расположенных под непрямым углом к камере."
 #define CORE_OPTION_NAME_PVR2_FILTERING_LABEL_RU NULL
 #define CORE_OPTION_NAME_PVR2_FILTERING_INFO_0_RU NULL
 #define CORE_OPTION_NAME_TEXUPSCALE_LABEL_RU NULL
@@ -47452,7 +47452,7 @@ struct retro_core_options_v2 options_ro = {
 #define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_LABEL_RU NULL
 #define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_INFO_0_RU NULL
 #define CORE_OPTION_NAME_CUSTOM_TEXTURES_LABEL_RU NULL
-#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_RU NULL
+#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_RU "Дамп текстур"
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_RU "Отдельные блоки визуальной памяти (VMU) для игр"
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_RU "VMU для каждой игры"
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_RU NULL
@@ -47472,19 +47472,19 @@ struct retro_core_options_v2 options_ro = {
 #define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_RU NULL
 #define OPTION_VAL_DEFAULT_OFF_01_RU NULL
 #define OPTION_VAL_DEFAULT_ON_00_RU NULL
-#define OPTION_VAL_BLACK_02_RU NULL
-#define OPTION_VAL_BLUE_03_RU NULL
+#define OPTION_VAL_BLACK_02_RU "Чёрный"
+#define OPTION_VAL_BLUE_03_RU "Голубая"
 #define OPTION_VAL_LIGHT_BLUE_04_RU NULL
-#define OPTION_VAL_GREEN_05_RU NULL
-#define OPTION_VAL_CYAN_06_RU NULL
+#define OPTION_VAL_GREEN_05_RU "Зелёная"
+#define OPTION_VAL_CYAN_06_RU "Сине-зелёный"
 #define OPTION_VAL_CYAN_BLUE_07_RU NULL
 #define OPTION_VAL_LIGHT_GREEN_08_RU NULL
 #define OPTION_VAL_CYAN_GREEN_09_RU NULL
 #define OPTION_VAL_LIGHT_CYAN_10_RU NULL
-#define OPTION_VAL_RED_11_RU NULL
-#define OPTION_VAL_PURPLE_12_RU NULL
+#define OPTION_VAL_RED_11_RU "Красная"
+#define OPTION_VAL_PURPLE_12_RU "Фиолетовый"
 #define OPTION_VAL_LIGHT_PURPLE_13_RU NULL
-#define OPTION_VAL_YELLOW_14_RU NULL
+#define OPTION_VAL_YELLOW_14_RU "Жёлтая"
 #define OPTION_VAL_GRAY_15_RU NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_RU NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_RU NULL
@@ -47493,11 +47493,11 @@ struct retro_core_options_v2 options_ro = {
 #define OPTION_VAL_LIGHT_RED_2_20_RU NULL
 #define OPTION_VAL_MAGENTA_21_RU NULL
 #define OPTION_VAL_LIGHT_ORANGE_22_RU NULL
-#define OPTION_VAL_ORANGE_23_RU NULL
+#define OPTION_VAL_ORANGE_23_RU "Оранжевый"
 #define OPTION_VAL_LIGHT_PURPLE_3_24_RU NULL
 #define OPTION_VAL_LIGHT_YELLOW_25_RU NULL
 #define OPTION_VAL_LIGHT_YELLOW_2_26_RU NULL
-#define OPTION_VAL_WHITE_27_RU NULL
+#define OPTION_VAL_WHITE_27_RU "Белый"
 #define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_RU NULL
 #define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_RU NULL
 #define OPTION_VAL_40_RU NULL
@@ -50571,7 +50571,7 @@ struct retro_core_options_v2 options_si = {
 
 #define CATEGORY_VIDEO_LABEL_SK NULL
 #define CATEGORY_VIDEO_INFO_0_SK NULL
-#define CATEGORY_INPUT_LABEL_SK NULL
+#define CATEGORY_INPUT_LABEL_SK "Vstup"
 #define CATEGORY_INPUT_INFO_0_SK NULL
 #define CATEGORY_VMU_LABEL_SK NULL
 #define CATEGORY_VMU_INFO_0_SK NULL
@@ -50624,7 +50624,7 @@ struct retro_core_options_v2 options_si = {
 #define OPTION_VAL_11520X8640_SK NULL
 #define OPTION_VAL_12160X9120_SK NULL
 #define OPTION_VAL_12800X9600_SK NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_SK NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_SK "Orientácia Obrazovky"
 #define OPTION_VAL_HORIZONTAL_SK NULL
 #define OPTION_VAL_VERTICAL_SK NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_SK NULL
@@ -50654,18 +50654,18 @@ struct retro_core_options_v2 options_si = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_SK NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_SK NULL
 #define OPTION_VAL_FULLSPEED_SK NULL
-#define OPTION_VAL_NORMAL_SK NULL
+#define OPTION_VAL_NORMAL_SK "Normálne"
 #define CORE_OPTION_NAME_REGION_LABEL_SK NULL
 #define OPTION_VAL_JAPAN_SK NULL
 #define OPTION_VAL_USA_SK NULL
 #define OPTION_VAL_EUROPE_SK NULL
 #define CORE_OPTION_NAME_LANGUAGE_LABEL_SK NULL
-#define OPTION_VAL_JAPANESE_SK NULL
+#define OPTION_VAL_JAPANESE_SK "Japončina"
 #define OPTION_VAL_ENGLISH_SK NULL
-#define OPTION_VAL_GERMAN_SK NULL
-#define OPTION_VAL_FRENCH_SK NULL
-#define OPTION_VAL_SPANISH_SK NULL
-#define OPTION_VAL_ITALIAN_SK NULL
+#define OPTION_VAL_GERMAN_SK "Nemčina"
+#define OPTION_VAL_FRENCH_SK "Francúzština"
+#define OPTION_VAL_SPANISH_SK "Španielčina"
+#define OPTION_VAL_ITALIAN_SK "Taliančina"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_SK NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_SK NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_SK NULL
@@ -50733,15 +50733,15 @@ struct retro_core_options_v2 options_si = {
 #define OPTION_VAL_DEFAULT_OFF_01_SK NULL
 #define OPTION_VAL_DEFAULT_ON_00_SK NULL
 #define OPTION_VAL_BLACK_02_SK NULL
-#define OPTION_VAL_BLUE_03_SK NULL
+#define OPTION_VAL_BLUE_03_SK "Modrá"
 #define OPTION_VAL_LIGHT_BLUE_04_SK NULL
-#define OPTION_VAL_GREEN_05_SK NULL
+#define OPTION_VAL_GREEN_05_SK "Zelená"
 #define OPTION_VAL_CYAN_06_SK NULL
 #define OPTION_VAL_CYAN_BLUE_07_SK NULL
 #define OPTION_VAL_LIGHT_GREEN_08_SK NULL
 #define OPTION_VAL_CYAN_GREEN_09_SK NULL
 #define OPTION_VAL_LIGHT_CYAN_10_SK NULL
-#define OPTION_VAL_RED_11_SK NULL
+#define OPTION_VAL_RED_11_SK "Červená"
 #define OPTION_VAL_PURPLE_12_SK NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_SK NULL
 #define OPTION_VAL_YELLOW_14_SK NULL
@@ -52201,7 +52201,7 @@ struct retro_core_options_v2 options_sk = {
 
 #define CATEGORY_VIDEO_LABEL_SR NULL
 #define CATEGORY_VIDEO_INFO_0_SR NULL
-#define CATEGORY_INPUT_LABEL_SR NULL
+#define CATEGORY_INPUT_LABEL_SR "Ulaz"
 #define CATEGORY_INPUT_INFO_0_SR NULL
 #define CATEGORY_VMU_LABEL_SR NULL
 #define CATEGORY_VMU_INFO_0_SR NULL
@@ -52254,7 +52254,7 @@ struct retro_core_options_v2 options_sk = {
 #define OPTION_VAL_11520X8640_SR NULL
 #define OPTION_VAL_12160X9120_SR NULL
 #define OPTION_VAL_12800X9600_SR NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_SR NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_SR "Orijentacija ekrana"
 #define OPTION_VAL_HORIZONTAL_SR NULL
 #define OPTION_VAL_VERTICAL_SR NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_SR NULL
@@ -53829,9 +53829,9 @@ struct retro_core_options_v2 options_sr = {
 
 /* RETRO_LANGUAGE_SV */
 
-#define CATEGORY_VIDEO_LABEL_SV NULL
+#define CATEGORY_VIDEO_LABEL_SV "Bild"
 #define CATEGORY_VIDEO_INFO_0_SV NULL
-#define CATEGORY_INPUT_LABEL_SV NULL
+#define CATEGORY_INPUT_LABEL_SV "Inmatning"
 #define CATEGORY_INPUT_INFO_0_SV NULL
 #define CATEGORY_VMU_LABEL_SV NULL
 #define CATEGORY_VMU_INFO_0_SV NULL
@@ -53843,7 +53843,7 @@ struct retro_core_options_v2 options_sr = {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_SV NULL
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_SV NULL
 #define CORE_OPTION_NAME_SYSTEM_LABEL_SV NULL
-#define OPTION_VAL_AUTO_SV NULL
+#define OPTION_VAL_AUTO_SV "Automatiskt"
 #define OPTION_VAL_DREAMCAST_SV NULL
 #define OPTION_VAL_NAOMI_SV NULL
 #define OPTION_VAL_ATOMISWAVE_SV NULL
@@ -53884,7 +53884,7 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_11520X8640_SV NULL
 #define OPTION_VAL_12160X9120_SV NULL
 #define OPTION_VAL_12800X9600_SV NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_SV NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_SV "Skärmorientering"
 #define OPTION_VAL_HORIZONTAL_SV NULL
 #define OPTION_VAL_VERTICAL_SV NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_SV NULL
@@ -55460,27 +55460,27 @@ struct retro_core_options_v2 options_sv = {
 /* RETRO_LANGUAGE_TR */
 
 #define CATEGORY_VIDEO_LABEL_TR NULL
-#define CATEGORY_VIDEO_INFO_0_TR NULL
+#define CATEGORY_VIDEO_INFO_0_TR "Görsel arabellek ve efektleri, görüntüleme parametrelerini, kare hızı/-atlama ve işleme/doku parametrelerini yapılandırın."
 #define CATEGORY_INPUT_LABEL_TR "Girdi"
 #define CATEGORY_INPUT_INFO_0_TR NULL
-#define CATEGORY_VMU_LABEL_TR NULL
+#define CATEGORY_VMU_LABEL_TR "Görsel Bellek"
 #define CATEGORY_VMU_INFO_0_TR NULL
-#define CATEGORY_HACKS_LABEL_TR NULL
+#define CATEGORY_HACKS_LABEL_TR "Emülatör Geliştirmeleri"
 #define CATEGORY_HACKS_INFO_0_TR NULL
-#define CORE_OPTION_NAME_CPU_MODE_LABEL_TR "CPU Modu (Yeniden Başlatma Gerektirir)"
+#define CORE_OPTION_NAME_CPU_MODE_LABEL_TR "CPU Kipi (Yeniden Başlatılmalı)"
 #define OPTION_VAL_DYNAMIC_RECOMPILER_TR "Dinamik Yeniden Derleyici"
 #define OPTION_VAL_GENERIC_RECOMPILER_TR "Jenerik Yeniden Derleyici"
-#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_TR "BIOS'a önyükleme (Yeniden Başlatma Gerektirir)"
+#define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_TR "BIOS Önyükleme (Yeniden Başlatılmalı)"
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_TR "Doğrudan Dreamcast BIOS menüsüne önyükleme yapın."
-#define CORE_OPTION_NAME_SYSTEM_LABEL_TR "Sistem Tipi (Yeniden Başlatma Gerektirir)"
+#define CORE_OPTION_NAME_SYSTEM_LABEL_TR "Sistem Türü (Yeniden Başlatılmalı)"
 #define OPTION_VAL_AUTO_TR "Otomatik"
 #define OPTION_VAL_DREAMCAST_TR NULL
 #define OPTION_VAL_NAOMI_TR NULL
 #define OPTION_VAL_ATOMISWAVE_TR NULL
 #define CORE_OPTION_NAME_HLE_BIOS_LABEL_TR NULL
-#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_TR "Üst düzey öykünmüş BIOS(HLE) kullanımını zorla."
-#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_TR "Birikim Piksel Arabellek Boyutu (Yeniden Başlatma Gerektirir)"
-#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_INFO_0_TR NULL
+#define CORE_OPTION_NAME_HLE_BIOS_INFO_0_TR "Yüksek seviyeli taklit BIOS kullanımını zorunlu kılın."
+#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_LABEL_TR "Yığın Piksel Arabellek Boyutu (Yeniden Başlatılmalı)"
+#define CORE_OPTION_NAME_OIT_ABUFFER_SIZE_INFO_0_TR "Daha yüksek çözünürlüklerin doğru çıktı alması için daha yüksek değerler gerekebilir."
 #define OPTION_VAL_512MB_TR NULL
 #define OPTION_VAL_1GB_TR NULL
 #define OPTION_VAL_2GB_TR NULL
@@ -55527,8 +55527,8 @@ struct retro_core_options_v2 options_sv = {
 #define CORE_OPTION_NAME_FOG_LABEL_TR NULL
 #define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_LABEL_TR "Hacim Değiştirici"
 #define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_INFO_0_TR "Nesne gölgeleri çizmek için genellikle oyunlar tarafından kullanılan bir Dreamcast GPU özelliği. Bu normalde etkinleştirilmelidir - performansın etkisi ihmal edilebilir düzeyde genellikle minimum düzeydedir."
-#define CORE_OPTION_NAME_WIDESCREEN_HACK_LABEL_TR "Geniş ekran kesmesi (Yeniden Başlatma Gerektirir)"
-#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_LABEL_TR NULL
+#define CORE_OPTION_NAME_WIDESCREEN_HACK_LABEL_TR "Geniş Ekran Geliştirmeleri (Yeniden Başlatılmalı)"
+#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_LABEL_TR "Geniş Ekran Hileleri (Yeniden Başlatılmalı)"
 #define CORE_OPTION_NAME_WIDESCREEN_CHEATS_INFO_0_TR NULL
 #define CORE_OPTION_NAME_CABLE_TYPE_LABEL_TR "Kablo Tipi"
 #define CORE_OPTION_NAME_CABLE_TYPE_INFO_0_TR NULL
@@ -55556,9 +55556,9 @@ struct retro_core_options_v2 options_sv = {
 #define OPTION_VAL_FRENCH_TR "Fransızca"
 #define OPTION_VAL_SPANISH_TR "İspanyolca"
 #define OPTION_VAL_ITALIAN_TR "İtalyanca"
-#define CORE_OPTION_NAME_DIV_MATCHING_LABEL_TR NULL
-#define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_TR NULL
-#define CORE_OPTION_NAME_FORCE_WINCE_LABEL_TR NULL
+#define CORE_OPTION_NAME_DIV_MATCHING_LABEL_TR "DIV Eşleştirme"
+#define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_TR "Tamsayı bölümünü optimize edin"
+#define CORE_OPTION_NAME_FORCE_WINCE_LABEL_TR "Windows CE Kipine Zorla"
 #define CORE_OPTION_NAME_FORCE_WINCE_INFO_0_TR "Enable full MMU emulation and other settings for Windows CE games"
 #define CORE_OPTION_NAME_ANALOG_STICK_DEADZONE_LABEL_TR "Analog Çubuğu Ölü Bölge"
 #define OPTION_VAL_0_TR "%0"
@@ -55572,12 +55572,12 @@ struct retro_core_options_v2 options_sv = {
 #define CORE_OPTION_NAME_DIGITAL_TRIGGERS_LABEL_TR "Dijital Tetikleyiciler"
 #define CORE_OPTION_NAME_ENABLE_DSP_LABEL_TR "DSP'yi Etkinleştir"
 #define CORE_OPTION_NAME_ENABLE_DSP_INFO_0_TR "Dreamcast'in ses DSP'sinin (dijital sinyal işlemcisi) öykünmesini etkinleştirin. Üretilen sesin doğruluğunu arttırır, ancak performans gereksinimlerini artırır."
-#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_TR NULL
+#define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_TR "Eşyönsüz Filtreleme"
 #define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_TR NULL
 #define CORE_OPTION_NAME_PVR2_FILTERING_LABEL_TR NULL
 #define CORE_OPTION_NAME_PVR2_FILTERING_INFO_0_TR NULL
 #define CORE_OPTION_NAME_TEXUPSCALE_LABEL_TR "Doku Büyütme (xBRZ)"
-#define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_TR NULL
+#define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_TR "Elle çizilmiş 2B piksel sanatsal grafiklerini geliştirin. Yalnızca 2D piksel oyunlarla kullanılmalıdır."
 #define OPTION_VAL_2X_TR NULL
 #define OPTION_VAL_4X_TR NULL
 #define OPTION_VAL_6X_TR NULL
@@ -55604,7 +55604,7 @@ struct retro_core_options_v2 options_sv = {
 #define CORE_OPTION_NAME_CUSTOM_TEXTURES_LABEL_TR "Özel Dokular Yükle"
 #define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_TR "Dokuları Göm"
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_TR "Oyun Başına VMU'lar"
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_TR NULL
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_TR "Oyun Başına VMU'lar"
 #define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_TR "Devre dışı bırakıldığında, tüm oyunlar RetroArch'ın sistem dizininde bulunan 4 VMU kaydetme dosyasını (A1, B1, C1, D1) paylaşır. 'VMU A1' ayarı, RetroArch'ın başlattığı her oyun için kaydetme dizininde benzersiz bir VMU 'A1' dosyası oluşturur. 'Tüm VMU'lar' ayarı, başlatılan her oyun için 4 benzersiz VMU dosyası (A1, B1, C1, D1) oluşturur."
 #define OPTION_VAL_VMU_A1_TR NULL
 #define OPTION_VAL_ALL_VMUS_TR "Tüm VMU'lar"
@@ -55639,15 +55639,15 @@ struct retro_core_options_v2 options_sv = {
 #define OPTION_VAL_LIGHT_PURPLE_2_16_TR "Açık Mor (2)"
 #define OPTION_VAL_LIGHT_GREEN_2_17_TR "Açık Yeşil (2)"
 #define OPTION_VAL_LIGHT_GREEN_3_18_TR "Açık Yeşil (3)"
-#define OPTION_VAL_LIGHT_CYAN_2_19_TR "Açık Cyan (2)"
+#define OPTION_VAL_LIGHT_CYAN_2_19_TR "Açık Camgöbeği (2)"
 #define OPTION_VAL_LIGHT_RED_2_20_TR "Açık Kırmızı (2)"
 #define OPTION_VAL_MAGENTA_21_TR "Eflatun"
-#define OPTION_VAL_LIGHT_ORANGE_22_TR NULL
-#define OPTION_VAL_ORANGE_23_TR NULL
-#define OPTION_VAL_LIGHT_PURPLE_3_24_TR NULL
-#define OPTION_VAL_LIGHT_YELLOW_25_TR NULL
-#define OPTION_VAL_LIGHT_YELLOW_2_26_TR NULL
-#define OPTION_VAL_WHITE_27_TR NULL
+#define OPTION_VAL_LIGHT_ORANGE_22_TR "Açık Turuncu"
+#define OPTION_VAL_ORANGE_23_TR "Turuncu"
+#define OPTION_VAL_LIGHT_PURPLE_3_24_TR "Açık Mor (3)"
+#define OPTION_VAL_LIGHT_YELLOW_25_TR "Açık Sarı"
+#define OPTION_VAL_LIGHT_YELLOW_2_26_TR "Açık Sarı (2)"
+#define OPTION_VAL_WHITE_27_TR "Beyaz"
 #define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_TR "VMU Screen 1 Piksel Yokken Renk"
 #define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_TR "VMU Screen 1 Opaklık"
 #define OPTION_VAL_40_TR "%40"
@@ -57089,13 +57089,13 @@ struct retro_core_options_v2 options_tr = {
 
 /* RETRO_LANGUAGE_UK */
 
-#define CATEGORY_VIDEO_LABEL_UK NULL
+#define CATEGORY_VIDEO_LABEL_UK "Відео"
 #define CATEGORY_VIDEO_INFO_0_UK NULL
-#define CATEGORY_INPUT_LABEL_UK NULL
+#define CATEGORY_INPUT_LABEL_UK "Ввід"
 #define CATEGORY_INPUT_INFO_0_UK NULL
 #define CATEGORY_VMU_LABEL_UK NULL
 #define CATEGORY_VMU_INFO_0_UK NULL
-#define CATEGORY_HACKS_LABEL_UK NULL
+#define CATEGORY_HACKS_LABEL_UK "Гаки емуляції"
 #define CATEGORY_HACKS_INFO_0_UK NULL
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_UK NULL
 #define OPTION_VAL_DYNAMIC_RECOMPILER_UK NULL
@@ -57103,7 +57103,7 @@ struct retro_core_options_v2 options_tr = {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_UK NULL
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_UK NULL
 #define CORE_OPTION_NAME_SYSTEM_LABEL_UK NULL
-#define OPTION_VAL_AUTO_UK NULL
+#define OPTION_VAL_AUTO_UK "Авто"
 #define OPTION_VAL_DREAMCAST_UK NULL
 #define OPTION_VAL_NAOMI_UK NULL
 #define OPTION_VAL_ATOMISWAVE_UK NULL
@@ -57144,7 +57144,7 @@ struct retro_core_options_v2 options_tr = {
 #define OPTION_VAL_11520X8640_UK NULL
 #define OPTION_VAL_12160X9120_UK NULL
 #define OPTION_VAL_12800X9600_UK NULL
-#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_UK NULL
+#define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_UK "Орієнтація екрану"
 #define OPTION_VAL_HORIZONTAL_UK NULL
 #define OPTION_VAL_VERTICAL_UK NULL
 #define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_UK NULL
@@ -57174,12 +57174,12 @@ struct retro_core_options_v2 options_tr = {
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_UK NULL
 #define CORE_OPTION_NAME_FRAMERATE_INFO_0_UK NULL
 #define OPTION_VAL_FULLSPEED_UK NULL
-#define OPTION_VAL_NORMAL_UK NULL
-#define CORE_OPTION_NAME_REGION_LABEL_UK NULL
+#define OPTION_VAL_NORMAL_UK "Нормально"
+#define CORE_OPTION_NAME_REGION_LABEL_UK "Регіон"
 #define OPTION_VAL_JAPAN_UK NULL
 #define OPTION_VAL_USA_UK NULL
 #define OPTION_VAL_EUROPE_UK NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_UK NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_UK "Мова"
 #define OPTION_VAL_JAPANESE_UK NULL
 #define OPTION_VAL_ENGLISH_UK NULL
 #define OPTION_VAL_GERMAN_UK NULL
@@ -57253,18 +57253,18 @@ struct retro_core_options_v2 options_tr = {
 #define OPTION_VAL_DEFAULT_OFF_01_UK NULL
 #define OPTION_VAL_DEFAULT_ON_00_UK NULL
 #define OPTION_VAL_BLACK_02_UK NULL
-#define OPTION_VAL_BLUE_03_UK NULL
+#define OPTION_VAL_BLUE_03_UK "Синій"
 #define OPTION_VAL_LIGHT_BLUE_04_UK NULL
-#define OPTION_VAL_GREEN_05_UK NULL
+#define OPTION_VAL_GREEN_05_UK "Зелений"
 #define OPTION_VAL_CYAN_06_UK NULL
 #define OPTION_VAL_CYAN_BLUE_07_UK NULL
 #define OPTION_VAL_LIGHT_GREEN_08_UK NULL
 #define OPTION_VAL_CYAN_GREEN_09_UK NULL
 #define OPTION_VAL_LIGHT_CYAN_10_UK NULL
-#define OPTION_VAL_RED_11_UK NULL
+#define OPTION_VAL_RED_11_UK "Червоний"
 #define OPTION_VAL_PURPLE_12_UK NULL
 #define OPTION_VAL_LIGHT_PURPLE_13_UK NULL
-#define OPTION_VAL_YELLOW_14_UK NULL
+#define OPTION_VAL_YELLOW_14_UK "Жовтий"
 #define OPTION_VAL_GRAY_15_UK NULL
 #define OPTION_VAL_LIGHT_PURPLE_2_16_UK NULL
 #define OPTION_VAL_LIGHT_GREEN_2_17_UK NULL
@@ -58719,9 +58719,9 @@ struct retro_core_options_v2 options_uk = {
 
 /* RETRO_LANGUAGE_VN */
 
-#define CATEGORY_VIDEO_LABEL_VN NULL
+#define CATEGORY_VIDEO_LABEL_VN "Hình ảnh"
 #define CATEGORY_VIDEO_INFO_0_VN NULL
-#define CATEGORY_INPUT_LABEL_VN NULL
+#define CATEGORY_INPUT_LABEL_VN "Input Driver"
 #define CATEGORY_INPUT_INFO_0_VN NULL
 #define CATEGORY_VMU_LABEL_VN NULL
 #define CATEGORY_VMU_INFO_0_VN NULL
@@ -58733,7 +58733,7 @@ struct retro_core_options_v2 options_uk = {
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_LABEL_VN NULL
 #define CORE_OPTION_NAME_BOOT_TO_BIOS_INFO_0_VN NULL
 #define CORE_OPTION_NAME_SYSTEM_LABEL_VN NULL
-#define OPTION_VAL_AUTO_VN NULL
+#define OPTION_VAL_AUTO_VN "Tự động"
 #define OPTION_VAL_DREAMCAST_VN NULL
 #define OPTION_VAL_NAOMI_VN NULL
 #define OPTION_VAL_ATOMISWAVE_VN NULL
@@ -58810,12 +58810,12 @@ struct retro_core_options_v2 options_uk = {
 #define OPTION_VAL_USA_VN NULL
 #define OPTION_VAL_EUROPE_VN NULL
 #define CORE_OPTION_NAME_LANGUAGE_LABEL_VN NULL
-#define OPTION_VAL_JAPANESE_VN NULL
-#define OPTION_VAL_ENGLISH_VN NULL
-#define OPTION_VAL_GERMAN_VN NULL
-#define OPTION_VAL_FRENCH_VN NULL
-#define OPTION_VAL_SPANISH_VN NULL
-#define OPTION_VAL_ITALIAN_VN NULL
+#define OPTION_VAL_JAPANESE_VN "Tiếng Nhật"
+#define OPTION_VAL_ENGLISH_VN "Tiếng Anh"
+#define OPTION_VAL_GERMAN_VN "Tiếng Đức"
+#define OPTION_VAL_FRENCH_VN "Tiếng Pháp"
+#define OPTION_VAL_SPANISH_VN "Tiếng Tây Ban Nha"
+#define OPTION_VAL_ITALIAN_VN "Tiếng Ý"
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_VN NULL
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_VN NULL
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_VN NULL
