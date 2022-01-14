@@ -8324,7 +8324,7 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_JAPAN_CS NULL
 #define OPTION_VAL_USA_CS NULL
 #define OPTION_VAL_EUROPE_CS NULL
-#define CORE_OPTION_NAME_LANGUAGE_LABEL_CS NULL
+#define CORE_OPTION_NAME_LANGUAGE_LABEL_CS "Jazyk"
 #define OPTION_VAL_JAPANESE_CS NULL
 #define OPTION_VAL_ENGLISH_CS NULL
 #define OPTION_VAL_GERMAN_CS NULL
@@ -18229,8 +18229,8 @@ struct retro_core_options_v2 options_eo = {
 #define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_ES "Tamaño de la pantalla de la VMU 1"
 #define OPTION_VAL_5X_ES NULL
 #define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_ES "Color de píxeles encendidos de la VMU 1"
-#define OPTION_VAL_DEFAULT_ON_00_ES "Encender por defecto"
-#define OPTION_VAL_DEFAULT_OFF_01_ES "Apagar por defecto"
+#define OPTION_VAL_DEFAULT_ON_00_ES "Predeterminado (encendido)"
+#define OPTION_VAL_DEFAULT_OFF_01_ES "Predeterminado (apagado)"
 #define OPTION_VAL_BLACK_02_ES "Negro"
 #define OPTION_VAL_BLUE_03_ES "Azul"
 #define OPTION_VAL_LIGHT_BLUE_04_ES "Azul claro"
@@ -34579,7 +34579,7 @@ struct retro_core_options_v2 options_ja = {
 #define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_KO NULL
 #define OPTION_VAL_2X_KO NULL
 #define OPTION_VAL_4X_KO NULL
-#define OPTION_VAL_6X_KO NULL
+#define OPTION_VAL_6X_KO "6배"
 #define CORE_OPTION_NAME_TEXUPSCALE_MAX_FILTERED_TEXTURE_SIZE_LABEL_KO NULL
 #define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_KO NULL
 #define CORE_OPTION_NAME_RENDER_TO_TEXTURE_UPSCALING_LABEL_KO NULL
@@ -54191,7 +54191,7 @@ struct retro_core_options_v2 options_sr = {
 #define CORE_OPTION_NAME_GDROM_FAST_LOADING_LABEL_SV NULL
 #define CORE_OPTION_NAME_GDROM_FAST_LOADING_INFO_0_SV NULL
 #define CORE_OPTION_NAME_MIPMAPPING_LABEL_SV NULL
-#define CORE_OPTION_NAME_FOG_LABEL_SV NULL
+#define CORE_OPTION_NAME_FOG_LABEL_SV "Dimeffekter"
 #define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_LABEL_SV NULL
 #define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_INFO_0_SV NULL
 #define CORE_OPTION_NAME_WIDESCREEN_HACK_LABEL_SV NULL
@@ -54237,7 +54237,7 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_30_SV NULL
 #define CORE_OPTION_NAME_TRIGGER_DEADZONE_LABEL_SV NULL
 #define CORE_OPTION_NAME_DIGITAL_TRIGGERS_LABEL_SV NULL
-#define CORE_OPTION_NAME_ENABLE_DSP_LABEL_SV NULL
+#define CORE_OPTION_NAME_ENABLE_DSP_LABEL_SV "Aktivera DSP"
 #define CORE_OPTION_NAME_ENABLE_DSP_INFO_0_SV NULL
 #define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_SV NULL
 #define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_SV NULL
@@ -55768,11 +55768,11 @@ struct retro_core_options_v2 options_sv = {
 #define CATEGORY_VIDEO_LABEL_TR NULL
 #define CATEGORY_VIDEO_INFO_0_TR "Görsel arabellek ve efektleri, görüntüleme parametrelerini, kare hızı/-atlama ve işleme/doku parametrelerini yapılandırın."
 #define CATEGORY_INPUT_LABEL_TR "Girdi"
-#define CATEGORY_INPUT_INFO_0_TR NULL
+#define CATEGORY_INPUT_INFO_0_TR "Kontrolcü ve light gun ayarlarını yapılandırın."
 #define CATEGORY_VMU_LABEL_TR "Görsel Bellek"
-#define CATEGORY_VMU_INFO_0_TR NULL
+#define CATEGORY_VMU_INFO_0_TR "Görsel Bellek Birimleri/Sistemleri (VMU) ile ilgili ayarları yapılandırın."
 #define CATEGORY_HACKS_LABEL_TR "Emülatör Geliştirmeleri"
-#define CATEGORY_HACKS_INFO_0_TR NULL
+#define CATEGORY_HACKS_INFO_0_TR "Farklı emülatör hilelerini yapılandırın."
 #define CORE_OPTION_NAME_CPU_MODE_LABEL_TR "CPU Kipi (Yeniden Başlatılmalı)"
 #define OPTION_VAL_DYNAMIC_RECOMPILER_TR "Dinamik Yeniden Derleyici"
 #define OPTION_VAL_GENERIC_RECOMPILER_TR "Jenerik Yeniden Derleyici"
@@ -55823,21 +55823,21 @@ struct retro_core_options_v2 options_sv = {
 #define CORE_OPTION_NAME_SCREEN_ROTATION_LABEL_TR "Ekran Yönü"
 #define OPTION_VAL_HORIZONTAL_TR "Yatay"
 #define OPTION_VAL_VERTICAL_TR "Dikey"
-#define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_TR "Alfa Sıralama"
+#define CORE_OPTION_NAME_ALPHA_SORTING_LABEL_TR "Alfabetik Sıralama"
 #define OPTION_VAL_PER_STRIP_FAST_LEAST_ACCURATE_TR "Şerit Başına (hızlı, en az doğru)"
 #define OPTION_VAL_PER_TRIANGLE_NORMAL_TR "Üçgen Başına (normal)"
 #define OPTION_VAL_PER_PIXEL_ACCURATE_TR "Piksel Başına (doğru, ancak en yavaş)"
 #define CORE_OPTION_NAME_GDROM_FAST_LOADING_LABEL_TR "GDROM Hızlı Yükleme (kusurlu)"
 #define CORE_OPTION_NAME_GDROM_FAST_LOADING_INFO_0_TR "GD-ROM yüklemesini hızlandırır."
 #define CORE_OPTION_NAME_MIPMAPPING_LABEL_TR NULL
-#define CORE_OPTION_NAME_FOG_LABEL_TR NULL
+#define CORE_OPTION_NAME_FOG_LABEL_TR "Sis Efektleri"
 #define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_LABEL_TR "Hacim Değiştirici"
-#define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_INFO_0_TR "Nesne gölgeleri çizmek için genellikle oyunlar tarafından kullanılan bir Dreamcast GPU özelliği. Bu normalde etkinleştirilmelidir - performansın etkisi ihmal edilebilir düzeyde genellikle minimum düzeydedir."
+#define CORE_OPTION_NAME_VOLUME_MODIFIER_ENABLE_INFO_0_TR "Genellikle oyunlar tarafından nesne gölgeleri çizmek için kullanılan bir Dreamcast GPU özelliği. Bu normalde etkinleştirilmelidir - performansa olumsuz etkisi yok denilebilecek düzeydedir."
 #define CORE_OPTION_NAME_WIDESCREEN_HACK_LABEL_TR "Geniş Ekran Geliştirmeleri (Yeniden Başlatılmalı)"
 #define CORE_OPTION_NAME_WIDESCREEN_CHEATS_LABEL_TR "Geniş Ekran Hileleri (Yeniden Başlatılmalı)"
-#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_INFO_0_TR NULL
+#define CORE_OPTION_NAME_WIDESCREEN_CHEATS_INFO_0_TR "Belirli oyunların geniş ekran biçiminde görüntülenmesine izin veren hileleri etkinleştirir."
 #define CORE_OPTION_NAME_CABLE_TYPE_LABEL_TR "Kablo Tipi"
-#define CORE_OPTION_NAME_CABLE_TYPE_INFO_0_TR "The output signal type. VGA is recommended, but some games might not be compatible with it."
+#define CORE_OPTION_NAME_CABLE_TYPE_INFO_0_TR "Çıkış sinyali türü. VGA önerilir, ancak bazı oyunlar bununla uyumlu olmayabilir."
 #define OPTION_VAL_TV_RGB_TR NULL
 #define OPTION_VAL_TV_COMPOSITE_TR NULL
 #define OPTION_VAL_VGA_RGB_TR NULL
@@ -55848,7 +55848,7 @@ struct retro_core_options_v2 options_sv = {
 #define OPTION_VAL_NTSC_TR NULL
 #define OPTION_VAL_PAL_TR "PAL (Dünya)"
 #define CORE_OPTION_NAME_FRAMERATE_LABEL_TR "Kare Hızı"
-#define CORE_OPTION_NAME_FRAMERATE_INFO_0_TR "Emülatörün ön uçla nasıl etkileşimde bulunduğunu etkiler. 'Tam Hız' - emülatör, bir kare oluşturulduğunda, kontrolü RetroArch'a geri döndürür. 'Normal' - emülatör, V-blank kesmesi her üretildiğinde kontrolü RetroArch'a döndürür. Çoğu durumda 'Tam Hız' kullanılmalıdır. 'Normal' bazı sistemlerde kare ilerleme hızını iyileştirebilir, ancak ekran statik olduğunda (örneğin, yükleme/duraklatma ekranları) yanıt vermeyen girişe neden olabilir."
+#define CORE_OPTION_NAME_FRAMERATE_INFO_0_TR NULL
 #define OPTION_VAL_FULLSPEED_TR "Tam Hız"
 #define OPTION_VAL_NORMAL_TR NULL
 #define CORE_OPTION_NAME_REGION_LABEL_TR "Bölge"
@@ -55865,7 +55865,7 @@ struct retro_core_options_v2 options_sv = {
 #define CORE_OPTION_NAME_DIV_MATCHING_LABEL_TR "DIV Eşleştirme"
 #define CORE_OPTION_NAME_DIV_MATCHING_INFO_0_TR "Tamsayı bölümünü optimize edin"
 #define CORE_OPTION_NAME_FORCE_WINCE_LABEL_TR "Windows CE Kipine Zorla"
-#define CORE_OPTION_NAME_FORCE_WINCE_INFO_0_TR "Enable full MMU emulation and other settings for Windows CE games"
+#define CORE_OPTION_NAME_FORCE_WINCE_INFO_0_TR NULL
 #define CORE_OPTION_NAME_ANALOG_STICK_DEADZONE_LABEL_TR "Analog Çubuğu Ölü Bölge"
 #define OPTION_VAL_0_TR "%0"
 #define OPTION_VAL_5_TR "%5"
@@ -55877,55 +55877,55 @@ struct retro_core_options_v2 options_sv = {
 #define CORE_OPTION_NAME_TRIGGER_DEADZONE_LABEL_TR "Tetik Ölü Bölge"
 #define CORE_OPTION_NAME_DIGITAL_TRIGGERS_LABEL_TR "Dijital Tetikleyiciler"
 #define CORE_OPTION_NAME_ENABLE_DSP_LABEL_TR "DSP'yi Etkinleştir"
-#define CORE_OPTION_NAME_ENABLE_DSP_INFO_0_TR "Dreamcast'in ses DSP'sinin (dijital sinyal işlemcisi) öykünmesini etkinleştirin. Üretilen sesin doğruluğunu arttırır, ancak performans gereksinimlerini artırır."
+#define CORE_OPTION_NAME_ENABLE_DSP_INFO_0_TR NULL
 #define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_LABEL_TR "Eşyönsüz Filtreleme"
 #define CORE_OPTION_NAME_ANISOTROPIC_FILTERING_INFO_0_TR NULL
 #define CORE_OPTION_NAME_PVR2_FILTERING_LABEL_TR NULL
 #define CORE_OPTION_NAME_PVR2_FILTERING_INFO_0_TR NULL
-#define CORE_OPTION_NAME_TEXUPSCALE_LABEL_TR "Doku Büyütme (xBRZ)"
+#define CORE_OPTION_NAME_TEXUPSCALE_LABEL_TR "Doku Yükseltme (xBRZ)"
 #define CORE_OPTION_NAME_TEXUPSCALE_INFO_0_TR "Elle çizilmiş 2B piksel sanatsal grafiklerini geliştirin. Yalnızca 2D piksel oyunlarla kullanılmalıdır."
 #define OPTION_VAL_2X_TR NULL
 #define OPTION_VAL_4X_TR NULL
 #define OPTION_VAL_6X_TR NULL
-#define CORE_OPTION_NAME_TEXUPSCALE_MAX_FILTERED_TEXTURE_SIZE_LABEL_TR "Doku Yükseltme Maks. Filtre boyutu"
-#define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_TR "RTT'yi etkinleştirme (Dokuya Render'i) ara belleği"
-#define CORE_OPTION_NAME_RENDER_TO_TEXTURE_UPSCALING_LABEL_TR "Doku Yükseltme İşlemine Render"
+#define CORE_OPTION_NAME_TEXUPSCALE_MAX_FILTERED_TEXTURE_SIZE_LABEL_TR NULL
+#define CORE_OPTION_NAME_ENABLE_RTTB_LABEL_TR NULL
+#define CORE_OPTION_NAME_RENDER_TO_TEXTURE_UPSCALING_LABEL_TR NULL
 #define OPTION_VAL_1X_TR NULL
 #define OPTION_VAL_3X_TR NULL
 #define OPTION_VAL_8X_TR NULL
-#define CORE_OPTION_NAME_THREADED_RENDERING_LABEL_TR "İşlem Parçacığı Renderlama (Yeniden Başlatma Gerektirir)"
-#define CORE_OPTION_NAME_THREADED_RENDERING_INFO_0_TR NULL
-#define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_LABEL_TR "Senkronize İşleme"
-#define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_INFO_0_TR NULL
+#define CORE_OPTION_NAME_THREADED_RENDERING_LABEL_TR "Baskın İşleme (Yeniden Başlatılmalı)"
+#define CORE_OPTION_NAME_THREADED_RENDERING_INFO_0_TR "GPU ve CPU'yu farklı iş parçacıklarında çalıştırır. Şiddetle tavsiye edilir."
+#define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_LABEL_TR "Eşzamanlı İşleme"
+#define CORE_OPTION_NAME_SYNCHRONOUS_RENDERING_INFO_0_TR "GPU'nun mevcut kareyi bırakmak yerine önceki kareyi oluşturmayı bitirmesini bekler. Not: Bu ayar yalnızca 'Baskın İşleme' etkinleştirildiğinde geçerlidir."
 #define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_LABEL_TR NULL
 #define CORE_OPTION_NAME_DELAY_FRAME_SWAPPING_INFO_0_TR NULL
 #define CORE_OPTION_NAME_FRAME_SKIPPING_LABEL_TR "Kare Atlama"
 #define CORE_OPTION_NAME_FRAME_SKIPPING_INFO_0_TR NULL
-#define CORE_OPTION_NAME_ENABLE_PURUPURU_LABEL_TR "Purupuru Paketi / Titreşim Paketi"
-#define CORE_OPTION_NAME_ENABLE_PURUPURU_INFO_0_TR "Denetleyici geri bildirimini etkinleştirir."
-#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_LABEL_TR NULL
-#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_INFO_0_TR "Kabin ayarlarına girmek için NAOMI'nin SERVİS düğmesini etkinleştirir."
-#define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_LABEL_TR "NAOMI 15KHz Dipswitch'i etkinleştir"
+#define CORE_OPTION_NAME_ENABLE_PURUPURU_LABEL_TR NULL
+#define CORE_OPTION_NAME_ENABLE_PURUPURU_INFO_0_TR NULL
+#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_LABEL_TR "NAOMI Servis Düğmelerine İzin Ver"
+#define CORE_OPTION_NAME_ALLOW_SERVICE_BUTTONS_INFO_0_TR "Kabin ayarlarına girmek için NAOMI için SERVICE düğmesini etkinleştirir."
+#define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_LABEL_TR "NAOMI 15KHz DIP anahtarını etkinleştir"
 #define CORE_OPTION_NAME_ENABLE_NAOMI_15KHZ_DIPSWITCH_INFO_0_TR "Bu, 240p, 480i'de gösterimi zorlayabilir veya oyuna bağlı olarak hiçbir etkisi olmayabilir."
 #define CORE_OPTION_NAME_CUSTOM_TEXTURES_LABEL_TR "Özel Dokular Yükle"
-#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_TR "Dokuları Göm"
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_TR "Oyun Başına VMU'lar"
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_TR "Oyun Başına VMU'lar"
-#define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_TR "Devre dışı bırakıldığında, tüm oyunlar RetroArch'ın sistem dizininde bulunan 4 VMU kaydetme dosyasını (A1, B1, C1, D1) paylaşır. 'VMU A1' ayarı, RetroArch'ın başlattığı her oyun için kaydetme dizininde benzersiz bir VMU 'A1' dosyası oluşturur. 'Tüm VMU'lar' ayarı, başlatılan her oyun için 4 benzersiz VMU dosyası (A1, B1, C1, D1) oluşturur."
+#define CORE_OPTION_NAME_DUMP_TEXTURES_LABEL_TR "Dokuları Sakla"
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_TR "Oyun Başına Görsel Bellek Birimleri/Sistemleri (VMU)"
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_LABEL_CAT_TR "Oyun Başına VMU"
+#define CORE_OPTION_NAME_PER_CONTENT_VMUS_INFO_0_TR "Devre dışı bırakıldığında, tüm oyunlar RetroArch sistem dizininde bulunan 4 VMU kayıt dosyasını (A1, B1, C1, D1) paylaşır. 'VMU A1' ayarı, başlatılan her oyun için RetroArch kayıt dizininde benzersiz bir VMU 'A1' dosyası oluşturur. 'Tüm VMU'' ayarı, başlatılan her oyun için 4 benzersiz VMU dosyası (A1, B1, C1, D1) oluşturur."
 #define OPTION_VAL_VMU_A1_TR NULL
-#define OPTION_VAL_ALL_VMUS_TR "Tüm VMU'lar"
+#define OPTION_VAL_ALL_VMUS_TR "Tüm VMU"
 #define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_TR NULL
-#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_CAT_TR NULL
-#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_INFO_0_TR NULL
-#define CORE_OPTION_NAME_VMU1_SCREEN_DISPLAY_LABEL_TR "VMU Screen 1 Görsel"
-#define CORE_OPTION_NAME_VMU1_SCREEN_POSITION_LABEL_TR "VMU Screen 1 Pozisyon"
+#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_LABEL_CAT_TR "VMU Görüntü Ayarlarını Göster"
+#define CORE_OPTION_NAME_SHOW_VMU_SCREEN_SETTINGS_INFO_0_TR "Taklit edilmiş VMU LCD ekran görünürlüğünün, boyutunun, konumunun ve renginin yapılandırılmasını etkinleştirin. NOT: Bu ayarın etkili olması için Hızlı Menü değiştirilmesi gerekebilir."
+#define CORE_OPTION_NAME_VMU1_SCREEN_DISPLAY_LABEL_TR "VMU Ekranı 1 Görüntüle"
+#define CORE_OPTION_NAME_VMU1_SCREEN_POSITION_LABEL_TR "VMU Ekranı 1 Pozisyon"
 #define OPTION_VAL_UPPER_LEFT_TR "Sol Üst"
 #define OPTION_VAL_UPPER_RIGHT_TR "Sağ Üst"
 #define OPTION_VAL_LOWER_LEFT_TR "Sol Alt"
 #define OPTION_VAL_LOWER_RIGHT_TR "Sağ Alt"
-#define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_TR "VMU Screen 1 Boyut"
+#define CORE_OPTION_NAME_VMU1_SCREEN_SIZE_MULT_LABEL_TR "VMU Ekranı 1 Boyut"
 #define OPTION_VAL_5X_TR NULL
-#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_TR "VMU Screen 1 Piksel Varken Renk"
+#define CORE_OPTION_NAME_VMU1_PIXEL_ON_COLOR_LABEL_TR "VMU Ekranı 1 Piksel Açık Renkli"
 #define OPTION_VAL_DEFAULT_ON_00_TR "Varsayılan AÇIK"
 #define OPTION_VAL_DEFAULT_OFF_01_TR "Varsayılan KAPALI"
 #define OPTION_VAL_BLACK_02_TR "Siyah"
@@ -55955,8 +55955,8 @@ struct retro_core_options_v2 options_sv = {
 #define OPTION_VAL_LIGHT_YELLOW_26_TR NULL
 #define OPTION_VAL_LIGHT_YELLOW_2_27_TR NULL
 #define OPTION_VAL_WHITE_28_TR NULL
-#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_TR "VMU Screen 1 Piksel Yokken Renk"
-#define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_TR "VMU Screen 1 Opaklık"
+#define CORE_OPTION_NAME_VMU1_PIXEL_OFF_COLOR_LABEL_TR "VMU Ekranı 1 Piksel Kapalı Renk"
+#define CORE_OPTION_NAME_VMU1_SCREEN_OPACITY_LABEL_TR "VMU Ekranı 1 Şeffaflığı"
 #define OPTION_VAL_40_TR "%40"
 #define OPTION_VAL_50_TR "%50"
 #define OPTION_VAL_60_TR "%60"
@@ -55964,30 +55964,30 @@ struct retro_core_options_v2 options_sv = {
 #define OPTION_VAL_80_TR "%80"
 #define OPTION_VAL_90_TR "%90"
 #define OPTION_VAL_100_TR "%100"
-#define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_TR "VMU Screen 2 Görsel"
-#define CORE_OPTION_NAME_VMU2_SCREEN_POSITION_LABEL_TR "VMU Screen 2 Pozisyon"
-#define CORE_OPTION_NAME_VMU2_SCREEN_SIZE_MULT_LABEL_TR "VMU Screen 2 Boyut"
-#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_TR "VMU Screen 2 Piksel Varken Renk"
-#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_TR "VMU Screen 2 Piksel Yokken Renk"
-#define CORE_OPTION_NAME_VMU2_SCREEN_OPACITY_LABEL_TR "VMU Screen 2 Opaklık"
-#define CORE_OPTION_NAME_VMU3_SCREEN_DISPLAY_LABEL_TR "VMU Screen 3 Görsel"
-#define CORE_OPTION_NAME_VMU3_SCREEN_POSITION_LABEL_TR "VMU Screen 3 Pozisyon"
-#define CORE_OPTION_NAME_VMU3_SCREEN_SIZE_MULT_LABEL_TR "VMU Screen 3 Boyut"
-#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_TR "VMU Screen 3 Piksel Varken Renk"
-#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_TR "VMU Screen 3 Piksel Yokken Renk"
-#define CORE_OPTION_NAME_VMU3_SCREEN_OPACITY_LABEL_TR "VMU Screen 3 Opaklık"
-#define CORE_OPTION_NAME_VMU4_SCREEN_DISPLAY_LABEL_TR "VMU Screen 4 Görsel"
-#define CORE_OPTION_NAME_VMU4_SCREEN_POSITION_LABEL_TR "VMU Screen 4 Pozisyon"
-#define CORE_OPTION_NAME_VMU4_SCREEN_SIZE_MULT_LABEL_TR "VMU Screen 4 Boyut"
-#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_TR "VMU Screen 4 Piksel Varken Renk"
-#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_TR "VMU Screen 4 Piksel Yokken Renk"
-#define CORE_OPTION_NAME_VMU4_SCREEN_OPACITY_LABEL_TR "VMU Screen 4 Opaklık"
-#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_LABEL_TR NULL
-#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_INFO_0_TR NULL
-#define CORE_OPTION_NAME_LIGHTGUN1_CROSSHAIR_LABEL_TR "Gun Crosshair 1 Görsel"
-#define CORE_OPTION_NAME_LIGHTGUN2_CROSSHAIR_LABEL_TR "Gun Crosshair 2 Görsel"
-#define CORE_OPTION_NAME_LIGHTGUN3_CROSSHAIR_LABEL_TR "Gun Crosshair 3 Görsel"
-#define CORE_OPTION_NAME_LIGHTGUN4_CROSSHAIR_LABEL_TR "Gun Crosshair 4 Görsel"
+#define CORE_OPTION_NAME_VMU2_SCREEN_DISPLAY_LABEL_TR "VMU Ekranı 2 Görüntüle"
+#define CORE_OPTION_NAME_VMU2_SCREEN_POSITION_LABEL_TR "VMU Ekranı 2 Pozisyon"
+#define CORE_OPTION_NAME_VMU2_SCREEN_SIZE_MULT_LABEL_TR "VMU Ekranı 2 Boyut"
+#define CORE_OPTION_NAME_VMU2_PIXEL_ON_COLOR_LABEL_TR "VMU Ekranı 2 Piksel Açık Renkli"
+#define CORE_OPTION_NAME_VMU2_PIXEL_OFF_COLOR_LABEL_TR "VMU Ekranı 2 Piksel Kapalı Renk"
+#define CORE_OPTION_NAME_VMU2_SCREEN_OPACITY_LABEL_TR "VMU Ekranı 2 Şeffaflığı"
+#define CORE_OPTION_NAME_VMU3_SCREEN_DISPLAY_LABEL_TR "VMU Ekranı 3 Görüntüle"
+#define CORE_OPTION_NAME_VMU3_SCREEN_POSITION_LABEL_TR "VMU Ekranı 3 Pozisyon"
+#define CORE_OPTION_NAME_VMU3_SCREEN_SIZE_MULT_LABEL_TR "VMU Ekranı 3 Boyut"
+#define CORE_OPTION_NAME_VMU3_PIXEL_ON_COLOR_LABEL_TR "VMU Ekranı 3 Piksel Açık Renkli"
+#define CORE_OPTION_NAME_VMU3_PIXEL_OFF_COLOR_LABEL_TR "VMU Ekranı 3 Piksel Kapalı Renk"
+#define CORE_OPTION_NAME_VMU3_SCREEN_OPACITY_LABEL_TR "VMU Ekranı 3 Şeffaflığı"
+#define CORE_OPTION_NAME_VMU4_SCREEN_DISPLAY_LABEL_TR "VMU Ekranı 4 Görüntüle"
+#define CORE_OPTION_NAME_VMU4_SCREEN_POSITION_LABEL_TR "VMU Ekranı 4 Pozisyon"
+#define CORE_OPTION_NAME_VMU4_SCREEN_SIZE_MULT_LABEL_TR "VMU Ekranı 4 Boyut"
+#define CORE_OPTION_NAME_VMU4_PIXEL_ON_COLOR_LABEL_TR "VMU Ekranı 4 Piksel Açık Renkli"
+#define CORE_OPTION_NAME_VMU4_PIXEL_OFF_COLOR_LABEL_TR "VMU Ekranı 4 Piksel Kapalı Renk"
+#define CORE_OPTION_NAME_VMU4_SCREEN_OPACITY_LABEL_TR "VMU Ekranı 4 Şeffaflığı"
+#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_LABEL_TR "Light Gun Ayarlarını Göster"
+#define CORE_OPTION_NAME_SHOW_LIGHTGUN_SETTINGS_INFO_0_TR "Light gun artı gösterge seçeneklerinin yapılandırılmasını etkinleştirin. NOT: Bu ayarın geçerli olması için Hızlı Menü değiştirilmesi gerekir."
+#define CORE_OPTION_NAME_LIGHTGUN1_CROSSHAIR_LABEL_TR "Silah Artı Göstergesi 1 Görüntüle"
+#define CORE_OPTION_NAME_LIGHTGUN2_CROSSHAIR_LABEL_TR "Silah Artı Göstergesi 2 Görüntüle"
+#define CORE_OPTION_NAME_LIGHTGUN3_CROSSHAIR_LABEL_TR "Silah Artı Göstergesi 3 Görüntüle"
+#define CORE_OPTION_NAME_LIGHTGUN4_CROSSHAIR_LABEL_TR "Silah Artı Göstergesi 4 Görüntüle"
 
 struct retro_core_option_v2_category option_cats_tr[] = {
    {
