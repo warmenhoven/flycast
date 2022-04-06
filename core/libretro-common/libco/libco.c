@@ -10,7 +10,7 @@ void genode_free_secondary_stack(void *stack);
 #endif
 
 #if defined _MSC_VER
-  #include <windows.h>
+  #include <Windows.h>
   #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
     #include "fiber.c"
   #elif defined _M_IX86
@@ -29,6 +29,10 @@ void genode_free_secondary_stack(void *stack);
     #include "ppc.c"
   #elif defined(__aarch64__)
     #include "aarch64.c"
+  #elif defined(PS2)
+    #include "ps2.c"
+  #elif defined(PSP)
+    #include "psp1.c"
   #elif defined VITA
     #include "scefiber.c"
   #elif defined(__ARM_EABI__) || defined(__arm__)
