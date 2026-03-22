@@ -11,6 +11,12 @@
 #include <fcntl.h>
 #include <cerrno>
 #include <unistd.h>
+#if defined(LIBRETRO) && (defined(TARGET_IPHONE) || defined(TARGET_ARM_MAC))
+#include <mach/mach.h>
+#endif
+#ifdef TARGET_IPHONE
+#include <signal.h>
+#endif
 
 #include "hw/mem/addrspace.h"
 #include "hw/sh4/sh4_if.h"
@@ -287,6 +293,110 @@ void release_jit_block(void *code_area, size_t size)
 	munmap(code_area, size);
 }
 
+#if defined(LIBRETRO) && defined(TARGET_IPHONE)
+extern "C" int csops(int, unsigned int, void *, size_t);
+#endif
+
+#if defined(LIBRETRO) && (defined(TARGET_IPHONE) || defined(TARGET_ARM_MAC))
+// W^X compliant dual mapping for Apple ARM: separate RX and RW views
+// of the same physical pages via vm_remap, avoiding MAP_JIT.
+bool prepare_jit_block(void *code_area, size_t size, void **code_area_rw, ptrdiff_t *rx_offset)
+{
+#ifdef TARGET_IPHONE
+	{
+		bool use_dual_mapping = false;
+		if (__builtin_available(iOS 26, *))
+		{
+			int flags = 0;
+			if (!csops(0, 0 /*CS_OPS_STATUS*/, &flags, sizeof(flags)) && (flags & 0x10000000 /*CS_DEBUGGED*/))
+				use_dual_mapping = true;
+		}
+		if (!use_dual_mapping)
+		{
+			void *ptr = mmap(nullptr, size, PROT_READ | PROT_WRITE | PROT_EXEC,
+			                 MAP_ANON | MAP_PRIVATE, -1, 0);
+			if (ptr == MAP_FAILED)
+				return false;
+			*code_area_rw = ptr;
+			*rx_offset = 0;
+			return true;
+		}
+	}
+#endif
+
+	void *ptr_rx = mmap(nullptr, size, PROT_READ | PROT_EXEC,
+	                    MAP_ANON | MAP_PRIVATE, -1, 0);
+	if (ptr_rx == MAP_FAILED)
+		return false;
+
+#ifdef TARGET_IPHONE
+	// Notify the debugger about the new executable region.
+	// A SIGTRAP handler allows graceful fallback if no debugger is attached.
+	{
+		static volatile bool s_brk_trapped = false;
+		static struct sigaction s_prev_trap;
+
+		struct sigaction trap_act = {};
+		trap_act.sa_sigaction = [](int, siginfo_t *, void *ctx) {
+			s_brk_trapped = true;
+			((ucontext_t *)ctx)->uc_mcontext->__ss.__pc += 4;
+		};
+		sigemptyset(&trap_act.sa_mask);
+		trap_act.sa_flags = SA_SIGINFO;
+		sigaction(SIGTRAP, &trap_act, &s_prev_trap);
+
+		s_brk_trapped = false;
+		__asm__ volatile (
+			"mov x0, %0\n"
+			"mov x1, %1\n"
+			"brk #0x69"
+			:: "r" (ptr_rx), "r" (size)
+			: "x0", "x1", "memory"
+		);
+
+		sigaction(SIGTRAP, &s_prev_trap, nullptr);
+	}
+#endif
+
+	vm_address_t rw_region = 0;
+	vm_prot_t cur_protection = 0;
+	vm_prot_t max_protection = 0;
+
+	kern_return_t kr = vm_remap(mach_task_self(), &rw_region, size, 0,
+	                            VM_FLAGS_ANYWHERE, mach_task_self(),
+	                            (vm_address_t)ptr_rx, FALSE,
+	                            &cur_protection, &max_protection,
+	                            VM_INHERIT_DEFAULT);
+	if (kr != KERN_SUCCESS)
+	{
+		WARN_LOG(DYNAREC, "JIT: vm_remap failed: 0x%x", kr);
+		munmap(ptr_rx, size);
+		return false;
+	}
+
+	void *ptr_rw = (void *)rw_region;
+
+	if (mprotect(ptr_rw, size, PROT_READ | PROT_WRITE) != 0)
+	{
+		WARN_LOG(DYNAREC, "JIT: mprotect RW failed: %s", strerror(errno));
+		munmap(ptr_rx, size);
+		vm_deallocate(mach_task_self(), rw_region, size);
+		return false;
+	}
+
+	*code_area_rw = ptr_rw;
+	*rx_offset = (char*)ptr_rx - (char*)ptr_rw;
+	return true;
+}
+
+void release_jit_block(void *code_area1, void *code_area2, size_t size)
+{
+	if (code_area1 && code_area1 != code_area2)
+		vm_deallocate(mach_task_self(), (vm_address_t)code_area1, size);
+	if (code_area2)
+		vm_deallocate(mach_task_self(), (vm_address_t)code_area2, size);
+}
+#else
 // Use two addr spaces: need to remap something twice, therefore use allocate_shared_filemem()
 bool prepare_jit_block(void *code_area, size_t size, void **code_area_rw, ptrdiff_t *rx_offset)
 {
@@ -323,6 +433,7 @@ void release_jit_block(void *code_area1, void *code_area2, size_t size)
 	// keep code_area1 (RX) mapped since it's statically allocated
 	munmap(code_area2, size);
 }
+#endif
 
 } // namespace virtmem
 
