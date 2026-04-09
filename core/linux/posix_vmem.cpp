@@ -14,9 +14,6 @@
 #if defined(LIBRETRO) && (defined(TARGET_IPHONE) || defined(TARGET_ARM_MAC))
 #include <mach/mach.h>
 #endif
-#ifdef TARGET_IPHONE
-#include <signal.h>
-#endif
 
 #include "hw/mem/addrspace.h"
 #include "hw/sh4/sh4_if.h"
@@ -56,6 +53,11 @@ static int ashmem_create_region(const char *name, size_t size)
 	return fd;
 }
 #endif  // #ifdef __ANDROID__
+
+#if defined(LIBRETRO) && defined(TARGET_IPHONE)
+#include <libretro.h>
+extern retro_environment_t environ_cb;
+#endif
 
 namespace virtmem
 {
@@ -292,10 +294,6 @@ void release_jit_block(void *code_area, size_t size)
 	munmap(code_area, size);
 }
 
-#if defined(LIBRETRO) && defined(TARGET_IPHONE)
-extern "C" int csops(int, unsigned int, void *, size_t);
-#endif
-
 #if defined(LIBRETRO) && (defined(TARGET_IPHONE) || defined(TARGET_ARM_MAC))
 // W^X compliant dual mapping for Apple ARM: separate RX and RW views
 // of the same physical pages via vm_remap, avoiding MAP_JIT.
@@ -303,59 +301,43 @@ bool prepare_jit_block(void *code_area, size_t size, void **code_area_rw, ptrdif
 {
 #ifdef TARGET_IPHONE
 	{
-		bool use_dual_mapping = false;
-		if (__builtin_available(iOS 26, *))
+		struct retro_exec_mem_alloc alloc = {};
+		alloc.version = 1;
+		alloc.size = size;
+		if (environ_cb &&
+		    environ_cb(RETRO_ENVIRONMENT_EXEC_MEM_ALLOC, &alloc) &&
+		    alloc.mode != RETRO_EXEC_MEM_MODE_UNAVAILABLE &&
+		    alloc.rx != nullptr)
 		{
-			int flags = 0;
-			if (!csops(0, 0 /*CS_OPS_STATUS*/, &flags, sizeof(flags)) && (flags & 0x10000000 /*CS_DEBUGGED*/))
-				use_dual_mapping = true;
-		}
-		if (!use_dual_mapping)
-		{
-			void *ptr = mmap(nullptr, size, PROT_READ | PROT_WRITE | PROT_EXEC,
-			                 MAP_ANON | MAP_PRIVATE, -1, 0);
-			if (ptr == MAP_FAILED)
-				return false;
-			*code_area_rw = ptr;
-			*rx_offset = 0;
+			if (alloc.mode == RETRO_EXEC_MEM_MODE_DUAL_MAP)
+			{
+				*code_area_rw = alloc.rw;
+				*rx_offset = (char*)alloc.rx - (char*)alloc.rw;
+			}
+			else
+			{
+				*code_area_rw = alloc.rx;
+				*rx_offset = 0;
+			}
 			return true;
 		}
+		/* EXEC_MEM_ALLOC not available — older frontend.
+		 * Fall back to W^X mmap (works if JIT_CAPABLE is true). */
+		void *ptr = mmap(nullptr, size, PROT_READ | PROT_WRITE,
+		                 MAP_ANON | MAP_PRIVATE, -1, 0);
+		if (ptr == MAP_FAILED)
+			return false;
+		*code_area_rw = ptr;
+		*rx_offset = 0;
+		return true;
 	}
 #endif
 
+	// macOS ARM: mmap R-X, vm_remap for R-W mirror (no brk needed)
 	void *ptr_rx = mmap(nullptr, size, PROT_READ | PROT_EXEC,
 	                    MAP_ANON | MAP_PRIVATE, -1, 0);
 	if (ptr_rx == MAP_FAILED)
 		return false;
-
-#ifdef TARGET_IPHONE
-	// Notify the debugger about the new executable region.
-	// A SIGTRAP handler allows graceful fallback if no debugger is attached.
-	{
-		static volatile bool s_brk_trapped = false;
-		static struct sigaction s_prev_trap;
-
-		struct sigaction trap_act = {};
-		trap_act.sa_sigaction = [](int, siginfo_t *, void *ctx) {
-			s_brk_trapped = true;
-			((ucontext_t *)ctx)->uc_mcontext->__ss.__pc += 4;
-		};
-		sigemptyset(&trap_act.sa_mask);
-		trap_act.sa_flags = SA_SIGINFO;
-		sigaction(SIGTRAP, &trap_act, &s_prev_trap);
-
-		s_brk_trapped = false;
-		__asm__ volatile (
-			"mov x0, %0\n"
-			"mov x1, %1\n"
-			"brk #0x69"
-			:: "r" (ptr_rx), "r" (size)
-			: "x0", "x1", "memory"
-		);
-
-		sigaction(SIGTRAP, &s_prev_trap, nullptr);
-	}
-#endif
 
 	vm_address_t rw_region = 0;
 	vm_prot_t cur_protection = 0;
@@ -390,10 +372,27 @@ bool prepare_jit_block(void *code_area, size_t size, void **code_area_rw, ptrdif
 
 void release_jit_block(void *code_area1, void *code_area2, size_t size)
 {
+#ifdef TARGET_IPHONE
+	if (code_area1 != code_area2)
+	{
+		// Dual-mapped via EXEC_MEM_ALLOC — tell the frontend to free
+		// code_area2 is the rx pointer
+		struct retro_exec_mem_free f = {};
+		f.rx = code_area2;
+		if (environ_cb)
+			environ_cb(RETRO_ENVIRONMENT_EXEC_MEM_FREE, &f);
+	}
+	else if (code_area1)
+	{
+		// Self-allocated W^X fallback
+		munmap(code_area1, size);
+	}
+#else
 	if (code_area1 && code_area1 != code_area2)
 		vm_deallocate(mach_task_self(), (vm_address_t)code_area1, size);
 	if (code_area2)
 		vm_deallocate(mach_task_self(), (vm_address_t)code_area2, size);
+#endif
 }
 #else
 // Use two addr spaces: need to remap something twice, therefore use allocate_shared_filemem()
